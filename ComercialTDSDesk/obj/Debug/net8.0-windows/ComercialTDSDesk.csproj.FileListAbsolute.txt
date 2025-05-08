@@ -1,0 +1,17 @@
+C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\bin\Debug\net8.0-windows\ComercialTDSDesk.exe
+C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\bin\Debug\net8.0-windows\ComercialTDSDesk.deps.json
+C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\bin\Debug\net8.0-windows\ComercialTDSDesk.runtimeconfig.json
+C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\bin\Debug\net8.0-windows\ComercialTDSDesk.dll
+C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\bin\Debug\net8.0-windows\ComercialTDSDesk.pdb
+C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.Form1.resources
+C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.csproj.GenerateResource.cache
+C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.AssemblyInfoInputs.cache
+C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.AssemblyInfo.cs
+C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.csproj.CoreCompileInputs.cache
+C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.sourcelink.json
+C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.dll
+C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\obj\Debug\net8.0-windows\refint\ComercialTDSDesk.dll
+C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.pdb
+C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.genruntimeconfig.cache
+C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\obj\Debug\net8.0-windows\ref\ComercialTDSDesk.dll
