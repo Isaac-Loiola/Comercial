@@ -640,6 +640,30 @@ where produto_id = new.produto_id
 ;
 END$$
 
+-- SP_NIVEL_INSERT --
+delimiter $$
+          create procedure comercialtdsdb01.sp_nivel_insert(
+          
+		   spnome varchar(45),
+           spsigla varchar(45)
+)
+begin
+		   insert into niveis(nome, sigla) values (spnome, spsigla);
+           select * from niveis where id = last_insert_id();
+end $$
+ 
+-- SP_NIVEL_UPDATE --
+delimiter $$
+		    create procedure comercialtdsdb01.sp_nivel_update(
+		    id int,
+            nome varchar(45),
+            sigla varchar(45)
+)
+begin
+   update niveis set nome = spnome, sigla = spsigla 
+   where id = spid;
+end $$
+
 
 DELIMITER ;
 
