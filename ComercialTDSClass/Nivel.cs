@@ -42,7 +42,37 @@ namespace ComercialTDSClass
             cmd.Parameters.AddWithValue("spnome", Nome);
             cmd.Parameters.AddWithValue("spsigla", Sigla);
             Id = Convert.ToInt32(cmd.ExecuteScalar());
-
+            cmd.Connection.Close();
         }
+
+        public static Nivel ObterPorId(int id)
+        {
+            Nivel nivel = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"select * from niveis where id = {id}";
+            var dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                nivel = new(dr.GetInt32(0), dr.GetString(1), dr.GetString(2));
+            }
+            dr.Close();
+            cmd.Connection.Close();
+
+            return nivel;
+        }
+
+        //public void Atualizar()
+        //{
+        //    var cmd = Banco.Abrir();
+        //    cmd.CommandType = CommandType.StoredProcedure;
+        //    cmd.CommandText = "sp_nivel_update";
+        //    cmd.Parameters.AddWithValue("id", Id);
+        //    cmd.Parameters.AddWithValue("spnome", Nome);
+        //    cmd.Parameters.AddWithValue("spsigla", Sigla);
+
+        //    cmd.ExecuteNonQuery();
+
+        //}
     }
 }
