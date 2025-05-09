@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace ComercialTDSClass
 {
@@ -30,6 +32,17 @@ namespace ComercialTDSClass
             Sigla = sigla;
         }
 
-        // Inserir, Atualizar
+        // Inserir, Atualizar - id, Listar, ObterPorId - id
+        public void Inserir()
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_nivel_insert";
+            //cmd.Parameters.Add("spnome", MySqlDbType.VarChar).Value = Nome;
+            cmd.Parameters.AddWithValue("spnome", Nome);
+            cmd.Parameters.AddWithValue("spsigla", Sigla);
+            Id = Convert.ToInt32(cmd.ExecuteScalar());
+
+        }
     }
 }
