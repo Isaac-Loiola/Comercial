@@ -12,7 +12,7 @@ namespace ComercialTDSClass
         public MySqlCommand Abrir()
         {
             MySqlCommand cmd = new();
-            string strconn = @"server=127.0.0.1;database=comercialtds;user=root;password=";
+            string strconn = @"server=10.91.47.220;database=comercialtdsdb01;user=root;password=123"; // Work
 
             MySqlConnection cn = new(strconn);
             try
