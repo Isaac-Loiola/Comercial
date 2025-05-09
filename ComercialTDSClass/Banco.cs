@@ -1,31 +1,41 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ComercialTDSClass
 {
-    class Banco
+    public static class Banco
     {
-        public MySqlCommand Abrir()
+        public static string StrConn { get; set; }
+
+        public static MySqlCommand Abrir(string strconn="")
         {
             MySqlCommand cmd = new();
-            string strconn = @"server=10.91.47.220;database=comercialtdsdb01;user=root;password=123"; // Work
 
-            MySqlConnection cn = new(strconn);
-            try
+            StrConn = strconn;
+            if (StrConn == string.Empty)
             {
-                cn.Open();
-                cmd.Connection = cn;
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine(ex.Message);
+                StrConn = $@"server=10.91.47.220;database=comercialtdsdb01;user=root;password=123"; // Work
+                MySqlConnection cn = new(StrConn);
+
+                try
+                {
+                    cn.Open(); // Passando por aqui terá uma conexão aberta.
+                    cmd.Connection = cn;
+                }
+                catch (MySqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
             }
 
             return cmd;
+
         }
     }
 }
