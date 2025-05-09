@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
+using Google.Protobuf;
 
 namespace ComercialTDSClass
 {
@@ -81,21 +82,36 @@ namespace ComercialTDSClass
                          )
                     );
             }
-
+            dr.Close();
+            cmd.Connection.Close();
             return niveis;
         }
 
-        //public void Atualizar()
-        //{
-        //    var cmd = Banco.Abrir();
-        //    cmd.CommandType = CommandType.StoredProcedure;
-        //    cmd.CommandText = "sp_nivel_update";
-        //    cmd.Parameters.AddWithValue("id", Id);
-        //    cmd.Parameters.AddWithValue("spnome", Nome);
-        //    cmd.Parameters.AddWithValue("spsigla", Sigla);
+        /// <summary>
+        /// Método não estático, precisamos considerar que as propriedades de Nivel já devem possuir valor.
+        /// </summary>
+        /// <returns>Booleano</returns>
+        public bool Atualizar()
+        {
+            bool atualizado = false;
+            if(Id < 1)
+            {
+                return false;
+            }
 
-        //    cmd.ExecuteNonQuery();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_niveis_update";
+            cmd.Parameters.AddWithValue("spid", Id);
+            cmd.Parameters.AddWithValue("spnome", Nome);
+            cmd.Parameters.AddWithValue("spsigla", Sigla);
+            if(cmd.ExecuteNonQuery() > 0)
+            {
+                atualizado = true;
+            }
 
-        //}
+            cmd.Connection.Close();
+            return atualizado;
+        }
     }
 }
