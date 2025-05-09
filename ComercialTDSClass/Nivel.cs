@@ -62,6 +62,29 @@ namespace ComercialTDSClass
             return nivel;
         }
 
+        public static List<Nivel> ObterLista()
+        {
+            List<Nivel> niveis = new();
+
+            var cmd = Banco.Abrir();
+            cmd.CommandText = $"select * from niveis order by nome";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                niveis.Add
+                    (
+                        new
+                         (
+                            dr.GetInt32(0),
+                            dr.GetString(1),
+                            dr.GetString(2)
+                         )
+                    );
+            }
+
+            return niveis;
+        }
+
         //public void Atualizar()
         //{
         //    var cmd = Banco.Abrir();
