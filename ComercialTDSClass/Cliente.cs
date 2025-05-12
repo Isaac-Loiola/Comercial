@@ -17,7 +17,7 @@ namespace ComercialTDSClass
         public DateTime DataNascimento { get; set; }
         public DateTime DataCadastro { get; set; }
         public int Ativo { get; set; }  
-        public List<Endereco> Endereco { get; set; 
+        public List<Endereco> Endereco { get; set; }
         
     }
 }
