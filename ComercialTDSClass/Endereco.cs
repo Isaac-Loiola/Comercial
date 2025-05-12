@@ -8,5 +8,12 @@ namespace ComercialTDSClass
 {
     class Endereco
     {
+        public static List<Endereco> ObterListaPorClienteId(int idCliente)
+        {
+            List<Endereco> enderecos = new();
+                
+
+            return enderecos;
+        } 
     }
 }
