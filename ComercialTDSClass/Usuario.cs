@@ -165,10 +165,33 @@ namespace ComercialTDSClass
             return usuarios;
         }
 
+        /// <summary>
+        /// Método EfetuarLogin verifica se há um usuario com os parametros inseridos no método
+        /// </summary>
+        /// <param name="email">email do usuario</param>
+        /// <param name="senha">senha do usuario</param>
+        /// <returns>boleano</returns>
         public static Usuario EfetuarLogin(string email, string senha)
         {
             Usuario usuario = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandText = $"select * from usuarios where email = '{email}' and senha = md5('{senha}')";
+            var dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                usuario = new
+                    (
+                        dr.GetInt32(0),
+                        dr.GetString(1),
+                        dr.GetString(2),
+                        dr.GetString(3),
+                        Nivel.ObterPorId(dr.GetInt32(4)),
+                        dr.GetBoolean(5)
+                    );
+            }
+            dr.Close();
 
+            cmd.Connection.Close();
             return usuario;
         }
 
