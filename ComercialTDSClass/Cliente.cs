@@ -67,7 +67,22 @@ namespace ComercialTDSClass
 
             cmd.Connection.Close();
         }
-
-   
+        
+        /// <summary>
+        /// Método Atualizar altera dados de um registro de um cliente. 
+        /// Propriedades necessárias: Id, Nome, Telefone, DataNascimento.
+        /// </summary>
+        /// <returns>boleano</returns>
+        public bool Atualizar()
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_cliente_update";
+            cmd.Parameters.AddWithValue("spid", Id);
+            cmd.Parameters.AddWithValue("spnome", Nome);
+            cmd.Parameters.AddWithValue("sptelefone", Telefone);
+            cmd.Parameters.AddWithValue("spdatanasc", DataNascimento);
+            return cmd.ExecuteNonQuery() > 0? true: false;
+        }
     }
 }
