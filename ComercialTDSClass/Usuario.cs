@@ -67,6 +67,10 @@ namespace ComercialTDSClass
             Ativo = ativo;
         }
 
+
+        /// <summary>
+        /// Esse método adiciona um registro de usuario ao banco de dados.
+        /// </summary>
         public void Inserir()
         {
             var cmd = Banco.Abrir();
@@ -83,9 +87,22 @@ namespace ComercialTDSClass
             cmd.Connection.Close();
         }
 
+        /// <summary>
+        /// Método Atualizar altera nome, senha e nivel da tabela usuarios.
+        /// </summary>
+        /// <returns>Boleano</returns>
         public bool Atualizar()
         {
-            return true;
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_usuario_altera";
+            cmd.Parameters.AddWithValue("spid", Id);
+            cmd.Parameters.AddWithValue("spnome", Nome);
+            cmd.Parameters.AddWithValue("spsenha", Senha);
+            cmd.Parameters.AddWithValue("spnivel", Nivel.Id);
+
+            return cmd.ExecuteNonQuery() > 0 ? true : false;
+       
         }
 
         public static Usuario ObterPorId(int id)
