@@ -195,11 +195,18 @@ namespace ComercialTDSClass
             return usuario;
         }
 
+        /// <summary>
+        /// Método AlterarSenha  altera email e senha de um usuario existente
+        /// </summary>
+        /// <param name="email">email de um usuario</param>
+        /// <param name="senha">senha de um usuario</param>
+        /// <returns>boleano</returns>
         public static bool AlterarSenha(string email, string senha)
         {
-            
 
-            return true;
+            var cmd = Banco.Abrir();
+            cmd.CommandText = $"update usuarios set email = '{email}' and senha = md5('{senha}')";
+            return cmd.ExecuteNonQuery() > 0 ? true : false;
         }
 
     }
