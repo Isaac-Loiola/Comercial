@@ -9,7 +9,7 @@ using Google.Protobuf;
 
 namespace ComercialTDSClass
 {
-    class Nivel
+    public class Nivel
     {
 
         public int? Id { get; set; }

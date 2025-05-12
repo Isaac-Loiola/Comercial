@@ -8,7 +8,7 @@ using System.Data;
 
 namespace ComercialTDSClass
 {
-    class Usuario
+    public class Usuario
     {
         // Propriedades 
         public int? Id { get; set; }
