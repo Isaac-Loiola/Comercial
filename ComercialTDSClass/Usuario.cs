@@ -135,10 +135,33 @@ namespace ComercialTDSClass
             return usuario;
         }
 
+        /// <summary>
+        /// Método Obter lista retorna registros de usuarios no banco de dados.
+        /// </summary>
+        /// <returns></returns>
         public static List<Usuario> ObterLista()
         {
             List<Usuario> usuarios = new();
-            
+            var cmd = Banco.Abrir();
+            cmd.CommandText = $"select * from usuarios order by nome";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                usuarios.Add
+                (new
+                    (
+                        dr.GetInt32(0),
+                        dr.GetString(1),
+                        dr.GetString(2),
+                        dr.GetString(3),
+                        Nivel.ObterPorId(dr.GetInt32(4)),
+                        dr.GetBoolean(5)
+                    )
+                );
+            }
+            dr.Close();
+
+            cmd.Connection.Close();
             return usuarios;
         }
 
