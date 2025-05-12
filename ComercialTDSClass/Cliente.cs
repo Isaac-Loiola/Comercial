@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace ComercialTDSClass
 {
@@ -19,5 +20,26 @@ namespace ComercialTDSClass
         public int Ativo { get; set; }  
         public List<Endereco> Endereco { get; set; }
         
+
+        /// <summary>
+        /// Método Inserir adiciona um registro de um cliente no banco de dados. 
+        /// Propriedades necessárias: Nome, Cpf, Telefone, Email, DataNascimento.
+        /// </summary>
+        public void Inserir()
+        {
+            // Referenciando valores nas procedures.
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = $"sp_cliente_insert";
+            cmd.Parameters.AddWithValue("spnome", Nome);
+            cmd.Parameters.AddWithValue("spcpf", Cpf);
+            cmd.Parameters.AddWithValue("sptelefone", Telefone);
+            cmd.Parameters.AddWithValue("spemail", Email);
+            cmd.Parameters.AddWithValue("spdatanasc", DataNascimento);
+
+            Id = Convert.ToInt32(cmd.ExecuteScalar());
+
+            cmd.Connection.Close();
+        }
     }
 }
