@@ -105,10 +105,33 @@ namespace ComercialTDSClass
        
         }
 
+        /// <summary>
+        /// Método ObterPorid retorna registros de um usuario no banco de dados.
+        /// </summary>
+        /// <param name="id">Id do usuario</param>
+        /// <returns>Objeto do tipo Usuario</returns>
         public static Usuario ObterPorId(int id)
         {
             Usuario usuario = new();
 
+            var cmd = Banco.Abrir();
+            cmd.CommandText = $"select * from usuarios where id = {id}";
+            var dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                usuario = new
+                    (
+                        dr.GetInt32(0),
+                        dr.GetString(1),
+                        dr.GetString(2),
+                        dr.GetString(3),
+                        Nivel.ObterPorId(dr.GetInt32(4)),
+                        dr.GetBoolean(5)
+                    );
+            }
+            dr.Close();
+
+            cmd.Connection.Close();
             return usuario;
         }
 
