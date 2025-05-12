@@ -19,7 +19,33 @@ namespace ComercialTDSClass
         public DateTime DataCadastro { get; set; }
         public int Ativo { get; set; }  
         public List<Endereco> Endereco { get; set; }
-        
+
+        public Cliente()
+        {
+
+        }
+        public Cliente(int id, string nome, string cpf, string telefone, string email, DateTime dataNascimento, DateTime dataCadastro, int ativo, List<Endereco> endereco)
+        {
+            Id = id;
+            Nome = nome;
+            Cpf = cpf;
+            Telefone = telefone;
+            Email = email;
+            DataNascimento = dataNascimento;
+            DataCadastro = dataCadastro;
+            Ativo = ativo;
+            Endereco = endereco;
+        }
+
+        public Cliente(string nome, string cpf, string telefone, string email, DateTime dataNascimento)
+        {
+            Nome = nome;
+            Cpf = cpf;
+            Telefone = telefone;
+            Email = email;
+            DataNascimento = dataNascimento;
+        }
+
 
         /// <summary>
         /// Método Inserir adiciona um registro de um cliente no banco de dados. 
@@ -41,5 +67,7 @@ namespace ComercialTDSClass
 
             cmd.Connection.Close();
         }
+
+   
     }
 }
