@@ -40,3 +40,4 @@ C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\obj\Debug\net8
 C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.FrmProduto.resources
 C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.FrmUsuario.resources
 C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\obj\Debug\net8.0-windows\Comercia.6A1E24CB.Up2Date
+C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.FrmLogin.resources
