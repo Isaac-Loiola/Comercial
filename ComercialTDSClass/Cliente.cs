@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using ZstdSharp.Unsafe;
 
 namespace ComercialTDSClass
 {
@@ -18,7 +19,7 @@ namespace ComercialTDSClass
         public DateTime? DataNascimento { get; set; }
         public DateTime? DataCadastro { get; set; }
         public int? Ativo { get; set; }  
-        public List<Endereco> Endereco { get; set; }
+        public List<Endereco> Enderecos { get; set; }
 
         public Cliente()
         {
@@ -34,7 +35,7 @@ namespace ComercialTDSClass
             DataNascimento = dataNascimento;
             DataCadastro = dataCadastro;
             Ativo = ativo;
-            Endereco = endereco;
+            Enderecos = endereco;
         }
 
         public Cliente(string nome, string cpf, string telefone, string email, DateTime dataNascimento)
@@ -120,12 +121,43 @@ namespace ComercialTDSClass
                         dr.GetString(4),
                         dr.GetDateTime(5),
                         dr.GetDateTime(6),
-                        dr.GetInt32(7)
+                        dr.GetInt32(7),
+                        Endereco.ObterListaPorClienteId(dr.GetInt32(0))
+                    );
+            }
+            cmd.Connection.Close();
+            return cliente;
+        }
+
+        public static List<Cliente> ObterLista()
+        {
+            List<Cliente> clientes = new();
+
+            var cmd = Banco.Abrir();
+            cmd.CommandText = "select * from clientes";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                clientes.Add
+                    (
+                        new
+                            (
+                                dr.GetInt32(0),
+                                dr.GetString(1),
+                                dr.GetString(2),
+                                dr.GetString(3),
+                                dr.GetString(4),
+                                dr.GetDateTime(5),
+                                dr.GetDateTime(6),
+                                dr.GetInt32(7),
+                                Endereco.ObterListaPorClienteId(dr.GetInt32(0))
+                            )
                     );
             }
 
-            return cliente;
-    
+            return clientes;
+
         }
+
     }
 }
