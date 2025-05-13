@@ -655,7 +655,7 @@ end $$
 -- SP_NIVEL_UPDATE --
 delimiter $$
 		    create procedure comercialtdsdb01.sp_nivel_update(
-		    spid int,
+		    spid int,enderecos
             spnome varchar(45),
             spsigla varchar(45)
 )
