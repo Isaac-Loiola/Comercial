@@ -8,16 +8,16 @@ using System.Data;
 
 namespace ComercialTDSClass
 {
-    class Cliente
+    public class Cliente
     {
-        public int Id { get; set; }
-        public string Nome { get; set; }
-        public string Cpf { get; set;}
-        public string Telefone { get; set; }
-        public string Email { get; set; }
-        public DateTime DataNascimento { get; set; }
-        public DateTime DataCadastro { get; set; }
-        public int Ativo { get; set; }  
+        public int? Id { get; set; }
+        public string? Nome { get; set; }
+        public string? Cpf { get; set;}
+        public string? Telefone { get; set; }
+        public string? Email { get; set; }
+        public DateTime? DataNascimento { get; set; }
+        public DateTime? DataCadastro { get; set; }
+        public int? Ativo { get; set; }  
         public List<Endereco> Endereco { get; set; }
 
         public Cliente()
@@ -46,6 +46,17 @@ namespace ComercialTDSClass
             DataNascimento = dataNascimento;
         }
 
+        public Cliente(int id, string nome, string cpf, string telefone, string email, DateTime dataNascimento, DateTime dataCadastro, int ativo)
+        {
+            Id = id;
+            Nome = nome;
+            Cpf = cpf;
+            Telefone = telefone;
+            Email = email;
+            DataNascimento = dataNascimento;
+            DataCadastro = dataCadastro;
+            Ativo = ativo;
+        }
 
         /// <summary>
         /// Método Inserir adiciona um registro de um cliente no banco de dados. 
@@ -85,21 +96,36 @@ namespace ComercialTDSClass
             return cmd.ExecuteNonQuery() > 0? true: false;
         }
 
+        /// <summary>
+        /// Método ObterPorId busca registro de um cliente no banco de dados 
+        /// com o parametro recebido no método.
+        /// </summary>
+        /// <param name="id">id do cliente</param>
+        /// <returns>Objeto Cliente</returns>
         public static Cliente ObterPorId(int id)
         {
             Cliente cliente = new();
+
             var cmd = Banco.Abrir();
             cmd.CommandText = $"select * from clientes where id = {id}";
             var dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                 cliente new
-                  (
-                    dr.GetInt32(0), dr.GetString(1), dr.GetString(2), dr.GetString(3),
-                    dr.GetString(4), dr.GetDateTime(5), dr.GetDateTime(6), dr.GetInt32(7)
-                  );
+                 cliente = new
+                    (
+                        dr.GetInt32(0),
+                        dr.GetString(1),
+                        dr.GetString(2),
+                        dr.GetString(3),
+                        dr.GetString(4),
+                        dr.GetDateTime(5),
+                        dr.GetDateTime(6),
+                        dr.GetInt32(7)
+                    );
             }
 
+            return cliente;
+    
         }
     }
 }
