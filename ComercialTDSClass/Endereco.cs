@@ -143,5 +143,15 @@ namespace ComercialTDSClass
             cmd.Connection.Close();
             return enderecos;
         }
+
+        public bool Excluir()
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_endereco_delete";
+            cmd.Parameters.AddWithValue("spid", Id);
+            return cmd.ExecuteNonQuery() > 0 ? true : false;
+        }
+
     }
 }
