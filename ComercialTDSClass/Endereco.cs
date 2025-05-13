@@ -73,7 +73,8 @@ namespace ComercialTDSClass
                             )
                     );
             }
-
+            dr.Close();
+            cmd.Connection.Close();
             return enderecos;
         } 
     }
