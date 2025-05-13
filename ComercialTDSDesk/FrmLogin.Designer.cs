@@ -73,10 +73,13 @@
             txtSenha.Size = new Size(324, 23);
             txtSenha.TabIndex = 3;
             txtSenha.UseSystemPasswordChar = true;
+            txtSenha.TextChanged += txtSenha_TextChanged;
             // 
             // chkExibirSenha
             // 
             chkExibirSenha.AutoSize = true;
+            chkExibirSenha.Checked = true;
+            chkExibirSenha.CheckState = CheckState.Checked;
             chkExibirSenha.Location = new Point(564, 229);
             chkExibirSenha.Name = "chkExibirSenha";
             chkExibirSenha.Size = new Size(15, 14);
@@ -129,7 +132,7 @@
         #endregion
 
         private Button btnEntrar;
-        private Button btnCancelar;
+        public Button btnCancelar;
         private TextBox txtEmail;
         private TextBox txtSenha;
         private CheckBox chkExibirSenha;

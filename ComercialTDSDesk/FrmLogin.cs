@@ -20,7 +20,15 @@ namespace ComercialTDSDesk
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+            if (chkExibirSenha.Checked)
+            {
+                txtSenha.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtSenha.UseSystemPasswordChar = false;
 
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -30,12 +38,26 @@ namespace ComercialTDSDesk
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if(btnCancelar.Text == "&Voltar")
+            {
+                Close();
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            Program.UsuarioLogado = Usuario.EfetuarLogin(txtEmail.Text, txtSenha.Text);
+            if()
             Close();
+        }
+
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

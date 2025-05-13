@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             contextMenuStrip1 = new ContextMenuStrip(components);
             statusStrip1 = new StatusStrip();
             tsslUsuarioLogado = new ToolStripStatusLabel();
+            toolStripDropDownButton1 = new ToolStripDropDownButton();
+            trocarDeUsuárioToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -42,7 +45,7 @@
             // 
             // statusStrip1
             // 
-            statusStrip1.Items.AddRange(new ToolStripItem[] { tsslUsuarioLogado });
+            statusStrip1.Items.AddRange(new ToolStripItem[] { tsslUsuarioLogado, toolStripDropDownButton1 });
             statusStrip1.Location = new Point(0, 428);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(800, 22);
@@ -54,6 +57,23 @@
             tsslUsuarioLogado.Name = "tsslUsuarioLogado";
             tsslUsuarioLogado.Size = new Size(12, 17);
             tsslUsuarioLogado.Text = "-";
+            // 
+            // toolStripDropDownButton1
+            // 
+            toolStripDropDownButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripDropDownButton1.DropDownItems.AddRange(new ToolStripItem[] { trocarDeUsuárioToolStripMenuItem });
+            toolStripDropDownButton1.Image = (Image)resources.GetObject("toolStripDropDownButton1.Image");
+            toolStripDropDownButton1.ImageTransparentColor = Color.Magenta;
+            toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            toolStripDropDownButton1.Size = new Size(29, 20);
+            toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            // 
+            // trocarDeUsuárioToolStripMenuItem
+            // 
+            trocarDeUsuárioToolStripMenuItem.Name = "trocarDeUsuárioToolStripMenuItem";
+            trocarDeUsuárioToolStripMenuItem.Size = new Size(180, 22);
+            trocarDeUsuárioToolStripMenuItem.Text = "Trocar de Usuário";
+            trocarDeUsuárioToolStripMenuItem.Click += trocarDeUsuárioToolStripMenuItem_Click;
             // 
             // FrmPrincipal
             // 
@@ -77,5 +97,7 @@
         private ContextMenuStrip contextMenuStrip1;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel tsslUsuarioLogado;
+        private ToolStripDropDownButton toolStripDropDownButton1;
+        private ToolStripMenuItem trocarDeUsuárioToolStripMenuItem;
     }
 }
