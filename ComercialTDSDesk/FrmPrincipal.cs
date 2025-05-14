@@ -42,5 +42,15 @@ namespace ComercialTDSDesk
         {
 
         }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
