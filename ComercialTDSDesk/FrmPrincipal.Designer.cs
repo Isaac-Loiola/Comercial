@@ -51,6 +51,7 @@
             statusStrip1.Size = new Size(800, 22);
             statusStrip1.TabIndex = 2;
             statusStrip1.Text = "statusStrip1";
+            statusStrip1.ItemClicked += statusStrip1_ItemClicked;
             // 
             // tsslUsuarioLogado
             // 
@@ -71,7 +72,7 @@
             // trocarDeUsuárioToolStripMenuItem
             // 
             trocarDeUsuárioToolStripMenuItem.Name = "trocarDeUsuárioToolStripMenuItem";
-            trocarDeUsuárioToolStripMenuItem.Size = new Size(180, 22);
+            trocarDeUsuárioToolStripMenuItem.Size = new Size(166, 22);
             trocarDeUsuárioToolStripMenuItem.Text = "Trocar de Usuário";
             trocarDeUsuárioToolStripMenuItem.Click += trocarDeUsuárioToolStripMenuItem_Click;
             // 
