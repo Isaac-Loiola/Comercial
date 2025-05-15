@@ -107,7 +107,7 @@
             dgvNiveis.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvNiveis.Size = new Size(280, 180);
             dgvNiveis.TabIndex = 6;
-            dgvNiveis.CellContentClick += dgvNiveis_CellContentClick;
+            dgvNiveis.CellDoubleClick += dgvNiveis_CellDoubleClick;
             // 
             // clnId
             // 

@@ -55,8 +55,20 @@ namespace ComercialTDSDesk
             this.Close();
         }
 
-        private void dgvNiveis_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvNiveis_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Recuperando o indice da linha do grid.
+            int linha = dgvNiveis.CurrentRow.Index;
+            // Recuperando o id do nivel na coluna, oculta, ID (0)
+            int id = Convert.ToInt32(dgvNiveis.Rows[linha].Cells[0].Value);
+
+            var nivel = Nivel.ObterPorId(id);
+
+            // atribuindo os dados do nivel, ao textbox.
+            txtId.Text = nivel.Id.ToString();
+            txtNome.Text = nivel.Nome;
+            txtSigla.Text = nivel.Sigla;
+
 
         }
     }
