@@ -77,7 +77,7 @@ namespace ComercialTDSClass
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.CommandText = "sp_usuario_insert";
-            cmd.Parameters.AddWithValue("spnome", Id);
+            cmd.Parameters.AddWithValue("spnome", Nome);
             cmd.Parameters.AddWithValue("spemail", Email);
             cmd.Parameters.AddWithValue("spsenha", Senha);
             cmd.Parameters.AddWithValue("spnivel", Nivel.Id);
