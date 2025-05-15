@@ -38,7 +38,7 @@ namespace ComercialTDSDesk
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            if(btnCancelar.Text == "&Voltar")
+            if (btnCancelar.Text == "&Voltar")
             {
                 Close();
             }
@@ -52,7 +52,7 @@ namespace ComercialTDSDesk
         {
             Program.UsuarioLogado = Usuario.EfetuarLogin(txtEmail.Text, txtSenha.Text);
 
-            if(Program.UsuarioLogado.Id > 0)
+            if (Program.UsuarioLogado.Id > 0)
             {
                 Close();
             }
@@ -67,6 +67,11 @@ namespace ComercialTDSDesk
         }
 
         private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
         {
 
         }

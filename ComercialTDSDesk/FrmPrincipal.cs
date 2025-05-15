@@ -59,5 +59,10 @@ namespace ComercialTDSDesk
             frmNivel.MdiParent = this;
             frmNivel.Show();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

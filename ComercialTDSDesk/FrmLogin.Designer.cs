@@ -125,6 +125,7 @@
             MinimizeBox = false;
             Name = "FrmLogin";
             StartPosition = FormStartPosition.CenterScreen;
+            Load += FrmLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }

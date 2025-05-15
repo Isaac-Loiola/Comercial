@@ -156,6 +156,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(766, 316);
+            ControlBox = false;
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(dgvNiveis);
@@ -165,8 +166,10 @@
             Controls.Add(btnEditar);
             Controls.Add(btnGravar);
             Controls.Add(btnCancelar);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FrmNivel";
-            Text = "Cadastro de Nivel";
+            StartPosition = FormStartPosition.CenterScreen;
             Load += FrmNivel_Load;
             ((System.ComponentModel.ISupportInitialize)dgvNiveis).EndInit();
             ResumeLayout(false);
