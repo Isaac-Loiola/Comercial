@@ -20,21 +20,45 @@ namespace ComercialTDSDesk
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            Nivel nivel = new(txtNome.Text, txtSigla.Text);
-            nivel.Inserir();
-            if (nivel.Id > 0)
+            if (txtId.Text == string.Empty)
             {
-                MessageBox.Show("Nivel adicionado com sucesso!");
+                if (txtNome.Text != string.Empty && txtSigla.Text != string.Empty)
+                {
+                    Nivel nivel = new(txtNome.Text, txtSigla.Text);
+                    nivel.Inserir();
+                    if (nivel.Id > 0)
+                    {
+                        MessageBox.Show("Nivel adicionado com sucesso!");
+                        btnGravar.Enabled = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nivel não cadastrado!");
+                    }
+                }
             }
             else
             {
-                MessageBox.Show("Nivel não cadastrado!");
+                Nivel nivel = new(int.Parse(txtId.Text), txtNome.Text, txtSigla.Text);
+                if (nivel.Atualizar())
+                {
+                    MessageBox.Show("Nível atualizado com sucesso!");
+                    btnGravar.Enabled = false;
+                }
             }
-            FrmNivel_Load(sender, e);
+            CarregaGrid();
+            LimpaControles();
 
         }
 
-        private void FrmNivel_Load(object sender, EventArgs e)
+        private void LimpaControles()
+        {
+            txtId.Clear();
+            txtNome.Clear();
+            txtSigla.Clear();
+        }
+
+        private void CarregaGrid()
         {
             var niveis = Nivel.ObterLista();
             int linha = 0;
@@ -48,6 +72,11 @@ namespace ComercialTDSDesk
 
                 linha++;
             }
+        }
+
+        private void FrmNivel_Load(object sender, EventArgs e)
+        {
+            CarregaGrid();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -79,6 +108,9 @@ namespace ComercialTDSDesk
         {
             txtNome.ReadOnly = false;
             txtSigla.ReadOnly = false;
+            btnEditar.Enabled = false;
+            btnGravar.Enabled = true;
+
         }
     }
 }
