@@ -69,7 +69,16 @@ namespace ComercialTDSDesk
             txtNome.Text = nivel.Nome;
             txtSigla.Text = nivel.Sigla;
 
+            txtNome.ReadOnly = true;
+            txtSigla.ReadOnly = true;
 
+            btnEditar.Enabled = true;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            txtNome.ReadOnly = false;
+            txtSigla.ReadOnly = false;
         }
     }
 }
