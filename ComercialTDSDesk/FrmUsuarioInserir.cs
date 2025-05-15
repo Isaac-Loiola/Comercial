@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ComercialTDSDesk
 {
-    public partial class FrmUsuario: Form
+    public partial class FrmUsuarioInserir : Form
     {
-        public FrmUsuario()
+        public FrmUsuarioInserir()
         {
             InitializeComponent();
+        }
+
+        private void FrmUsuario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

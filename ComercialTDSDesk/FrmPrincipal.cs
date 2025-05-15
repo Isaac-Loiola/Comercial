@@ -55,17 +55,46 @@ namespace ComercialTDSDesk
 
         private void níveisToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmNivel frmNivel = new();
-            frmNivel.TopLevel = false;
-            frmNivel.Size = pnlPrincipal.Size;
+            FrmNivel frmNIvel = new();
+            frmNIvel.TopLevel = false;
+            frmNIvel.FormBorderStyle = FormBorderStyle.None;
+            frmNIvel.Size = pnlPrincipal.Size;
+            frmNIvel.Size = pnlPrincipal.Size;
             pnlPrincipal.Controls.Clear();
-            pnlPrincipal.Controls.Add(frmNivel);
-            frmNivel.Show();
+            frmNIvel.MaximizeBox = true;
+            frmNIvel.AutoSize = true;
+            pnlPrincipal.Controls.Clear();
+            pnlPrincipal.Controls.Add(frmNIvel);
+            frmNIvel.Show();
+            pnlPrincipal.Visible = true;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
- 
+
+        }
+
+        private void listarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmUsuarioInserir frmUsuarioInserir = new();
+            frmUsuarioInserir.TopLevel = false;
+            frmUsuarioInserir.FormBorderStyle = FormBorderStyle.None;
+            frmUsuarioInserir.Size = pnlPrincipal.Size;
+            frmUsuarioInserir.Size = pnlPrincipal.Size;
+            pnlPrincipal.Controls.Clear();
+            frmUsuarioInserir.MaximizeBox = true;
+            frmUsuarioInserir.AutoSize = true;
+            pnlPrincipal.Controls.Clear();
+            pnlPrincipal.Controls.Add(frmUsuarioInserir);
+            frmUsuarioInserir.Show();
+            pnlPrincipal.Visible = true;
+
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

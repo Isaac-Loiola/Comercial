@@ -75,9 +75,9 @@
             // statusStrip1
             // 
             statusStrip1.Items.AddRange(new ToolStripItem[] { tsslUsuarioLogado, toolStripDropDownButton1 });
-            statusStrip1.Location = new Point(0, 513);
+            statusStrip1.Location = new Point(0, 659);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(1060, 22);
+            statusStrip1.Size = new Size(1264, 22);
             statusStrip1.TabIndex = 2;
             statusStrip1.Text = "statusStrip1";
             statusStrip1.ItemClicked += statusStrip1_ItemClicked;
@@ -110,9 +110,10 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, operaçãoToolStripMenuItem, movimentoToolStripMenuItem, configuraçãoToolStripMenuItem, sairToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1060, 24);
+            menuStrip1.Size = new Size(1264, 24);
             menuStrip1.TabIndex = 4;
             menuStrip1.Text = "menuStrip1";
+            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // cadastroToolStripMenuItem
             // 
@@ -208,6 +209,7 @@
             listarToolStripMenuItem1.Name = "listarToolStripMenuItem1";
             listarToolStripMenuItem1.Size = new Size(107, 22);
             listarToolStripMenuItem1.Text = "&Listar";
+            listarToolStripMenuItem1.Click += listarToolStripMenuItem1_Click;
             // 
             // níveisToolStripMenuItem
             // 
@@ -328,7 +330,7 @@
             pnlPrincipal.Dock = DockStyle.Fill;
             pnlPrincipal.Location = new Point(0, 24);
             pnlPrincipal.Name = "pnlPrincipal";
-            pnlPrincipal.Size = new Size(1060, 489);
+            pnlPrincipal.Size = new Size(1264, 635);
             pnlPrincipal.TabIndex = 6;
             pnlPrincipal.Paint += panel1_Paint;
             // 
@@ -336,7 +338,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1060, 535);
+            ClientSize = new Size(1264, 681);
             Controls.Add(pnlPrincipal);
             Controls.Add(statusStrip1);
             Controls.Add(menuStrip1);
@@ -344,7 +346,6 @@
             MainMenuStrip = menuStrip1;
             Name = "FrmPrincipal";
             Text = "Sistema Comercial TDS T01";
-            WindowState = FormWindowState.Maximized;
             Load += FrmPrincipal_Load;
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();

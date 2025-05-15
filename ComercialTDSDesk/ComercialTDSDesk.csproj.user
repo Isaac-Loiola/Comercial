@@ -22,7 +22,7 @@
     <Compile Update="FrmProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmUsuario.cs">
+    <Compile Update="FrmUsuarioInserir.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
