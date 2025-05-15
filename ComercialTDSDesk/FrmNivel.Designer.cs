@@ -45,16 +45,17 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(236, 202);
+            btnCancelar.Location = new Point(244, 201);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 23);
             btnCancelar.TabIndex = 0;
             btnCancelar.Text = "&Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnGravar
             // 
-            btnGravar.Location = new Point(74, 202);
+            btnGravar.Location = new Point(82, 201);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(75, 23);
             btnGravar.TabIndex = 1;
@@ -64,7 +65,7 @@
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(155, 202);
+            btnEditar.Location = new Point(163, 201);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(75, 23);
             btnEditar.TabIndex = 2;
@@ -73,14 +74,14 @@
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(74, 104);
+            txtNome.Location = new Point(82, 103);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(237, 23);
             txtNome.TabIndex = 3;
             // 
             // txtId
             // 
-            txtId.Location = new Point(74, 48);
+            txtId.Location = new Point(82, 47);
             txtId.Name = "txtId";
             txtId.Size = new Size(100, 23);
             txtId.TabIndex = 4;
@@ -88,7 +89,7 @@
             // 
             // txtSigla
             // 
-            txtSigla.Location = new Point(74, 153);
+            txtSigla.Location = new Point(82, 152);
             txtSigla.Name = "txtSigla";
             txtSigla.Size = new Size(100, 23);
             txtSigla.TabIndex = 5;
@@ -99,13 +100,14 @@
             dgvNiveis.AllowUserToDeleteRows = false;
             dgvNiveis.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvNiveis.Columns.AddRange(new DataGridViewColumn[] { clnId, clnNome, clnSigla });
-            dgvNiveis.Location = new Point(413, 73);
+            dgvNiveis.Location = new Point(421, 72);
             dgvNiveis.Name = "dgvNiveis";
             dgvNiveis.ReadOnly = true;
             dgvNiveis.RowHeadersVisible = false;
             dgvNiveis.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvNiveis.Size = new Size(280, 180);
             dgvNiveis.TabIndex = 6;
+            dgvNiveis.CellContentClick += dgvNiveis_CellContentClick;
             // 
             // clnId
             // 
@@ -136,7 +138,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(28, 107);
+            label1.Location = new Point(36, 106);
             label1.Name = "label1";
             label1.Size = new Size(40, 15);
             label1.TabIndex = 7;
@@ -145,7 +147,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(36, 156);
+            label2.Location = new Point(44, 155);
             label2.Name = "label2";
             label2.Size = new Size(32, 15);
             label2.TabIndex = 8;
@@ -155,7 +157,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(766, 316);
+            ClientSize = new Size(784, 388);
             ControlBox = false;
             Controls.Add(label2);
             Controls.Add(label1);

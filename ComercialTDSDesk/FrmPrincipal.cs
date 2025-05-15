@@ -56,13 +56,16 @@ namespace ComercialTDSDesk
         private void níveisToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmNivel frmNivel = new();
-            frmNivel.MdiParent = this;
+            frmNivel.TopLevel = false;
+            frmNivel.Size = pnlPrincipal.Size;
+            pnlPrincipal.Controls.Clear();
+            pnlPrincipal.Controls.Add(frmNivel);
             frmNivel.Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
+ 
         }
     }
 }

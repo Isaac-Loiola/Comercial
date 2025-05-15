@@ -67,7 +67,7 @@
             emitirNotaToolStripMenuItem = new ToolStripMenuItem();
             configuraçãoToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
-            panel1 = new Panel();
+            pnlPrincipal = new Panel();
             statusStrip1.SuspendLayout();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -75,9 +75,9 @@
             // statusStrip1
             // 
             statusStrip1.Items.AddRange(new ToolStripItem[] { tsslUsuarioLogado, toolStripDropDownButton1 });
-            statusStrip1.Location = new Point(0, 428);
+            statusStrip1.Location = new Point(0, 513);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(800, 22);
+            statusStrip1.Size = new Size(1060, 22);
             statusStrip1.TabIndex = 2;
             statusStrip1.Text = "statusStrip1";
             statusStrip1.ItemClicked += statusStrip1_ItemClicked;
@@ -110,7 +110,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, operaçãoToolStripMenuItem, movimentoToolStripMenuItem, configuraçãoToolStripMenuItem, sairToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
+            menuStrip1.Size = new Size(1060, 24);
             menuStrip1.TabIndex = 4;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -323,21 +323,21 @@
             sairToolStripMenuItem.Size = new Size(38, 20);
             sairToolStripMenuItem.Text = "&Sair";
             // 
-            // panel1
+            // pnlPrincipal
             // 
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 24);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(800, 404);
-            panel1.TabIndex = 6;
-            panel1.Paint += panel1_Paint;
+            pnlPrincipal.Dock = DockStyle.Fill;
+            pnlPrincipal.Location = new Point(0, 24);
+            pnlPrincipal.Name = "pnlPrincipal";
+            pnlPrincipal.Size = new Size(1060, 489);
+            pnlPrincipal.TabIndex = 6;
+            pnlPrincipal.Paint += panel1_Paint;
             // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(panel1);
+            ClientSize = new Size(1060, 535);
+            Controls.Add(pnlPrincipal);
             Controls.Add(statusStrip1);
             Controls.Add(menuStrip1);
             IsMdiContainer = true;
@@ -393,6 +393,6 @@
         private ToolStripMenuItem vendasToolStripMenuItem;
         private ToolStripMenuItem consultarToolStripMenuItem1;
         private ToolStripMenuItem emitirNotaToolStripMenuItem;
-        private Panel panel1;
+        private Panel pnlPrincipal;
     }
 }

@@ -64,6 +64,7 @@
             txtEmail.PlaceholderText = "Email";
             txtEmail.Size = new Size(324, 23);
             txtEmail.TabIndex = 2;
+            txtEmail.Text = "isaackopi@icloud.com";
             // 
             // txtSenha
             // 
@@ -72,6 +73,7 @@
             txtSenha.PlaceholderText = "Senha";
             txtSenha.Size = new Size(324, 23);
             txtSenha.TabIndex = 3;
+            txtSenha.Text = "Az.103098";
             txtSenha.UseSystemPasswordChar = true;
             txtSenha.TextChanged += txtSenha_TextChanged;
             // 

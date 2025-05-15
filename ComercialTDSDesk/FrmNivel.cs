@@ -39,7 +39,7 @@ namespace ComercialTDSDesk
             var niveis = Nivel.ObterLista();
             int linha = 0;
             dgvNiveis.Rows.Clear();
-            foreach(var nivel in niveis)
+            foreach (var nivel in niveis)
             {
                 dgvNiveis.Rows.Add();
                 dgvNiveis.Rows[linha].Cells[0].Value = nivel.Id;
@@ -48,6 +48,16 @@ namespace ComercialTDSDesk
 
                 linha++;
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dgvNiveis_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
