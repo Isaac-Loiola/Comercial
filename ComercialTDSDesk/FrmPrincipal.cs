@@ -29,6 +29,21 @@ namespace ComercialTDSDesk
             this.Show();
         }
 
+        private void AssociaPanel(Form form)
+        {
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Size = pnlPrincipal.Size;
+            form.Size = pnlPrincipal.Size;
+            pnlPrincipal.Controls.Clear();
+            form.MaximizeBox = true;
+            form.AutoSize = true;
+            pnlPrincipal.Controls.Clear();
+            pnlPrincipal.Controls.Add(form);
+            form.Show();
+            pnlPrincipal.Visible = true;
+        }
+
         private void trocarDeUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmLogin frmLogin = new();
@@ -55,18 +70,7 @@ namespace ComercialTDSDesk
 
         private void níveisToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmNivel frmNIvel = new();
-            frmNIvel.TopLevel = false;
-            frmNIvel.FormBorderStyle = FormBorderStyle.None;
-            frmNIvel.Size = pnlPrincipal.Size;
-            frmNIvel.Size = pnlPrincipal.Size;
-            pnlPrincipal.Controls.Clear();
-            frmNIvel.MaximizeBox = true;
-            frmNIvel.AutoSize = true;
-            pnlPrincipal.Controls.Clear();
-            pnlPrincipal.Controls.Add(frmNIvel);
-            frmNIvel.Show();
-            pnlPrincipal.Visible = true;
+            AssociaPanel(new FrmUsuarioInserir());
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -76,18 +80,7 @@ namespace ComercialTDSDesk
 
         private void listarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FrmUsuarioListar frmUsuarioListar = new();
-            frmUsuarioListar.TopLevel = false;
-            frmUsuarioListar.FormBorderStyle = FormBorderStyle.None;
-            frmUsuarioListar.Size = pnlPrincipal.Size;
-            frmUsuarioListar.Size = pnlPrincipal.Size;
-            pnlPrincipal.Controls.Clear();
-            frmUsuarioListar.MaximizeBox = true;
-            frmUsuarioListar.AutoSize = true;
-            pnlPrincipal.Controls.Clear();
-            pnlPrincipal.Controls.Add(frmUsuarioListar);
-            frmUsuarioListar.Show();
-            pnlPrincipal.Visible = true;
+            AssociaPanel(new FrmUsuarioListar());
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
