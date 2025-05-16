@@ -76,6 +76,16 @@ namespace ComercialTDSDesk
 
         private void listarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void incluirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             FrmUsuarioInserir frmUsuarioInserir = new();
             frmUsuarioInserir.TopLevel = false;
             frmUsuarioInserir.FormBorderStyle = FormBorderStyle.None;
@@ -88,12 +98,6 @@ namespace ComercialTDSDesk
             pnlPrincipal.Controls.Add(frmUsuarioInserir);
             frmUsuarioInserir.Show();
             pnlPrincipal.Visible = true;
-
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
 
         }
     }

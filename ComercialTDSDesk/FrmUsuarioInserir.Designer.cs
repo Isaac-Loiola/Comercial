@@ -36,35 +36,38 @@
             panel1 = new Panel();
             label2 = new Label();
             label1 = new Label();
+            label3 = new Label();
+            label4 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(417, 498);
+            button1.Location = new Point(399, 483);
             button1.Name = "button1";
             button1.Size = new Size(208, 48);
             button1.TabIndex = 4;
-            button1.Text = "button1";
+            button1.Text = "Registrar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(120, 51);
+            txtNome.Location = new Point(120, 63);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(208, 23);
             txtNome.TabIndex = 0;
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(120, 191);
+            txtSenha.Location = new Point(120, 194);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(208, 23);
             txtSenha.TabIndex = 1;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(120, 150);
+            txtEmail.Location = new Point(120, 126);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(208, 23);
             txtEmail.TabIndex = 2;
@@ -72,20 +75,22 @@
             // cmbNivel
             // 
             cmbNivel.FormattingEnabled = true;
-            cmbNivel.Location = new Point(207, 241);
+            cmbNivel.Location = new Point(120, 261);
             cmbNivel.Name = "cmbNivel";
-            cmbNivel.Size = new Size(121, 23);
+            cmbNivel.Size = new Size(208, 23);
             cmbNivel.TabIndex = 3;
             // 
             // panel1
             // 
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(cmbNivel);
             panel1.Controls.Add(txtEmail);
             panel1.Controls.Add(txtSenha);
             panel1.Controls.Add(txtNome);
-            panel1.Location = new Point(417, 138);
+            panel1.Location = new Point(399, 123);
             panel1.Name = "panel1";
             panel1.Size = new Size(456, 353);
             panel1.TabIndex = 0;
@@ -93,20 +98,38 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(120, 132);
+            label2.Location = new Point(120, 108);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(41, 15);
             label2.TabIndex = 5;
-            label2.Text = "label2";
+            label2.Text = "E-mail";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(120, 33);
+            label1.Location = new Point(120, 45);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(40, 15);
             label1.TabIndex = 4;
-            label1.Text = "label1";
+            label1.Text = "Nome";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(120, 176);
+            label3.Name = "label3";
+            label3.Size = new Size(39, 15);
+            label3.TabIndex = 6;
+            label3.Text = "Senha";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(120, 243);
+            label4.Name = "label4";
+            label4.Size = new Size(34, 15);
+            label4.TabIndex = 7;
+            label4.Text = "Nivel";
             // 
             // FrmUsuarioInserir
             // 
@@ -135,5 +158,7 @@
         private Panel panel1;
         private Label label2;
         private Label label1;
+        private Label label4;
+        private Label label3;
     }
 }
