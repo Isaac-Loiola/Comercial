@@ -20,13 +20,27 @@ namespace ComercialTDSDesk
 
         private void FrmUsuario_Load(object sender, EventArgs e)
         {
-
+            var niveis = Nivel.ObterLista();
+            cmbNivel.DataSource = niveis;
+            cmbNivel.DisplayMember = "Nome";
+            cmbNivel.ValueMember = "Id";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Usuario usuario = new(txtNome.Text, txtEmail.Text, txtSenha.Text, Nivel.ObterPorId());
-            //usuario.Inserir();
+            Usuario usuario = new(txtNome.Text, txtEmail.Text, txtSenha.Text, Nivel.ObterPorId(Convert.ToInt32(cmbNivel.SelectedValue)));
+            if(usuario.Nome != string.Empty && usuario.Email != string.Empty && usuario.Senha != string.Empty && cmbNivel.SelectedValue != string.Empty)
+            {
+                usuario.Inserir();
+                MessageBox.Show($"{usuario.Nome} cadastrado com sucesso!");
+                txtSenha.Clear();
+                txtEmail.Clear();
+                txtSenha.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Os campos devem ser obrigatórios");
+            }
         }
     }
 }

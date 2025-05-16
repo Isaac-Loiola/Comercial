@@ -70,7 +70,7 @@ namespace ComercialTDSDesk
 
         private void níveisToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AssociaPanel(new FrmUsuarioInserir());
+            AssociaPanel(new FrmNivel());
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
