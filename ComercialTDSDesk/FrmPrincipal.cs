@@ -76,7 +76,18 @@ namespace ComercialTDSDesk
 
         private void listarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            FrmUsuarioListar frmUsuarioListar = new();
+            frmUsuarioListar.TopLevel = false;
+            frmUsuarioListar.FormBorderStyle = FormBorderStyle.None;
+            frmUsuarioListar.Size = pnlPrincipal.Size;
+            frmUsuarioListar.Size = pnlPrincipal.Size;
+            pnlPrincipal.Controls.Clear();
+            frmUsuarioListar.MaximizeBox = true;
+            frmUsuarioListar.AutoSize = true;
+            pnlPrincipal.Controls.Clear();
+            pnlPrincipal.Controls.Add(frmUsuarioListar);
+            frmUsuarioListar.Show();
+            pnlPrincipal.Visible = true;
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

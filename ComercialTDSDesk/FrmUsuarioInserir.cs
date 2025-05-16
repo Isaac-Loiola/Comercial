@@ -25,8 +25,8 @@ namespace ComercialTDSDesk
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Usuario usuario = new(txtNome.Text, txtEmail.Text, txtSenha.Text, Nivel.ObterPorId());
-            usuario.Inserir();
+            //Usuario usuario = new(txtNome.Text, txtEmail.Text, txtSenha.Text, Nivel.ObterPorId());
+            //usuario.Inserir();
         }
     }
 }
