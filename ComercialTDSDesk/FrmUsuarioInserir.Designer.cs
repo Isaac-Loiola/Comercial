@@ -34,10 +34,11 @@
             txtEmail = new TextBox();
             cmbNivel = new ComboBox();
             panel1 = new Panel();
+            chkExibirSenha = new CheckBox();
+            label4 = new Label();
+            label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            label3 = new Label();
-            label4 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -64,6 +65,7 @@
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(208, 23);
             txtSenha.TabIndex = 1;
+            txtSenha.UseSystemPasswordChar = true;
             // 
             // txtEmail
             // 
@@ -82,6 +84,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(chkExibirSenha);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
@@ -94,6 +97,34 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(456, 353);
             panel1.TabIndex = 0;
+            // 
+            // chkExibirSenha
+            // 
+            chkExibirSenha.AutoSize = true;
+            chkExibirSenha.Location = new Point(303, 199);
+            chkExibirSenha.Name = "chkExibirSenha";
+            chkExibirSenha.Size = new Size(15, 14);
+            chkExibirSenha.TabIndex = 8;
+            chkExibirSenha.UseVisualStyleBackColor = true;
+            chkExibirSenha.CheckedChanged += chkExibirSenha_CheckedChanged;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(120, 243);
+            label4.Name = "label4";
+            label4.Size = new Size(34, 15);
+            label4.TabIndex = 7;
+            label4.Text = "Nivel";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(120, 176);
+            label3.Name = "label3";
+            label3.Size = new Size(39, 15);
+            label3.TabIndex = 6;
+            label3.Text = "Senha";
             // 
             // label2
             // 
@@ -112,24 +143,6 @@
             label1.Size = new Size(40, 15);
             label1.TabIndex = 4;
             label1.Text = "Nome";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(120, 176);
-            label3.Name = "label3";
-            label3.Size = new Size(39, 15);
-            label3.TabIndex = 6;
-            label3.Text = "Senha";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(120, 243);
-            label4.Name = "label4";
-            label4.Size = new Size(34, 15);
-            label4.TabIndex = 7;
-            label4.Text = "Nivel";
             // 
             // FrmUsuarioInserir
             // 
@@ -160,5 +173,6 @@
         private Label label1;
         private Label label4;
         private Label label3;
+        private CheckBox chkExibirSenha;
     }
 }
