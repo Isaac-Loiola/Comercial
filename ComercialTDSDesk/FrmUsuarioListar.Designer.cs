@@ -28,35 +28,93 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgvListarUsuario = new DataGridView();
+            clnId = new DataGridViewTextBoxColumn();
+            clnNome = new DataGridViewTextBoxColumn();
+            clnEmail = new DataGridViewTextBoxColumn();
+            clnSenha = new DataGridViewTextBoxColumn();
+            clnNivel = new DataGridViewTextBoxColumn();
+            clnAtivo = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dgvListarUsuario).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvListarUsuario
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(361, 82);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(600, 403);
-            dataGridView1.TabIndex = 2;
+            dgvListarUsuario.AllowUserToAddRows = false;
+            dgvListarUsuario.AllowUserToDeleteRows = false;
+            dgvListarUsuario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvListarUsuario.Columns.AddRange(new DataGridViewColumn[] { clnId, clnNome, clnEmail, clnSenha, clnNivel, clnAtivo });
+            dgvListarUsuario.Location = new Point(284, 81);
+            dgvListarUsuario.Name = "dgvListarUsuario";
+            dgvListarUsuario.ReadOnly = true;
+            dgvListarUsuario.RowHeadersVisible = false;
+            dgvListarUsuario.Size = new Size(753, 403);
+            dgvListarUsuario.TabIndex = 2;
+            dgvListarUsuario.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // clnId
+            // 
+            clnId.HeaderText = "Id";
+            clnId.Name = "clnId";
+            clnId.ReadOnly = true;
+            clnId.Visible = false;
+            // 
+            // clnNome
+            // 
+            clnNome.HeaderText = "Nome";
+            clnNome.Name = "clnNome";
+            clnNome.ReadOnly = true;
+            clnNome.Width = 250;
+            // 
+            // clnEmail
+            // 
+            clnEmail.HeaderText = "Email";
+            clnEmail.Name = "clnEmail";
+            clnEmail.ReadOnly = true;
+            clnEmail.Width = 250;
+            // 
+            // clnSenha
+            // 
+            clnSenha.HeaderText = "Senha";
+            clnSenha.Name = "clnSenha";
+            clnSenha.ReadOnly = true;
+            clnSenha.Visible = false;
+            clnSenha.Width = 200;
+            // 
+            // clnNivel
+            // 
+            clnNivel.HeaderText = "Nivel";
+            clnNivel.Name = "clnNivel";
+            clnNivel.ReadOnly = true;
+            clnNivel.Width = 150;
+            // 
+            // clnAtivo
+            // 
+            clnAtivo.HeaderText = "Ativo";
+            clnAtivo.Name = "clnAtivo";
+            clnAtivo.ReadOnly = true;
             // 
             // FrmUsuarioListar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1248, 573);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvListarUsuario);
             Name = "FrmUsuarioListar";
             Text = "FrmUsuarioListar";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += FrmUsuarioListar_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvListarUsuario).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgvListarUsuario;
+        private DataGridViewTextBoxColumn clnId;
+        private DataGridViewTextBoxColumn clnNome;
+        private DataGridViewTextBoxColumn clnEmail;
+        private DataGridViewTextBoxColumn clnSenha;
+        private DataGridViewTextBoxColumn clnNivel;
+        private DataGridViewTextBoxColumn clnAtivo;
     }
 }

@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace ComercialTDSDesk
 {
-    public partial class FrmUsuarioListar: Form
+    public partial class FrmUsuarioListar : Form
     {
         public FrmUsuarioListar()
         {
             InitializeComponent();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void FrmUsuarioListar_Load(object sender, EventArgs e)
+        {
+            int linha = 0;
         }
     }
 }

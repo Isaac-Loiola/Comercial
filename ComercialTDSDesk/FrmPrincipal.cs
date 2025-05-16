@@ -90,18 +90,7 @@ namespace ComercialTDSDesk
 
         private void incluirToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FrmUsuarioInserir frmUsuarioInserir = new();
-            frmUsuarioInserir.TopLevel = false;
-            frmUsuarioInserir.FormBorderStyle = FormBorderStyle.None;
-            frmUsuarioInserir.Size = pnlPrincipal.Size;
-            frmUsuarioInserir.Size = pnlPrincipal.Size;
-            pnlPrincipal.Controls.Clear();
-            frmUsuarioInserir.MaximizeBox = true;
-            frmUsuarioInserir.AutoSize = true;
-            pnlPrincipal.Controls.Clear();
-            pnlPrincipal.Controls.Add(frmUsuarioInserir);
-            frmUsuarioInserir.Show();
-            pnlPrincipal.Visible = true;
+            AssociaPanel(new FrmUsuarioInserir());
 
         }
     }
