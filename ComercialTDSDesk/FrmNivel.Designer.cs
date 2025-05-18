@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNivel));
             btnCancelar = new Button();
             btnGravar = new Button();
             btnEditar = new Button();
@@ -40,7 +41,9 @@
             clnSigla = new DataGridViewTextBoxColumn();
             label1 = new Label();
             label2 = new Label();
+            pnlLista = new Panel();
             ((System.ComponentModel.ISupportInitialize)dgvNiveis).BeginInit();
+            pnlLista.SuspendLayout();
             SuspendLayout();
             // 
             // btnCancelar
@@ -100,14 +103,16 @@
             // 
             dgvNiveis.AllowUserToAddRows = false;
             dgvNiveis.AllowUserToDeleteRows = false;
+            dgvNiveis.BackgroundColor = Color.White;
+            dgvNiveis.BorderStyle = BorderStyle.None;
             dgvNiveis.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvNiveis.Columns.AddRange(new DataGridViewColumn[] { clnId, clnNome, clnSigla });
-            dgvNiveis.Location = new Point(654, 195);
+            dgvNiveis.Location = new Point(14, 16);
             dgvNiveis.Name = "dgvNiveis";
             dgvNiveis.ReadOnly = true;
             dgvNiveis.RowHeadersVisible = false;
             dgvNiveis.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvNiveis.Size = new Size(280, 180);
+            dgvNiveis.Size = new Size(433, 323);
             dgvNiveis.TabIndex = 6;
             dgvNiveis.CellDoubleClick += dgvNiveis_CellDoubleClick;
             // 
@@ -127,7 +132,7 @@
             clnNome.Name = "clnNome";
             clnNome.ReadOnly = true;
             clnNome.Resizable = DataGridViewTriState.False;
-            clnNome.Width = 180;
+            clnNome.Width = 250;
             // 
             // clnSigla
             // 
@@ -136,6 +141,7 @@
             clnSigla.Name = "clnSigla";
             clnSigla.ReadOnly = true;
             clnSigla.Resizable = DataGridViewTriState.False;
+            clnSigla.Width = 180;
             // 
             // label1
             // 
@@ -155,15 +161,26 @@
             label2.TabIndex = 8;
             label2.Text = "Sigla";
             // 
+            // pnlLista
+            // 
+            pnlLista.BackColor = Color.Transparent;
+            pnlLista.BackgroundImage = (Image)resources.GetObject("pnlLista.BackgroundImage");
+            pnlLista.Controls.Add(dgvNiveis);
+            pnlLista.Location = new Point(673, 123);
+            pnlLista.Name = "pnlLista";
+            pnlLista.Size = new Size(456, 353);
+            pnlLista.TabIndex = 9;
+            // 
             // FrmNivel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1248, 596);
             ControlBox = false;
+            Controls.Add(pnlLista);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(dgvNiveis);
             Controls.Add(txtSigla);
             Controls.Add(txtId);
             Controls.Add(txtNome);
@@ -176,6 +193,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Load += FrmNivel_Load;
             ((System.ComponentModel.ISupportInitialize)dgvNiveis).EndInit();
+            pnlLista.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -191,6 +209,7 @@
         private DataGridView dgvNiveis;
         private Label label1;
         private Label label2;
+        private Panel pnlLista;
         private DataGridViewTextBoxColumn clnId;
         private DataGridViewTextBoxColumn clnNome;
         private DataGridViewTextBoxColumn clnSigla;
