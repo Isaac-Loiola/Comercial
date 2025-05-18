@@ -107,6 +107,7 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = Color.White;
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, operaçãoToolStripMenuItem, movimentoToolStripMenuItem, configuraçãoToolStripMenuItem, sairToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
@@ -328,6 +329,8 @@
             // 
             // pnlPrincipal
             // 
+            pnlPrincipal.BackColor = Color.White;
+            pnlPrincipal.BackgroundImageLayout = ImageLayout.None;
             pnlPrincipal.Dock = DockStyle.Fill;
             pnlPrincipal.Location = new Point(0, 24);
             pnlPrincipal.Name = "pnlPrincipal";

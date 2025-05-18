@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarioInserir));
             button1 = new Button();
             txtNome = new TextBox();
             txtSenha = new TextBox();
@@ -44,46 +45,54 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.Transparent;
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.White;
             button1.Location = new Point(399, 483);
             button1.Name = "button1";
-            button1.Size = new Size(208, 48);
+            button1.Size = new Size(208, 50);
             button1.TabIndex = 4;
             button1.Text = "Registrar";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(120, 63);
+            txtNome.BackColor = Color.White;
+            txtNome.Location = new Point(112, 78);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(208, 23);
+            txtNome.Size = new Size(221, 23);
             txtNome.TabIndex = 0;
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(120, 194);
+            txtSenha.Location = new Point(112, 194);
             txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(208, 23);
+            txtSenha.Size = new Size(216, 23);
             txtSenha.TabIndex = 1;
             txtSenha.UseSystemPasswordChar = true;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(120, 126);
+            txtEmail.Location = new Point(112, 126);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(208, 23);
+            txtEmail.Size = new Size(221, 23);
             txtEmail.TabIndex = 2;
             // 
             // cmbNivel
             // 
             cmbNivel.FormattingEnabled = true;
-            cmbNivel.Location = new Point(120, 261);
+            cmbNivel.Location = new Point(112, 261);
             cmbNivel.Name = "cmbNivel";
-            cmbNivel.Size = new Size(208, 23);
+            cmbNivel.Size = new Size(216, 23);
             cmbNivel.TabIndex = 3;
             // 
             // panel1
             // 
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.Controls.Add(chkExibirSenha);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
@@ -111,7 +120,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(120, 243);
+            label4.Location = new Point(112, 243);
             label4.Name = "label4";
             label4.Size = new Size(34, 15);
             label4.TabIndex = 7;
@@ -120,7 +129,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(120, 176);
+            label3.Location = new Point(112, 176);
             label3.Name = "label3";
             label3.Size = new Size(39, 15);
             label3.TabIndex = 6;
@@ -129,7 +138,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(120, 108);
+            label2.Location = new Point(112, 108);
             label2.Name = "label2";
             label2.Size = new Size(41, 15);
             label2.TabIndex = 5;
@@ -138,7 +147,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(120, 45);
+            label1.Location = new Point(112, 45);
             label1.Name = "label1";
             label1.Size = new Size(40, 15);
             label1.TabIndex = 4;
@@ -148,6 +157,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1248, 596);
             ControlBox = false;
             Controls.Add(button1);
