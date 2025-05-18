@@ -11,3 +11,16 @@ C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSClass\obj\Debug\net
 C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSClass\obj\Debug\net8.0\refint\ComercialTDSClass.dll
 C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSClass\obj\Debug\net8.0\ComercialTDSClass.pdb
 C:\Users\isaac.oloiola\source\repos\ComercialTDS\ComercialTDSClass\obj\Debug\net8.0\ref\ComercialTDSClass.dll
+C:\Users\ratoj\source\repos\Comercial\ComercialTDSClass\bin\Debug\net8.0\ComercialTDSClass.deps.json
+C:\Users\ratoj\source\repos\Comercial\ComercialTDSClass\bin\Debug\net8.0\ComercialTDSClass.dll
+C:\Users\ratoj\source\repos\Comercial\ComercialTDSClass\bin\Debug\net8.0\ComercialTDSClass.pdb
+C:\Users\ratoj\source\repos\Comercial\ComercialTDSClass\obj\Debug\net8.0\ComercialTDSClass.csproj.AssemblyReference.cache
+C:\Users\ratoj\source\repos\Comercial\ComercialTDSClass\obj\Debug\net8.0\ComercialTDSClass.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ratoj\source\repos\Comercial\ComercialTDSClass\obj\Debug\net8.0\ComercialTDSClass.AssemblyInfoInputs.cache
+C:\Users\ratoj\source\repos\Comercial\ComercialTDSClass\obj\Debug\net8.0\ComercialTDSClass.AssemblyInfo.cs
+C:\Users\ratoj\source\repos\Comercial\ComercialTDSClass\obj\Debug\net8.0\ComercialTDSClass.csproj.CoreCompileInputs.cache
+C:\Users\ratoj\source\repos\Comercial\ComercialTDSClass\obj\Debug\net8.0\ComercialTDSClass.sourcelink.json
+C:\Users\ratoj\source\repos\Comercial\ComercialTDSClass\obj\Debug\net8.0\ComercialTDSClass.dll
+C:\Users\ratoj\source\repos\Comercial\ComercialTDSClass\obj\Debug\net8.0\refint\ComercialTDSClass.dll
+C:\Users\ratoj\source\repos\Comercial\ComercialTDSClass\obj\Debug\net8.0\ComercialTDSClass.pdb
+C:\Users\ratoj\source\repos\Comercial\ComercialTDSClass\obj\Debug\net8.0\ref\ComercialTDSClass.dll
