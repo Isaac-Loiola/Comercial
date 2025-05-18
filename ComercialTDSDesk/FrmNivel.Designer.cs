@@ -42,13 +42,15 @@
             label1 = new Label();
             label2 = new Label();
             pnlLista = new Panel();
+            pnlAdicionarNivel = new Panel();
             ((System.ComponentModel.ISupportInitialize)dgvNiveis).BeginInit();
             pnlLista.SuspendLayout();
+            pnlAdicionarNivel.SuspendLayout();
             SuspendLayout();
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(477, 324);
+            btnCancelar.Location = new Point(515, 427);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 23);
             btnCancelar.TabIndex = 0;
@@ -58,7 +60,7 @@
             // 
             // btnGravar
             // 
-            btnGravar.Location = new Point(315, 324);
+            btnGravar.Location = new Point(198, 427);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(75, 23);
             btnGravar.TabIndex = 1;
@@ -69,7 +71,7 @@
             // btnEditar
             // 
             btnEditar.Enabled = false;
-            btnEditar.Location = new Point(396, 324);
+            btnEditar.Location = new Point(365, 427);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(75, 23);
             btnEditar.TabIndex = 2;
@@ -79,14 +81,14 @@
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(315, 226);
+            txtNome.Location = new Point(70, 97);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(237, 23);
             txtNome.TabIndex = 3;
             // 
             // txtId
             // 
-            txtId.Location = new Point(315, 170);
+            txtId.Location = new Point(70, 18);
             txtId.Name = "txtId";
             txtId.Size = new Size(100, 23);
             txtId.TabIndex = 4;
@@ -94,7 +96,7 @@
             // 
             // txtSigla
             // 
-            txtSigla.Location = new Point(315, 275);
+            txtSigla.Location = new Point(70, 161);
             txtSigla.Name = "txtSigla";
             txtSigla.Size = new Size(100, 23);
             txtSigla.TabIndex = 5;
@@ -146,7 +148,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(269, 229);
+            label1.Location = new Point(70, 79);
             label1.Name = "label1";
             label1.Size = new Size(40, 15);
             label1.TabIndex = 7;
@@ -155,7 +157,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(277, 278);
+            label2.Location = new Point(70, 143);
             label2.Name = "label2";
             label2.Size = new Size(32, 15);
             label2.TabIndex = 8;
@@ -171,6 +173,20 @@
             pnlLista.Size = new Size(456, 353);
             pnlLista.TabIndex = 9;
             // 
+            // pnlAdicionarNivel
+            // 
+            pnlAdicionarNivel.BackColor = Color.Transparent;
+            pnlAdicionarNivel.BackgroundImage = (Image)resources.GetObject("pnlAdicionarNivel.BackgroundImage");
+            pnlAdicionarNivel.Controls.Add(label2);
+            pnlAdicionarNivel.Controls.Add(label1);
+            pnlAdicionarNivel.Controls.Add(txtSigla);
+            pnlAdicionarNivel.Controls.Add(txtId);
+            pnlAdicionarNivel.Controls.Add(txtNome);
+            pnlAdicionarNivel.Location = new Point(198, 144);
+            pnlAdicionarNivel.Name = "pnlAdicionarNivel";
+            pnlAdicionarNivel.Size = new Size(392, 277);
+            pnlAdicionarNivel.TabIndex = 10;
+            // 
             // FrmNivel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -178,15 +194,11 @@
             BackColor = Color.White;
             ClientSize = new Size(1248, 596);
             ControlBox = false;
+            Controls.Add(pnlAdicionarNivel);
             Controls.Add(pnlLista);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(txtSigla);
-            Controls.Add(txtId);
-            Controls.Add(txtNome);
+            Controls.Add(btnCancelar);
             Controls.Add(btnEditar);
             Controls.Add(btnGravar);
-            Controls.Add(btnCancelar);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FrmNivel";
@@ -194,8 +206,9 @@
             Load += FrmNivel_Load;
             ((System.ComponentModel.ISupportInitialize)dgvNiveis).EndInit();
             pnlLista.ResumeLayout(false);
+            pnlAdicionarNivel.ResumeLayout(false);
+            pnlAdicionarNivel.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -213,5 +226,6 @@
         private DataGridViewTextBoxColumn clnId;
         private DataGridViewTextBoxColumn clnNome;
         private DataGridViewTextBoxColumn clnSigla;
+        private Panel pnlAdicionarNivel;
     }
 }
