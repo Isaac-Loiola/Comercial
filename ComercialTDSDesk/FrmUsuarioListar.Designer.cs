@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarioListar));
             dgvListarUsuario = new DataGridView();
             clnId = new DataGridViewTextBoxColumn();
             clnNome = new DataGridViewTextBoxColumn();
@@ -35,16 +36,20 @@
             clnSenha = new DataGridViewTextBoxColumn();
             clnNivel = new DataGridViewTextBoxColumn();
             clnAtivo = new DataGridViewTextBoxColumn();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dgvListarUsuario).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // dgvListarUsuario
             // 
             dgvListarUsuario.AllowUserToAddRows = false;
             dgvListarUsuario.AllowUserToDeleteRows = false;
+            dgvListarUsuario.BackgroundColor = Color.White;
+            dgvListarUsuario.BorderStyle = BorderStyle.None;
             dgvListarUsuario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvListarUsuario.Columns.AddRange(new DataGridViewColumn[] { clnId, clnNome, clnEmail, clnSenha, clnNivel, clnAtivo });
-            dgvListarUsuario.Location = new Point(284, 81);
+            dgvListarUsuario.Location = new Point(16, 23);
             dgvListarUsuario.Name = "dgvListarUsuario";
             dgvListarUsuario.ReadOnly = true;
             dgvListarUsuario.RowHeadersVisible = false;
@@ -94,16 +99,27 @@
             clnAtivo.Name = "clnAtivo";
             clnAtivo.ReadOnly = true;
             // 
+            // panel1
+            // 
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.Controls.Add(dgvListarUsuario);
+            panel1.Location = new Point(290, 65);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(787, 451);
+            panel1.TabIndex = 3;
+            // 
             // FrmUsuarioListar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1248, 573);
-            Controls.Add(dgvListarUsuario);
+            Controls.Add(panel1);
             Name = "FrmUsuarioListar";
             Text = "FrmUsuarioListar";
             Load += FrmUsuarioListar_Load;
             ((System.ComponentModel.ISupportInitialize)dgvListarUsuario).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -116,5 +132,6 @@
         private DataGridViewTextBoxColumn clnSenha;
         private DataGridViewTextBoxColumn clnNivel;
         private DataGridViewTextBoxColumn clnAtivo;
+        private Panel panel1;
     }
 }
