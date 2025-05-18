@@ -37,8 +37,11 @@
             clnNivel = new DataGridViewTextBoxColumn();
             clnAtivo = new DataGridViewTextBoxColumn();
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
+            txtBuscarUsuario = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvListarUsuario).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // dgvListarUsuario
@@ -103,10 +106,28 @@
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.Controls.Add(dgvListarUsuario);
-            panel1.Location = new Point(290, 65);
+            panel1.Location = new Point(290, 91);
             panel1.Name = "panel1";
             panel1.Size = new Size(787, 451);
             panel1.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.Location = new Point(856, 35);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(221, 50);
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
+            // 
+            // txtBuscarUsuario
+            // 
+            txtBuscarUsuario.BorderStyle = BorderStyle.None;
+            txtBuscarUsuario.Location = new Point(865, 52);
+            txtBuscarUsuario.Name = "txtBuscarUsuario";
+            txtBuscarUsuario.PlaceholderText = "Buscar";
+            txtBuscarUsuario.Size = new Size(203, 16);
+            txtBuscarUsuario.TabIndex = 5;
             // 
             // FrmUsuarioListar
             // 
@@ -114,13 +135,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1248, 573);
+            Controls.Add(txtBuscarUsuario);
+            Controls.Add(pictureBox1);
             Controls.Add(panel1);
             Name = "FrmUsuarioListar";
             Text = "FrmUsuarioListar";
             Load += FrmUsuarioListar_Load;
             ((System.ComponentModel.ISupportInitialize)dgvListarUsuario).EndInit();
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -133,5 +158,7 @@
         private DataGridViewTextBoxColumn clnNivel;
         private DataGridViewTextBoxColumn clnAtivo;
         private Panel panel1;
+        private PictureBox pictureBox1;
+        private TextBox txtBuscarUsuario;
     }
 }
