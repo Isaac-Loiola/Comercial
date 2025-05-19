@@ -126,7 +126,7 @@
             // clienteToolStripMenuItem
             // 
             clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            clienteToolStripMenuItem.Size = new Size(145, 22);
+            clienteToolStripMenuItem.Size = new Size(180, 22);
             clienteToolStripMenuItem.Text = "&Clientes";
             clienteToolStripMenuItem.Click += clienteToolStripMenuItem_Click;
             // 
@@ -134,44 +134,45 @@
             // 
             produtoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { incluirToolStripMenuItem, listarToolStripMenuItem, fornecedorToolStripMenuItem, categoriaToolStripMenuItem, estoqueToolStripMenuItem });
             produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
-            produtoToolStripMenuItem.Size = new Size(145, 22);
+            produtoToolStripMenuItem.Size = new Size(180, 22);
             produtoToolStripMenuItem.Text = "&Produtos";
             // 
             // incluirToolStripMenuItem
             // 
             incluirToolStripMenuItem.Name = "incluirToolStripMenuItem";
-            incluirToolStripMenuItem.Size = new Size(134, 22);
+            incluirToolStripMenuItem.Size = new Size(180, 22);
             incluirToolStripMenuItem.Text = "&Incluir";
+            incluirToolStripMenuItem.Click += incluirToolStripMenuItem_Click;
             // 
             // listarToolStripMenuItem
             // 
             listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            listarToolStripMenuItem.Size = new Size(134, 22);
+            listarToolStripMenuItem.Size = new Size(180, 22);
             listarToolStripMenuItem.Text = "&Listar";
             // 
             // fornecedorToolStripMenuItem
             // 
             fornecedorToolStripMenuItem.Name = "fornecedorToolStripMenuItem";
-            fornecedorToolStripMenuItem.Size = new Size(134, 22);
+            fornecedorToolStripMenuItem.Size = new Size(180, 22);
             fornecedorToolStripMenuItem.Text = "&Fornecedor";
             // 
             // categoriaToolStripMenuItem
             // 
             categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            categoriaToolStripMenuItem.Size = new Size(134, 22);
+            categoriaToolStripMenuItem.Size = new Size(180, 22);
             categoriaToolStripMenuItem.Text = "&Categoria";
             // 
             // estoqueToolStripMenuItem
             // 
             estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
-            estoqueToolStripMenuItem.Size = new Size(134, 22);
+            estoqueToolStripMenuItem.Size = new Size(180, 22);
             estoqueToolStripMenuItem.Text = "&Estoque";
             // 
             // fToolStripMenuItem
             // 
             fToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { incluirToolStripMenuItem2, listarToolStripMenuItem2 });
             fToolStripMenuItem.Name = "fToolStripMenuItem";
-            fToolStripMenuItem.Size = new Size(145, 22);
+            fToolStripMenuItem.Size = new Size(180, 22);
             fToolStripMenuItem.Text = "&Fornecedores";
             // 
             // incluirToolStripMenuItem2
@@ -189,14 +190,14 @@
             // categoriasToolStripMenuItem
             // 
             categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            categoriasToolStripMenuItem.Size = new Size(145, 22);
+            categoriasToolStripMenuItem.Size = new Size(180, 22);
             categoriasToolStripMenuItem.Text = "&Categorias";
             // 
             // usuariosToolStripMenuItem
             // 
             usuariosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { incluirToolStripMenuItem1, listarToolStripMenuItem1, níveisToolStripMenuItem });
             usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            usuariosToolStripMenuItem.Size = new Size(145, 22);
+            usuariosToolStripMenuItem.Size = new Size(180, 22);
             usuariosToolStripMenuItem.Text = "&Usuarios";
             // 
             // incluirToolStripMenuItem1

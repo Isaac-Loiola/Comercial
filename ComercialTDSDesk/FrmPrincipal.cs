@@ -93,5 +93,10 @@ namespace ComercialTDSDesk
             AssociaPanel(new FrmUsuarioInserir());
 
         }
+
+        private void incluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AssociaPanel(new FrmProduto());
+        }
     }
 }
