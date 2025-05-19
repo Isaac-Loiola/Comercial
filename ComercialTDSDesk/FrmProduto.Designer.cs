@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProduto));
             txtCodBarras = new TextBox();
             txtDescricao = new TextBox();
             nudValorUnit = new NumericUpDown();
@@ -122,6 +123,7 @@
             // picImagem
             // 
             picImagem.BorderStyle = BorderStyle.FixedSingle;
+            picImagem.Image = (Image)resources.GetObject("picImagem.Image");
             picImagem.Location = new Point(455, 12);
             picImagem.Name = "picImagem";
             picImagem.Size = new Size(150, 150);
