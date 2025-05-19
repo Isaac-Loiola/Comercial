@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata;
@@ -54,6 +55,17 @@ namespace ComercialTDSClass
             Desconto = desconto;
         }
 
+        public Produto(string? codBarras, string? descricao, double valorUnit, string? unidadeVenda, Categoria? categoria, double estoqueMinimo, double desconto, Bytes[] imagem)
+        {
+            CodBarras = codBarras;
+            Descricao = descricao;
+            ValorUnit = valorUnit;
+            UnidadeVenda = unidadeVenda;
+            Categoria = categoria;
+            EstoqueMinimo = estoqueMinimo;
+            Desconto = desconto;
+            Imagem = Imagem;
+        }
 
     }
 }

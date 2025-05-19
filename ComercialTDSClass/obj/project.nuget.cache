@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gIdECPifTyE=",
+  "dgSpecHash": "yWFCo8Kz7oQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\isaac.oloiola\\source\\repos\\ComercialTDS\\ComercialTDSClass\\ComercialTDSClass.csproj",
+  "projectFilePath": "C:\\Users\\isaac.oloiola\\source\\repos\\Isaac-Loiola\\Comercial\\ComercialTDSClass\\ComercialTDSClass.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\isaac.oloiola\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",
     "C:\\Users\\isaac.oloiola\\.nuget\\packages\\google.protobuf\\3.30.0\\google.protobuf.3.30.0.nupkg.sha512",
