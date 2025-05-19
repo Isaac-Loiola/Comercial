@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-
-
             txtCodBarras = new TextBox();
             txtDescricao = new TextBox();
             nudValorUnit = new NumericUpDown();
@@ -88,7 +86,6 @@
             txtUnidadeVenda.PlaceholderText = "Unid. Venda";
             txtUnidadeVenda.Size = new Size(142, 23);
             txtUnidadeVenda.TabIndex = 3;
-
             // 
             // cmbCategoria
             // 
@@ -109,7 +106,7 @@
             // nudClasseDesconto
             // 
             nudClasseDesconto.DecimalPlaces = 2;
-            nudClasseDesconto.Location = new Point(338, 145);
+            nudClasseDesconto.Location = new Point(338, 146);
             nudClasseDesconto.Name = "nudClasseDesconto";
             nudClasseDesconto.Size = new Size(100, 23);
             nudClasseDesconto.TabIndex = 6;
