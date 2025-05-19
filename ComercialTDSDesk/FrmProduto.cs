@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComercialTDSClass;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,10 +21,43 @@ namespace ComercialTDSDesk
         private void btnCarregarImagem_Click(object sender, EventArgs e)
         {
             ofdObterImagem.Filter = "Imagens (*.jpg;*.png)|*.jpg;*.png";
-            if(ofdObterImagem.ShowDialog() == DialogResult.OK)
+            if (ofdObterImagem.ShowDialog() == DialogResult.OK)
             {
                 picImagem.Image = Image.FromFile(ofdObterImagem.FileName); //arquivo
             }
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            MemoryStream ms = new();
+
+            using (ms)
+            {
+                picImagem.Image.Save(ms, picImagem.Image.RawFormat);
+
+            }
+            Produto produto = new
+                (
+                    txtCodBarras.Text,
+                    txtDescricao.Text,
+                    (double)nudClasseDesconto.Value,
+                    txtUnidadeVenda.Text,
+                    Categoria.ObterPorId(Convert.ToInt32(cmbCategoria.SelectedValue)),
+                    (double)nudEstoqueMinimo.Value,
+                    (double)nudClasseDesconto.Value,
+                    ms
+                );
+            produto.Inserir();
+
+            if (produto.Id > 0)
+                MessageBox.Show($"Produto {produto.Id} gravado com sucesso!");
+        }
+
+        private void FrmProduto_Load(object sender, EventArgs e)
+        {
+            cmbCategoria.DataSource = Categoria.ObterLista();
+            cmbCategoria.DisplayMember = "Nome";
+            cmbCategoria.ValueMember = "Id";
         }
     }
 }
