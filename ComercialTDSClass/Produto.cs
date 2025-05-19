@@ -18,7 +18,7 @@ namespace ComercialTDSClass
         public string? UnidadeVenda { get; set; }
         public Categoria? Categoria { get; set; }
         public double EstoqueMinimo { get; set; }
-        public  double Desconto { get; set; }
+        public  double ClasseDesconto { get; set; }
         public byte[]? Imagem { get; set; }
         public DateTime DataCad { get; set; }
         public int? Descontinuado { get; set; }
@@ -29,7 +29,7 @@ namespace ComercialTDSClass
             Categoria = new();
         }
 
-        public Produto(int? id, string? codBarras, string? descricao, double valorUnit, string? unidadeVenda, Categoria? categoria, double estoqueMinimo, double desconto, byte[]? imagem, DateTime dataCad, int? descontinuado)
+        public Produto(int? id, string? codBarras, string? descricao, double valorUnit, string? unidadeVenda, Categoria? categoria, double estoqueMinimo, double classeDesconto, byte[]? imagem, DateTime dataCad, int? descontinuado)
         {
             Id = id;
             CodBarras = codBarras;
@@ -38,13 +38,13 @@ namespace ComercialTDSClass
             UnidadeVenda = unidadeVenda;
             Categoria = categoria;
             EstoqueMinimo = estoqueMinimo;
-            Desconto = desconto;
+            ClasseDesconto = classeDesconto;
             Imagem = imagem;
             DataCad = dataCad;
             Descontinuado = descontinuado;
         }
 
-        public Produto(string? codBarras, string? descricao, double valorUnit, string? unidadeVenda, Categoria? categoria, double estoqueMinimo, double desconto)
+        public Produto(string? codBarras, string? descricao, double valorUnit, string? unidadeVenda, Categoria? categoria, double estoqueMinimo, double classeDesconto)
         {
             CodBarras = codBarras;
             Descricao = descricao;
@@ -52,10 +52,10 @@ namespace ComercialTDSClass
             UnidadeVenda = unidadeVenda;
             Categoria = categoria;
             EstoqueMinimo = estoqueMinimo;
-            Desconto = desconto;
+            ClasseDesconto = classeDesconto;
         }
 
-        public Produto(string? codBarras, string? descricao, double valorUnit, string? unidadeVenda, Categoria? categoria, double estoqueMinimo, double desconto, Bytes[] imagem)
+        public Produto(string? codBarras, string? descricao, double valorUnit, string? unidadeVenda, Categoria? categoria, double estoqueMinimo, double classeDesconto, byte[]? imagem)
         {
             CodBarras = codBarras;
             Descricao = descricao;
@@ -63,13 +63,26 @@ namespace ComercialTDSClass
             UnidadeVenda = unidadeVenda;
             Categoria = categoria;
             EstoqueMinimo = estoqueMinimo;
-            Desconto = desconto;
-            Imagem = Imagem;
+            ClasseDesconto = classeDesconto;
+            Imagem = imagem;
         }
 
         public void Inserir()
         {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.CommandText = "sp_produto_insert";
+            cmd.Parameters.AddWithValue("spcod_barras", CodBarras);
+            cmd.Parameters.AddWithValue("spdescricao", Descricao);
+            cmd.Parameters.AddWithValue("spvalor_unit", ValorUnit);
+            cmd.Parameters.AddWithValue("spunidade_venda", UnidadeVenda);
+            cmd.Parameters.AddWithValue("spcategoria_id", Categoria.Id);
+            cmd.Parameters.AddWithValue("spestoque_minimo", EstoqueMinimo);
+            cmd.Parameters.AddWithValue("spclasse_deconto", ClasseDesconto);
+            cmd.Parameters.AddWithValue("spimagem", Imagem);
 
+            Id = Convert.ToInt32(cmd.ExecuteNonQuery());
+            cmd.Connection.Clone();
         }
 
         public bool Atualizar()

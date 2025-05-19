@@ -513,7 +513,8 @@ spvalor_unit decimal(10,2),
 spunidade_venda varchar(12),
 spcategoria_id int,
 spestoque_minimo decimal(10,2),
-spclasse_desconto decimal(10,2))
+spclasse_desconto decimal(10,2),
+spimagem blob)
 begin
 	insert into produtos
     values(
@@ -525,6 +526,7 @@ begin
     spcategoria_id, 
     spestoque_minimo,
     spclasse_desconto,
+    spimagem,
     null,
     default, 
     default);
