@@ -67,5 +67,29 @@ namespace ComercialTDSClass
             Imagem = Imagem;
         }
 
+        public void Inserir()
+        {
+
+        }
+
+        public bool Atualizar()
+        {
+            return true;
+        }
+
+        public Produto ObterPorId(int id)
+        {
+            Produto produto = new();
+
+            return produto;
+        }
+
+        public static List<Produto> ObterLista()
+        {
+            List<Produto> produtos = new();
+
+            return produtos;
+        }
+
     }
 }
