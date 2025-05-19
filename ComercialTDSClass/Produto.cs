@@ -81,13 +81,34 @@ namespace ComercialTDSClass
             cmd.Parameters.AddWithValue("spclasse_deconto", ClasseDesconto);
             cmd.Parameters.AddWithValue("spimagem", Imagem);
 
-            Id = Convert.ToInt32(cmd.ExecuteNonQuery());
+            Id = Convert.ToInt32(cmd.ExecuteScalar());
             cmd.Connection.Clone();
         }
 
         public bool Atualizar()
         {
-            return true;
+            bool atualizado = false;
+
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.CommandText = "sp_produto_update";
+            cmd.Parameters.AddWithValue("spid", Id);
+            cmd.Parameters.AddWithValue("spcod_barras", CodBarras);
+            cmd.Parameters.AddWithValue("spdescricao", Descricao);
+            cmd.Parameters.AddWithValue("spvalor_unit", ValorUnit);
+            cmd.Parameters.AddWithValue("spunidade_venda", UnidadeVenda);
+            cmd.Parameters.AddWithValue("spcategoria_id", Categoria.Id);
+            cmd.Parameters.AddWithValue("spestoque_minimo", EstoqueMinimo);
+            cmd.Parameters.AddWithValue("spclasse_deconto", ClasseDesconto);
+            cmd.Parameters.AddWithValue("spimagem", Imagem);
+
+            if (cmd.ExecuteNonQuery() > 0)
+            {
+                atualizado = true;
+            }
+            cmd.Connection.Close();
+            return atualizado;
+           
         }
 
         public Produto ObterPorId(int id)
