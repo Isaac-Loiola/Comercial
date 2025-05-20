@@ -149,6 +149,7 @@
             listarToolStripMenuItem.Name = "listarToolStripMenuItem";
             listarToolStripMenuItem.Size = new Size(180, 22);
             listarToolStripMenuItem.Text = "&Listar";
+            listarToolStripMenuItem.Click += listarToolStripMenuItem_Click;
             // 
             // fornecedorToolStripMenuItem
             // 
