@@ -19,7 +19,7 @@ namespace ComercialTDSClass
         public Categoria? Categoria { get; set; }
         public double EstoqueMinimo { get; set; }
         public  double ClasseDesconto { get; set; }
-        public Stream? Imagem { get; set; }
+        public byte[]? Imagem { get; set; }
         public DateTime DataCad { get; set; }
         public int? Descontinuado { get; set; }
 
@@ -29,7 +29,7 @@ namespace ComercialTDSClass
             Categoria = new();
         }
 
-        public Produto(int? id, string? codBarras, string? descricao, double valorUnit, string? unidadeVenda, Categoria? categoria, double estoqueMinimo, double classeDesconto, Stream? imagem, DateTime dataCad, int? descontinuado)
+        public Produto(int? id, string? codBarras, string? descricao, double valorUnit, string? unidadeVenda, Categoria? categoria, double estoqueMinimo, double classeDesconto, byte[]? imagem, DateTime dataCad, int? descontinuado)
         {
             Id = id;
             CodBarras = codBarras;
@@ -44,18 +44,18 @@ namespace ComercialTDSClass
             Descontinuado = descontinuado;
         }
 
-        public Produto(string? codBarras, string? descricao, double valorUnit, string? unidadeVenda, Categoria? categoria, double estoqueMinimo, double classeDesconto)
-        {
-            CodBarras = codBarras;
-            Descricao = descricao;
-            ValorUnit = valorUnit;
-            UnidadeVenda = unidadeVenda;
-            Categoria = categoria;
-            EstoqueMinimo = estoqueMinimo;
-            ClasseDesconto = classeDesconto;
-        }
+        //public Produto(string? codBarras, string? descricao, double valorUnit, string? unidadeVenda, Categoria? categoria, double estoqueMinimo, double classeDesconto)
+        //{
+        //    CodBarras = codBarras;
+        //    Descricao = descricao;
+        //    ValorUnit = valorUnit;
+        //    UnidadeVenda = unidadeVenda;
+        //    Categoria = categoria;
+        //    EstoqueMinimo = estoqueMinimo;
+        //    ClasseDesconto = classeDesconto;
+        //}
 
-        public Produto(string? codBarras, string? descricao, double valorUnit, string? unidadeVenda, Categoria? categoria, double estoqueMinimo, double classeDesconto, Stream? imagem)
+        public Produto(string? codBarras, string? descricao, double valorUnit, string? unidadeVenda, Categoria? categoria, double estoqueMinimo, double classeDesconto, byte[]? imagem)
         {
             CodBarras = codBarras;
             Descricao = descricao;
@@ -117,7 +117,7 @@ namespace ComercialTDSClass
             var cmd = Banco.Abrir();
             cmd.CommandText = "select * from produtos where id = {id}";
             var dr = cmd.ExecuteReader();
-            if(dr.Read())
+            while(dr.Read())
             {
                 produto = new
                     (
@@ -129,7 +129,7 @@ namespace ComercialTDSClass
                         Categoria.ObterPorId(dr.GetInt32(5)),
                         dr.GetDouble(6),
                         dr.GetDouble(7),
-                        dr.GetStream(8),
+                        (byte[])dr.GetValue(8),
                         dr.GetDateTime(9),
                         dr.GetInt32(10)
                     );
@@ -159,7 +159,7 @@ namespace ComercialTDSClass
                             Categoria.ObterPorId(dr.GetInt32(5)),
                             dr.GetDouble(6),
                             dr.GetDouble(7),
-                            dr.GetStream(8),
+                            (byte[])dr.GetValue(8),
                             dr.GetDateTime(9),
                             dr.GetInt32(10)
                         )
