@@ -28,12 +28,94 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FrmProdutoListar";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProdutoListar));
+            dgvProduto = new DataGridView();
+            clnId = new DataGridViewTextBoxColumn();
+            clnCodBar = new DataGridViewTextBoxColumn();
+            clnDescricao = new DataGridViewTextBoxColumn();
+            clnValorUnit = new DataGridViewTextBoxColumn();
+            picImagem = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)dgvProduto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picImagem).BeginInit();
+            SuspendLayout();
+            // 
+            // dgvProduto
+            // 
+            dgvProduto.AllowUserToAddRows = false;
+            dgvProduto.AllowUserToDeleteRows = false;
+            dgvProduto.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProduto.Columns.AddRange(new DataGridViewColumn[] { clnId, clnCodBar, clnDescricao, clnValorUnit });
+            dgvProduto.Location = new Point(57, 51);
+            dgvProduto.Name = "dgvProduto";
+            dgvProduto.ReadOnly = true;
+            dgvProduto.RowHeadersVisible = false;
+            dgvProduto.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvProduto.Size = new Size(494, 300);
+            dgvProduto.TabIndex = 0;
+            // 
+            // clnId
+            // 
+            clnId.Frozen = true;
+            clnId.HeaderText = "ID";
+            clnId.Name = "clnId";
+            clnId.ReadOnly = true;
+            // 
+            // clnCodBar
+            // 
+            clnCodBar.Frozen = true;
+            clnCodBar.HeaderText = "Cod Barras";
+            clnCodBar.Name = "clnCodBar";
+            clnCodBar.ReadOnly = true;
+            clnCodBar.Width = 130;
+            // 
+            // clnDescricao
+            // 
+            clnDescricao.Frozen = true;
+            clnDescricao.HeaderText = "Descrição";
+            clnDescricao.Name = "clnDescricao";
+            clnDescricao.ReadOnly = true;
+            clnDescricao.Width = 200;
+            // 
+            // clnValorUnit
+            // 
+            clnValorUnit.Frozen = true;
+            clnValorUnit.HeaderText = "Preço";
+            clnValorUnit.Name = "clnValorUnit";
+            clnValorUnit.ReadOnly = true;
+            clnValorUnit.Width = 60;
+            // 
+            // picImagem
+            // 
+            picImagem.BorderStyle = BorderStyle.FixedSingle;
+            picImagem.Image = (Image)resources.GetObject("picImagem.Image");
+            picImagem.Location = new Point(583, 51);
+            picImagem.Name = "picImagem";
+            picImagem.Size = new Size(300, 300);
+            picImagem.SizeMode = PictureBoxSizeMode.StretchImage;
+            picImagem.TabIndex = 9;
+            picImagem.TabStop = false;
+            // 
+            // FrmProdutoListar
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(899, 446);
+            Controls.Add(picImagem);
+            Controls.Add(dgvProduto);
+            Name = "FrmProdutoListar";
+            Text = "FrmProdutoListar";
+            ((System.ComponentModel.ISupportInitialize)dgvProduto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picImagem).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dgvProduto;
+        private DataGridViewTextBoxColumn clnId;
+        private DataGridViewTextBoxColumn clnCodBar;
+        private DataGridViewTextBoxColumn clnDescricao;
+        private DataGridViewTextBoxColumn clnValorUnit;
+        private PictureBox picImagem;
     }
 }
