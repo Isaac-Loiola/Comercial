@@ -52,6 +52,7 @@
             dgvProduto.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvProduto.Size = new Size(494, 300);
             dgvProduto.TabIndex = 0;
+            dgvProduto.CellClick += dgvProduto_CellClick;
             // 
             // clnId
             // 

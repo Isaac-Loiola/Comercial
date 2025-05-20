@@ -111,11 +111,11 @@ namespace ComercialTDSClass
            
         }
 
-        public Produto ObterPorId(int id)
+        public static Produto ObterPorId(int id)
         {
             Produto produto = new();
             var cmd = Banco.Abrir();
-            cmd.CommandText = "select * from produtos where id = {id}";
+            cmd.CommandText = $"select * from produtos where id = {id}";
             var dr = cmd.ExecuteReader();
             while(dr.Read())
             {

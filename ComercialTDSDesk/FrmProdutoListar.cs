@@ -23,7 +23,7 @@ namespace ComercialTDSDesk
             var lista = Produto.ObterLista();
             int linha = 0;
             dgvProduto.Rows.Clear();
-            foreach(var item in lista)
+            foreach (var item in lista)
             {
                 dgvProduto.Rows.Add();
                 dgvProduto.Rows[linha].Cells[0].Value = item.Id;
@@ -32,6 +32,16 @@ namespace ComercialTDSDesk
                 dgvProduto.Rows[linha].Cells[3].Value = item.ValorUnit;
 
                 linha++;
+            }
+        }
+
+        private void dgvProduto_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var produto = Produto.ObterPorId(Convert.ToInt32(dgvProduto.Rows[dgvProduto.CurrentRow.Index].Cells[0].Value));
+            using(MemoryStream ms = new MemoryStream(produto.Imagem))
+            {
+                picImagem.Image = Image.FromStream(ms);
+                picImagem.SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
     }
