@@ -78,11 +78,11 @@ namespace ComercialTDSClass
             cmd.Parameters.AddWithValue("spunidade_venda", UnidadeVenda);
             cmd.Parameters.AddWithValue("spcategoria_id", Categoria.Id);
             cmd.Parameters.AddWithValue("spestoque_minimo", EstoqueMinimo);
-            cmd.Parameters.AddWithValue("spclasse_deconto", ClasseDesconto);
+            cmd.Parameters.AddWithValue("spclasse_desconto", ClasseDesconto);
             cmd.Parameters.AddWithValue("spimagem", Imagem);
 
             Id = Convert.ToInt32(cmd.ExecuteScalar());
-            cmd.Connection.Clone();
+            cmd.Connection.Close();
         }
 
         public bool Atualizar()

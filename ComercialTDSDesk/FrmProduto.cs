@@ -29,28 +29,25 @@ namespace ComercialTDSDesk
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            //MemoryStream ms = new();
+            byte[] imgBytes;
+            MemoryStream ms = new();
+            picImagem.Image.Save(ms, picImagem.Image.RawFormat);
+            imgBytes = ms.ToArray();
 
-            //using (ms)
-            //{
-            //    picImagem.Image.Save(ms, picImagem.Image.RawFormat);
-
-            //}
-            //Produto produto = new
-            //    (
-            //        txtCodBarras.Text,
-            //        txtDescricao.Text,
-            //        (double)nudClasseDesconto.Value,
-            //        txtUnidadeVenda.Text,
-            //        Categoria.ObterPorId(Convert.ToInt32(cmbCategoria.SelectedValue)),
-            //        (double)nudEstoqueMinimo.Value,
-            //        (double)nudClasseDesconto.Value,
-            //        ms
-            //    );
-            //produto.Inserir();
-
-            //if (produto.Id > 0)
-            //    MessageBox.Show($"Produto {produto.Id} gravado com sucesso!");
+            Produto produto = new
+                (
+                    txtCodBarras.Text,
+                    txtDescricao.Text,
+                    (double)nudValorUnit.Value,
+                    txtUnidadeVenda.Text,
+                    Categoria.ObterPorId(Convert.ToInt32(cmbCategoria.SelectedValue)),
+                    (double)nudEstoqueMinimo.Value,
+                    (double)nudClasseDesconto.Value,
+                    imgBytes
+                );
+            produto.Inserir();
+            if (produto.Id > 0)
+                MessageBox.Show($"Produto {produto.Id} gravado com sucesso!");
         }
 
         private void FrmProduto_Load(object sender, EventArgs e)
