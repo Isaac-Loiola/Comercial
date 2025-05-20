@@ -104,6 +104,7 @@
             Controls.Add(dgvProduto);
             Name = "FrmProdutoListar";
             Text = "FrmProdutoListar";
+            Load += FrmProdutoListar_Load;
             ((System.ComponentModel.ISupportInitialize)dgvProduto).EndInit();
             ((System.ComponentModel.ISupportInitialize)picImagem).EndInit();
             ResumeLayout(false);
