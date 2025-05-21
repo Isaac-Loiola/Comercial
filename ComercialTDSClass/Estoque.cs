@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ComercialTDSClass
 {
-    class Estoque
+    public class Estoque
     {
+        public int ProdutoId { get; set;}
+        public double Quantidade { get; set; }
+        public DateTime DataUltimoMovimento { get; set; }
     }
 }
