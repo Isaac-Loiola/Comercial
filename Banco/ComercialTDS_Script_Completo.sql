@@ -527,7 +527,6 @@ begin
     spestoque_minimo,
     (spclasse_desconto / 100),
     spimagem,
-    null,
     default, 
     default);
     select last_insert_id();
