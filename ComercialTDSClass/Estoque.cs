@@ -1,5 +1,4 @@
-﻿using Org.BouncyCastle.Tls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,6 +47,28 @@ namespace ComercialTDSClass
             return false;
         }
 
-        //public static List<Estoque> 
+        public static List<Estoque> ObterLista()
+        {
+            List<Estoque> estoques = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandText = "select * from estoques";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                estoques.Add
+                    (
+                        new
+                        (
+                            dr.GetInt32(0),
+                            dr.GetDouble(1),
+                            dr.GetDateTime(2)
+                        )
+                    );
+            }
+            dr.Close();
+            cmd.Connection.Close();
+
+            return estoques;
+        }
     }
 }
