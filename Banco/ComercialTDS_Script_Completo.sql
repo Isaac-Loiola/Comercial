@@ -677,7 +677,19 @@ begin
    where id = spid;
 end $$
 
+USE `comercialtdsdb01`;
+DROP procedure IF EXISTS `sp_estoque_insert`;
 
+DELIMITER $$
+USE `comercialtdsdb01`$$
+CREATE PROCEDURE `sp_estoque_insert` (
+spproduto_id int,
+spquantidade decimal(10,2)
+)
+BEGIN
+update estoques set quantidade = spquantidade, data_ultimo_movimento = default 
+where produto_id = spproduto_id;
+END$$
 
 DELIMITER ;
 
