@@ -11,7 +11,7 @@ namespace ComercialTDSClass
     public class Produto
     {
 
-        public int? Id { get; set; }
+        public int Id { get; set; }
         public string? CodBarras { get; set; }
         public string? Descricao { get; set; }
         public double ValorUnit { get; set; }
@@ -29,7 +29,7 @@ namespace ComercialTDSClass
             Categoria = new();
         }
 
-        public Produto(int? id, string? codBarras, string? descricao, double valorUnit, string? unidadeVenda, Categoria? categoria, double estoqueMinimo, double classeDesconto, byte[]? imagem, DateTime dataCad, int? descontinuado)
+        public Produto(int id, string? codBarras, string? descricao, double valorUnit, string? unidadeVenda, Categoria? categoria, double estoqueMinimo, double classeDesconto, byte[]? imagem, DateTime dataCad, int? descontinuado)
         {
             Id = id;
             CodBarras = codBarras;

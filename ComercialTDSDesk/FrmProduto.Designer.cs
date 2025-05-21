@@ -242,6 +242,7 @@
             btnBucar.TabIndex = 18;
             btnBucar.Text = "Buscar";
             btnBucar.UseVisualStyleBackColor = true;
+            btnBucar.Click += btnBucar_Click;
             // 
             // FrmProduto
             // 

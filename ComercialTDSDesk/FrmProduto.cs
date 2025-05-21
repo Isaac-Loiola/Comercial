@@ -56,5 +56,36 @@ namespace ComercialTDSDesk
             cmbCategoria.DisplayMember = "Nome";
             cmbCategoria.ValueMember = "Id";
         }
+
+        private void btnBucar_Click(object sender, EventArgs e)
+        {
+            if(txtCodBarras.Text.Length > 7)
+            {
+                var produto = Produto.ObterPorCodBarras(txtCodBarras.Text);
+                txtCodBarras.Text = produto.CodBarras;
+                txtDescricao.Text = produto.Descricao;
+                nudValorUnit.Value = Convert.ToDecimal(produto.ValorUnit);
+                txtUnidadeVenda.Text = produto.UnidadeVenda;
+                nudClasseDesconto.Value = Convert.ToDecimal(produto.ClasseDesconto);
+                nudEstoqueMinimo.Value = Convert.ToDecimal(produto.EstoqueMinimo);
+                cmbCategoria.Text = produto.Categoria.Nome;
+
+                var imagem = Produto.ObterPorId(produto.Id);
+                using (MemoryStream ms = new MemoryStream(imagem.Imagem))
+                {
+                    picImagem.Image = Image.FromStream(ms);
+                    picImagem.SizeMode = PictureBoxSizeMode.Zoom;
+                }
+
+                if (produto.Descontinuado == 1)
+                {
+                    chkDescontinuado.Checked = true;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Numero de caracteres inválido.");
+            }
+        }
     }
 }
