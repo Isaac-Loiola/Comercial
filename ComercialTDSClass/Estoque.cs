@@ -30,5 +30,17 @@ namespace ComercialTDSClass
             DataUltimoMovimento = dataUltimoMovimento;
         }
 
+        public bool Alterar()
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandText = $"update estoques set quantidade = {Quantidade} and data_ultimo_movimento = {DataUltimoMovimento}";
+            int resultado = cmd.ExecuteNonQuery();
+            if(resultado == 1)
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
