@@ -50,6 +50,7 @@
             label6 = new Label();
             label7 = new Label();
             ofdObterImagem = new OpenFileDialog();
+            btnBucar = new Button();
             ((System.ComponentModel.ISupportInitialize)nudValorUnit).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudEstoqueMinimo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudClasseDesconto).BeginInit();
@@ -233,11 +234,21 @@
             // 
             ofdObterImagem.FileName = "foto_produto";
             // 
+            // btnBucar
+            // 
+            btnBucar.Location = new Point(582, 142);
+            btnBucar.Name = "btnBucar";
+            btnBucar.Size = new Size(136, 23);
+            btnBucar.TabIndex = 18;
+            btnBucar.Text = "Buscar";
+            btnBucar.UseVisualStyleBackColor = true;
+            // 
             // FrmProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1248, 573);
+            Controls.Add(btnBucar);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -291,6 +302,7 @@
         private Button btnCarregarImagem;
         private Button btnSalvar;
         private OpenFileDialog ofdObterImagem;
+        private Button btnBucar;
     }
     #endregion
 }
