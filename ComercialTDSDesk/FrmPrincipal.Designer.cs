@@ -87,6 +87,7 @@
             panel30 = new Panel();
             btnSair = new Button();
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
             nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             flpMenuLateralusuarios = new FlowLayoutPanel();
             panel13 = new Panel();
@@ -130,6 +131,7 @@
             panel29.SuspendLayout();
             panel30.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             flpMenuLateralusuarios.SuspendLayout();
             panel13.SuspendLayout();
             panel14.SuspendLayout();
@@ -860,6 +862,7 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(nightControlBox1);
             panel1.Controls.Add(flpMenuLateralusuarios);
             panel1.Dock = DockStyle.Top;
@@ -867,6 +870,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1920, 86);
             panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(6, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(168, 55);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
             // 
             // nightControlBox1
             // 
@@ -1046,6 +1059,7 @@
             panel29.ResumeLayout(false);
             panel30.ResumeLayout(false);
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             flpMenuLateralusuarios.ResumeLayout(false);
             panel13.ResumeLayout(false);
             panel14.ResumeLayout(false);
@@ -1123,5 +1137,6 @@
         private Button btnConfiguracao;
         private Panel panel30;
         private Button btnSair;
+        private PictureBox pictureBox1;
     }
 }
