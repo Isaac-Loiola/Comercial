@@ -108,5 +108,10 @@ namespace ComercialTDSDesk
         {
 
         }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

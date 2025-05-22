@@ -30,21 +30,32 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             pnlPrincipal = new Panel();
-            panel3 = new Panel();
-            flowLayoutPanel2 = new FlowLayoutPanel();
-            panel6 = new Panel();
+            flpMenuLateralProdutos = new FlowLayoutPanel();
             panel2 = new Panel();
-            panel5 = new Panel();
+            btnProdutos = new Button();
+            panel3 = new Panel();
+            btnIncluir = new Button();
             panel4 = new Panel();
-            panel10 = new Panel();
+            btnListar = new Button();
+            panel5 = new Panel();
+            btnFornecedor = new Button();
+            panel6 = new Panel();
+            btnCategoria = new Button();
             panel7 = new Panel();
-            panel8 = new Panel();
-            panel9 = new Panel();
+            btnEstoque = new Button();
             panel11 = new Panel();
-            button1 = new Button();
+            btnCliente = new Button();
+            flowLayoutPanel2 = new FlowLayoutPanel();
             panel1 = new Panel();
             nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             pnlPrincipal.SuspendLayout();
+            flpMenuLateralProdutos.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            panel4.SuspendLayout();
+            panel5.SuspendLayout();
+            panel6.SuspendLayout();
+            panel7.SuspendLayout();
             panel11.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -53,18 +64,10 @@
             // 
             pnlPrincipal.BackColor = Color.White;
             pnlPrincipal.BackgroundImageLayout = ImageLayout.None;
-            pnlPrincipal.Controls.Add(panel6);
-            pnlPrincipal.Controls.Add(panel3);
-            pnlPrincipal.Controls.Add(panel2);
-            pnlPrincipal.Controls.Add(flowLayoutPanel2);
-            pnlPrincipal.Controls.Add(panel5);
-            pnlPrincipal.Controls.Add(panel1);
-            pnlPrincipal.Controls.Add(panel4);
-            pnlPrincipal.Controls.Add(panel7);
-            pnlPrincipal.Controls.Add(panel10);
-            pnlPrincipal.Controls.Add(panel8);
-            pnlPrincipal.Controls.Add(panel9);
+            pnlPrincipal.Controls.Add(flpMenuLateralProdutos);
             pnlPrincipal.Controls.Add(panel11);
+            pnlPrincipal.Controls.Add(flowLayoutPanel2);
+            pnlPrincipal.Controls.Add(panel1);
             pnlPrincipal.Dock = DockStyle.Fill;
             pnlPrincipal.Location = new Point(0, 0);
             pnlPrincipal.Name = "pnlPrincipal";
@@ -72,13 +75,192 @@
             pnlPrincipal.TabIndex = 6;
             pnlPrincipal.Paint += panel1_Paint;
             // 
+            // flpMenuLateralProdutos
+            // 
+            flpMenuLateralProdutos.Controls.Add(panel2);
+            flpMenuLateralProdutos.Controls.Add(panel3);
+            flpMenuLateralProdutos.Controls.Add(panel4);
+            flpMenuLateralProdutos.Controls.Add(panel5);
+            flpMenuLateralProdutos.Controls.Add(panel6);
+            flpMenuLateralProdutos.Controls.Add(panel7);
+            flpMenuLateralProdutos.Location = new Point(657, 140);
+            flpMenuLateralProdutos.Name = "flpMenuLateralProdutos";
+            flpMenuLateralProdutos.Size = new Size(185, 354);
+            flpMenuLateralProdutos.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(btnProdutos);
+            panel2.Location = new Point(3, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(180, 53);
+            panel2.TabIndex = 2;
+            // 
+            // btnProdutos
+            // 
+            btnProdutos.BackColor = Color.Transparent;
+            btnProdutos.BackgroundImage = (Image)resources.GetObject("btnProdutos.BackgroundImage");
+            btnProdutos.FlatAppearance.BorderSize = 0;
+            btnProdutos.FlatStyle = FlatStyle.Flat;
+            btnProdutos.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnProdutos.Image = (Image)resources.GetObject("btnProdutos.Image");
+            btnProdutos.ImageAlign = ContentAlignment.MiddleLeft;
+            btnProdutos.Location = new Point(0, 0);
+            btnProdutos.Margin = new Padding(0);
+            btnProdutos.Name = "btnProdutos";
+            btnProdutos.Size = new Size(180, 53);
+            btnProdutos.TabIndex = 2;
+            btnProdutos.Text = "    Produtos";
+            btnProdutos.UseVisualStyleBackColor = false;
+            // 
             // panel3
             // 
-            panel3.BackColor = Color.Transparent;
-            panel3.Location = new Point(472, 395);
+            panel3.Controls.Add(btnIncluir);
+            panel3.Location = new Point(3, 62);
             panel3.Name = "panel3";
             panel3.Size = new Size(180, 53);
             panel3.TabIndex = 2;
+            // 
+            // btnIncluir
+            // 
+            btnIncluir.BackColor = Color.Transparent;
+            btnIncluir.BackgroundImage = (Image)resources.GetObject("btnIncluir.BackgroundImage");
+            btnIncluir.FlatAppearance.BorderSize = 0;
+            btnIncluir.FlatStyle = FlatStyle.Flat;
+            btnIncluir.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnIncluir.Image = (Image)resources.GetObject("btnIncluir.Image");
+            btnIncluir.ImageAlign = ContentAlignment.MiddleLeft;
+            btnIncluir.Location = new Point(0, 0);
+            btnIncluir.Margin = new Padding(0);
+            btnIncluir.Name = "btnIncluir";
+            btnIncluir.Size = new Size(180, 53);
+            btnIncluir.TabIndex = 2;
+            btnIncluir.Text = "    Incluir";
+            btnIncluir.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(btnListar);
+            panel4.Location = new Point(3, 121);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(180, 53);
+            panel4.TabIndex = 2;
+            // 
+            // btnListar
+            // 
+            btnListar.BackColor = Color.Transparent;
+            btnListar.BackgroundImage = (Image)resources.GetObject("btnListar.BackgroundImage");
+            btnListar.FlatAppearance.BorderSize = 0;
+            btnListar.FlatStyle = FlatStyle.Flat;
+            btnListar.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnListar.Image = (Image)resources.GetObject("btnListar.Image");
+            btnListar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnListar.Location = new Point(0, 0);
+            btnListar.Margin = new Padding(0);
+            btnListar.Name = "btnListar";
+            btnListar.Size = new Size(180, 53);
+            btnListar.TabIndex = 2;
+            btnListar.Text = "    Listar";
+            btnListar.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(btnFornecedor);
+            panel5.Location = new Point(3, 180);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(180, 53);
+            panel5.TabIndex = 2;
+            // 
+            // btnFornecedor
+            // 
+            btnFornecedor.BackColor = Color.Transparent;
+            btnFornecedor.BackgroundImage = (Image)resources.GetObject("btnFornecedor.BackgroundImage");
+            btnFornecedor.FlatAppearance.BorderSize = 0;
+            btnFornecedor.FlatStyle = FlatStyle.Flat;
+            btnFornecedor.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnFornecedor.Image = (Image)resources.GetObject("btnFornecedor.Image");
+            btnFornecedor.ImageAlign = ContentAlignment.MiddleLeft;
+            btnFornecedor.Location = new Point(0, 0);
+            btnFornecedor.Margin = new Padding(0);
+            btnFornecedor.Name = "btnFornecedor";
+            btnFornecedor.Size = new Size(180, 53);
+            btnFornecedor.TabIndex = 2;
+            btnFornecedor.Text = "    Fornecedor";
+            btnFornecedor.UseVisualStyleBackColor = false;
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(btnCategoria);
+            panel6.Location = new Point(3, 239);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(180, 53);
+            panel6.TabIndex = 2;
+            // 
+            // btnCategoria
+            // 
+            btnCategoria.BackColor = Color.Transparent;
+            btnCategoria.BackgroundImage = (Image)resources.GetObject("btnCategoria.BackgroundImage");
+            btnCategoria.FlatAppearance.BorderSize = 0;
+            btnCategoria.FlatStyle = FlatStyle.Flat;
+            btnCategoria.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnCategoria.Image = (Image)resources.GetObject("btnCategoria.Image");
+            btnCategoria.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCategoria.Location = new Point(0, 0);
+            btnCategoria.Margin = new Padding(0);
+            btnCategoria.Name = "btnCategoria";
+            btnCategoria.Size = new Size(180, 53);
+            btnCategoria.TabIndex = 2;
+            btnCategoria.Text = "    Categoria";
+            btnCategoria.UseVisualStyleBackColor = false;
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(btnEstoque);
+            panel7.Location = new Point(3, 298);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(180, 53);
+            panel7.TabIndex = 2;
+            // 
+            // btnEstoque
+            // 
+            btnEstoque.BackColor = Color.Transparent;
+            btnEstoque.BackgroundImage = (Image)resources.GetObject("btnEstoque.BackgroundImage");
+            btnEstoque.FlatAppearance.BorderSize = 0;
+            btnEstoque.FlatStyle = FlatStyle.Flat;
+            btnEstoque.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnEstoque.Image = (Image)resources.GetObject("btnEstoque.Image");
+            btnEstoque.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEstoque.Location = new Point(0, 0);
+            btnEstoque.Margin = new Padding(0);
+            btnEstoque.Name = "btnEstoque";
+            btnEstoque.Size = new Size(180, 53);
+            btnEstoque.TabIndex = 2;
+            btnEstoque.Text = "    Estoque";
+            btnEstoque.UseVisualStyleBackColor = false;
+            // 
+            // panel11
+            // 
+            panel11.Controls.Add(btnCliente);
+            panel11.Location = new Point(212, 103);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(180, 53);
+            panel11.TabIndex = 2;
+            // 
+            // btnCliente
+            // 
+            btnCliente.BackColor = Color.Transparent;
+            btnCliente.BackgroundImage = (Image)resources.GetObject("btnCliente.BackgroundImage");
+            btnCliente.FlatAppearance.BorderSize = 0;
+            btnCliente.FlatStyle = FlatStyle.Flat;
+            btnCliente.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnCliente.Image = (Image)resources.GetObject("btnCliente.Image");
+            btnCliente.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCliente.Location = new Point(0, 0);
+            btnCliente.Name = "btnCliente";
+            btnCliente.Size = new Size(180, 53);
+            btnCliente.TabIndex = 2;
+            btnCliente.Text = "   Clientes";
+            btnCliente.UseVisualStyleBackColor = false;
             // 
             // flowLayoutPanel2
             // 
@@ -86,87 +268,8 @@
             flowLayoutPanel2.Dock = DockStyle.Left;
             flowLayoutPanel2.Location = new Point(0, 86);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(183, 946);
+            flowLayoutPanel2.Size = new Size(185, 946);
             flowLayoutPanel2.TabIndex = 1;
-            // 
-            // panel6
-            // 
-            panel6.Location = new Point(1132, 275);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(180, 53);
-            panel6.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            panel2.Location = new Point(344, 172);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(180, 53);
-            panel2.TabIndex = 2;
-            // 
-            // panel5
-            // 
-            panel5.Location = new Point(934, 172);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(180, 53);
-            panel5.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            panel4.Location = new Point(840, 325);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(180, 53);
-            panel4.TabIndex = 2;
-            // 
-            // panel10
-            // 
-            panel10.Location = new Point(599, 163);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(180, 53);
-            panel10.TabIndex = 2;
-            // 
-            // panel7
-            // 
-            panel7.Location = new Point(360, 289);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(180, 53);
-            panel7.TabIndex = 2;
-            // 
-            // panel8
-            // 
-            panel8.Location = new Point(266, 443);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(180, 53);
-            panel8.TabIndex = 2;
-            // 
-            // panel9
-            // 
-            panel9.Location = new Point(733, 251);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(180, 53);
-            panel9.TabIndex = 2;
-            // 
-            // panel11
-            // 
-            panel11.Controls.Add(button1);
-            panel11.Location = new Point(705, 502);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(180, 53);
-            panel11.TabIndex = 2;
-            // 
-            // button1
-            // 
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(0, 0);
-            button1.Name = "button1";
-            button1.Size = new Size(180, 53);
-            button1.TabIndex = 2;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -214,6 +317,13 @@
             Text = "Sistema Comercial TDS T01";
             Load += FrmPrincipal_Load;
             pnlPrincipal.ResumeLayout(false);
+            flpMenuLateralProdutos.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            panel7.ResumeLayout(false);
             panel11.ResumeLayout(false);
             panel1.ResumeLayout(false);
             ResumeLayout(false);
@@ -224,8 +334,6 @@
         private Panel panel1;
         private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
         private FlowLayoutPanel flowLayoutPanel2;
-        private Panel panel2;
-        private Panel panel3;
         private Panel panel6;
         private Panel panel5;
         private Panel panel4;
@@ -234,6 +342,15 @@
         private Panel panel9;
         private Panel panel8;
         private Panel panel7;
-        private Button button1;
+        private Button btnCliente;
+        private Panel panel2;
+        private Button btnProdutos;
+        private Panel panel3;
+        private Button btnIncluir;
+        private FlowLayoutPanel flpMenuLateralProdutos;
+        private Button btnListar;
+        private Button btnFornecedor;
+        private Button btnCategoria;
+        private Button btnEstoque;
     }
 }
