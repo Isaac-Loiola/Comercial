@@ -46,6 +46,49 @@ namespace ComercialTDSClass
             Quantidade = quantidade;
             Desconto = desconto;
         }
+
+        public void Deletar(int id)
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.CommandText = "sp_itempedido_delete";
+            cmd.Parameters.AddWithValue("spid", Id);
+
+            cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
+        }
+
+        public void Inserir()
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.CommandText = "sp_itempedido_insert";
+            cmd.Parameters.AddWithValue("sppedido_id", PedidoId);
+            cmd.Parameters.AddWithValue("spproduto_id", Produto);
+            cmd.Parameters.AddWithValue("spquantidade", Quantidade);
+            cmd.Parameters.AddWithValue("spdesconto", Desconto);
+
+            Id = Convert.ToInt32(cmd.ExecuteScalar());
+            cmd.Connection.Close();
+        }
+
+        public bool Atualizar()
+        {
+            return true;
+        }
+        public static ItemPedido ObterPorId(int id)
+        {
+            ItemPedido itemPedido = new();
+
+            return itemPedido;
+        }
+
+        public static List<ItemPedido> ObterListaPorPedidoId(int pedidoId)
+        {
+            List<ItemPedido> items = new();
+            
+            return items;
+        }
     }
 }
 
