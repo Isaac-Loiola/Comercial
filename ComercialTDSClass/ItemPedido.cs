@@ -74,7 +74,17 @@ namespace ComercialTDSClass
 
         public bool Atualizar()
         {
-            return true;
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.CommandText = "sp_itempedido_insert";
+            cmd.Parameters.AddWithValue("sppedido_id", PedidoId);
+            cmd.Parameters.AddWithValue("spproduto_id", Produto);
+            cmd.Parameters.AddWithValue("spquantidade", Quantidade);
+            cmd.Parameters.AddWithValue("spdesconto", Desconto);
+
+            bool atualizado = cmd.ExecuteNonQuery() > 0 ? true : false;
+            cmd.Connection.Close();
+            return atualizado;
         }
         public static ItemPedido ObterPorId(int id)
         {
