@@ -121,7 +121,7 @@ namespace ComercialTDSClass
             List<ItemPedido> items = new();
             ItemPedido itemPedido = new();
             var cmd = Banco.Abrir();
-            cmd.CommandText = $"select * from itempedido where id = {id}";
+            cmd.CommandText = $"select * from itempedido where id = {pedidoId}";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
