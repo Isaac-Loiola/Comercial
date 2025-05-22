@@ -54,5 +54,31 @@ namespace ComercialTDSClass
             Desconto = desconto;
         }
 
+        public void Inserir()
+        {
+
+        }
+
+        public bool Atualizar()
+        {
+            return true;
+        }
+
+        public static Pedido ObterPorId(int id)
+        {
+            Pedido pedido = new();
+
+            return pedido; 
+        }
+
+        public static List<Pedido> ObterLista()
+        {
+            List<Pedido> pedidos = new();
+
+            return pedidos;
+        }
+
+
+
     }
 }
