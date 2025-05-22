@@ -48,6 +48,13 @@
             flowLayoutPanel2 = new FlowLayoutPanel();
             panel1 = new Panel();
             nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
+            panel8 = new Panel();
+            btnFornecedores = new Button();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            panel9 = new Panel();
+            btnIncluirFornecedores = new Button();
+            panel10 = new Panel();
+            btnListarFornecedores = new Button();
             pnlPrincipal.SuspendLayout();
             flpMenuLateralProdutos.SuspendLayout();
             panel2.SuspendLayout();
@@ -58,12 +65,17 @@
             panel7.SuspendLayout();
             panel11.SuspendLayout();
             panel1.SuspendLayout();
+            panel8.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
+            panel9.SuspendLayout();
+            panel10.SuspendLayout();
             SuspendLayout();
             // 
             // pnlPrincipal
             // 
             pnlPrincipal.BackColor = Color.White;
             pnlPrincipal.BackgroundImageLayout = ImageLayout.None;
+            pnlPrincipal.Controls.Add(flowLayoutPanel1);
             pnlPrincipal.Controls.Add(flpMenuLateralProdutos);
             pnlPrincipal.Controls.Add(panel11);
             pnlPrincipal.Controls.Add(flowLayoutPanel2);
@@ -83,9 +95,9 @@
             flpMenuLateralProdutos.Controls.Add(panel5);
             flpMenuLateralProdutos.Controls.Add(panel6);
             flpMenuLateralProdutos.Controls.Add(panel7);
-            flpMenuLateralProdutos.Location = new Point(657, 140);
+            flpMenuLateralProdutos.Location = new Point(1211, 140);
             flpMenuLateralProdutos.Name = "flpMenuLateralProdutos";
-            flpMenuLateralProdutos.Size = new Size(185, 354);
+            flpMenuLateralProdutos.Size = new Size(185, 356);
             flpMenuLateralProdutos.TabIndex = 3;
             // 
             // panel2
@@ -304,6 +316,91 @@
             nightControlBox1.Size = new Size(139, 31);
             nightControlBox1.TabIndex = 1;
             // 
+            // panel8
+            // 
+            panel8.Controls.Add(btnFornecedores);
+            panel8.Location = new Point(0, 0);
+            panel8.Margin = new Padding(0);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(180, 53);
+            panel8.TabIndex = 2;
+            // 
+            // btnFornecedores
+            // 
+            btnFornecedores.BackColor = Color.Transparent;
+            btnFornecedores.BackgroundImage = (Image)resources.GetObject("btnFornecedores.BackgroundImage");
+            btnFornecedores.FlatAppearance.BorderSize = 0;
+            btnFornecedores.FlatStyle = FlatStyle.Flat;
+            btnFornecedores.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnFornecedores.Image = (Image)resources.GetObject("btnFornecedores.Image");
+            btnFornecedores.ImageAlign = ContentAlignment.MiddleLeft;
+            btnFornecedores.Location = new Point(0, 0);
+            btnFornecedores.Name = "btnFornecedores";
+            btnFornecedores.Size = new Size(180, 53);
+            btnFornecedores.TabIndex = 2;
+            btnFornecedores.Text = "    Fornecedores";
+            btnFornecedores.UseVisualStyleBackColor = false;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Controls.Add(panel8);
+            flowLayoutPanel1.Controls.Add(panel9);
+            flowLayoutPanel1.Controls.Add(panel10);
+            flowLayoutPanel1.Location = new Point(605, 224);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(185, 166);
+            flowLayoutPanel1.TabIndex = 4;
+            // 
+            // panel9
+            // 
+            panel9.Controls.Add(btnIncluirFornecedores);
+            panel9.Location = new Point(0, 53);
+            panel9.Margin = new Padding(0);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(180, 53);
+            panel9.TabIndex = 2;
+            // 
+            // btnIncluirFornecedores
+            // 
+            btnIncluirFornecedores.BackColor = Color.Transparent;
+            btnIncluirFornecedores.BackgroundImage = (Image)resources.GetObject("btnIncluirFornecedores.BackgroundImage");
+            btnIncluirFornecedores.FlatAppearance.BorderSize = 0;
+            btnIncluirFornecedores.FlatStyle = FlatStyle.Flat;
+            btnIncluirFornecedores.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnIncluirFornecedores.Image = (Image)resources.GetObject("btnIncluirFornecedores.Image");
+            btnIncluirFornecedores.ImageAlign = ContentAlignment.MiddleLeft;
+            btnIncluirFornecedores.Location = new Point(0, 0);
+            btnIncluirFornecedores.Name = "btnIncluirFornecedores";
+            btnIncluirFornecedores.Size = new Size(180, 53);
+            btnIncluirFornecedores.TabIndex = 2;
+            btnIncluirFornecedores.Text = "    Incluir";
+            btnIncluirFornecedores.UseVisualStyleBackColor = false;
+            // 
+            // panel10
+            // 
+            panel10.Controls.Add(btnListarFornecedores);
+            panel10.Location = new Point(0, 106);
+            panel10.Margin = new Padding(0);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(180, 53);
+            panel10.TabIndex = 2;
+            // 
+            // btnListarFornecedores
+            // 
+            btnListarFornecedores.BackColor = Color.Transparent;
+            btnListarFornecedores.BackgroundImage = (Image)resources.GetObject("btnListarFornecedores.BackgroundImage");
+            btnListarFornecedores.FlatAppearance.BorderSize = 0;
+            btnListarFornecedores.FlatStyle = FlatStyle.Flat;
+            btnListarFornecedores.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnListarFornecedores.Image = (Image)resources.GetObject("btnListarFornecedores.Image");
+            btnListarFornecedores.ImageAlign = ContentAlignment.MiddleLeft;
+            btnListarFornecedores.Location = new Point(0, 0);
+            btnListarFornecedores.Name = "btnListarFornecedores";
+            btnListarFornecedores.Size = new Size(180, 53);
+            btnListarFornecedores.TabIndex = 2;
+            btnListarFornecedores.Text = "    Listar";
+            btnListarFornecedores.UseVisualStyleBackColor = false;
+            // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -326,6 +423,10 @@
             panel7.ResumeLayout(false);
             panel11.ResumeLayout(false);
             panel1.ResumeLayout(false);
+            panel8.ResumeLayout(false);
+            flowLayoutPanel1.ResumeLayout(false);
+            panel9.ResumeLayout(false);
+            panel10.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -352,5 +453,9 @@
         private Button btnFornecedor;
         private Button btnCategoria;
         private Button btnEstoque;
+        private Button btnFornecedores;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Button btnIncluirFornecedores;
+        private Button btnListarFornecedores;
     }
 }
