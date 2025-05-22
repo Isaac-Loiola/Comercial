@@ -46,5 +46,21 @@ namespace ComercialTDSClass
             Telefone = telefone;
             Email = email;
         }
+
+        public void Inserir()
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.CommandText = "sp_forncedor_insert";
+            cmd.Parameters.AddWithValue("sprazao_social", RazaoSocial);
+            cmd.Parameters.AddWithValue("spfantasia", Fantasia);
+            cmd.Parameters.AddWithValue("spcnpj", Cnpj);
+            cmd.Parameters.AddWithValue("spcontato", Contato);
+            cmd.Parameters.AddWithValue("sptelefone", Telefone);
+            cmd.Parameters.AddWithValue("spemail", Email);
+
+            Id = Convert.ToInt32(cmd.ExecuteScalar());
+            cmd.Connection.Close();
+        }
     }
 }
