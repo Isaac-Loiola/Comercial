@@ -113,5 +113,153 @@ namespace ComercialTDSDesk
         {
 
         }
+
+        bool menuEspandidoProdutos = false;
+
+        private void transicaoMenu_Tick(object sender, EventArgs e)
+        {
+            if (menuEspandidoProdutos == false)
+            {
+                flpMenuLateralProdutos.Height += 15;
+                if (flpMenuLateralProdutos.Height >= 348)
+                {
+                    transicaoMenuProdutos.Stop();
+                    menuEspandidoProdutos = true;
+                }
+
+            }
+            else
+            {
+                flpMenuLateralProdutos.Height -= 15;
+                if (flpMenuLateralProdutos.Height <= 53)
+                {
+                    transicaoMenuProdutos.Stop();
+                    menuEspandidoProdutos = false;
+                }
+            }
+        }
+
+        private void btnProdutos_Click(object sender, EventArgs e)
+        {
+            transicaoMenuProdutos.Start();
+        }
+
+        private void btnCaixa_Click(object sender, EventArgs e)
+        {
+            transicaoMenuCaixa.Start();
+        }
+
+
+        public bool menuEspandidoFornecedores = false;
+        private void transicaoMenuFornecedores_Tick(object sender, EventArgs e)
+        {
+            if (menuEspandidoFornecedores == false)
+            {
+                flpMenuLateralFornecedores.Height += 15;
+                if (flpMenuLateralFornecedores.Height >= 166)
+                {
+                    transicaoMenuFornecedores.Stop();
+                    menuEspandidoFornecedores = true;
+                }
+            }
+            else
+            {
+                flpMenuLateralFornecedores.Height -= 15;
+                if (flpMenuLateralFornecedores.Height <= 53)
+                {
+                    transicaoMenuFornecedores.Stop();
+                    menuEspandidoFornecedores = false;
+                }
+            }
+        }
+
+        private void btnFornecedores_Click(object sender, EventArgs e)
+        {
+            transicaoMenuFornecedores.Start();
+        }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            transicaoMenuPedidos.Start();
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        bool menuEspandidoPedidos = false;
+        private void transicaoMenuPedidos_Tick(object sender, EventArgs e)
+        {
+            if (menuEspandidoPedidos == false)
+            {
+                flpMenuLateralPedidos.Height += 15;
+                if (flpMenuLateralPedidos.Height >= 202)
+                {
+                    transicaoMenuPedidos.Stop();
+                    menuEspandidoPedidos = true;
+                }
+            }
+            else
+            {
+                flpMenuLateralPedidos.Height -= 15;
+                if (flpMenuLateralPedidos.Height <= 53)
+                {
+                    transicaoMenuPedidos.Stop();
+                    menuEspandidoPedidos = false;
+                }
+            }
+        }
+
+        bool menuEspandidoCaixa = false;
+        private void transicaoMenuCaixa_Tick(object sender, EventArgs e)
+        {
+            if (menuEspandidoCaixa == false)
+            {
+                flpMenuLateralCaixa.Height += 15;
+                if (flpMenuLateralCaixa.Height >= 290)
+                {
+                    transicaoMenuCaixa.Stop();
+                    menuEspandidoCaixa = true;
+                }
+            }
+            else
+            {
+                flpMenuLateralCaixa.Height -= 15;
+                if (flpMenuLateralCaixa.Height <= 53)
+                {
+                    transicaoMenuCaixa.Stop();
+                    menuEspandidoCaixa = false;
+                }
+            }
+        }
+
+        bool menuEspandidoVendas = false;
+        private void transicaoMenuVendas_Tick(object sender, EventArgs e)
+        {
+            if (menuEspandidoVendas == false)
+            {
+                flpMenulateralVendas.Height += 5;
+                if (flpMenulateralVendas.Height >= 160)
+                {
+                    transicaoMenuVendas.Stop();
+                    menuEspandidoVendas = true;
+                }
+            }
+            else
+            {
+                flpMenulateralVendas.Height -= 5;
+                if (flpMenulateralVendas.Height <= 53)
+                {
+                    transicaoMenuVendas.Stop();
+                    menuEspandidoVendas = false;
+                }
+            }
+        }
+
+        private void btnVendas_Click(object sender, EventArgs e)
+        {
+            transicaoMenuVendas.Start();
+        }
     }
 }
