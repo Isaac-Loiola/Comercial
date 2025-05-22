@@ -119,7 +119,30 @@ namespace ComercialTDSClass
         public static List<ItemPedido> ObterListaPorPedidoId(int pedidoId)
         {
             List<ItemPedido> items = new();
-            
+            ItemPedido itemPedido = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandText = $"select * from itempedido where id = {id}";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                items.Add
+                    (
+                        new
+                            (
+                                dr.GetInt32(0),
+                                dr.GetInt32(1),
+                                Produto.ObterPorId(dr.GetInt32(2)),
+                                dr.GetDouble(3),
+                                dr.GetDouble(4),
+                                dr.GetDouble(5)
+                            )
+
+                    );
+
+
+            }
+            dr.Close();
+            cmd.Connection.Close();
             return items;
         }
     }
