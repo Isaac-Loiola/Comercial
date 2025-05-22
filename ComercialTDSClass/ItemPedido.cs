@@ -49,12 +49,18 @@ namespace ComercialTDSClass
 
         public void Deletar(int id)
         {
+            var item = ItemPedido.ObterPorId(id);
+
             var cmd = Banco.Abrir();
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.CommandText = "sp_itempedido_delete";
-            cmd.Parameters.AddWithValue("spid", Id);
-
-            cmd.ExecuteNonQuery();
+            cmd.CommandText = $"update estoques set quantidade = quantidade +" +
+                              $"{item.Quantidade}" +
+                              $"where produto_id = {item.Produto.Id}";
+            if(cmd.ExecuteNonQuery() > 0)
+            {
+                cmd.CommandText = $"delete from itempedido where id = {id}";
+                cmd.ExecuteNonQuery();
+            }
             cmd.Connection.Close();
         }
 
