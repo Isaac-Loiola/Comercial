@@ -51,7 +51,7 @@
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.White;
-            button1.Location = new Point(399, 483);
+            button1.Location = new Point(655, 583);
             button1.Name = "button1";
             button1.Size = new Size(208, 50);
             button1.TabIndex = 4;
@@ -102,7 +102,7 @@
             panel1.Controls.Add(txtEmail);
             panel1.Controls.Add(txtSenha);
             panel1.Controls.Add(txtNome);
-            panel1.Location = new Point(399, 123);
+            panel1.Location = new Point(655, 223);
             panel1.Name = "panel1";
             panel1.Size = new Size(456, 353);
             panel1.TabIndex = 0;
@@ -158,7 +158,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1248, 596);
+            ClientSize = new Size(1715, 930);
             ControlBox = false;
             Controls.Add(button1);
             Controls.Add(panel1);

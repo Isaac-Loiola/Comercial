@@ -180,6 +180,7 @@
             // 
             // pnlCentral
             // 
+            pnlCentral.BackColor = SystemColors.ButtonFace;
             pnlCentral.Location = new Point(189, 86);
             pnlCentral.Name = "pnlCentral";
             pnlCentral.Size = new Size(1731, 946);
