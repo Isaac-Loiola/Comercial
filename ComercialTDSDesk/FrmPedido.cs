@@ -49,7 +49,8 @@ namespace ComercialTDSDesk
                 {
                     //MessageBox.Show($"Pedido ")
                     txtIdPedido.Text = pedido.Id.ToString();
-                    //grbIndentificacaok
+                    grbIndentificacao.Enabled = false;
+                    grbItens.Enabled = true;
                 }
             }
             else
@@ -62,7 +63,19 @@ namespace ComercialTDSDesk
 
         private void txtCodBar_TextChanged(object sender, EventArgs e)
         {
-            var produto = Produto.ObterPorBar(txtIdPedido. Text);
+            if(txtCodBar.Text.Length > 6)
+            {
+                var produto = Produto.ObterPorCodBar(txtIdPedido. Text);
+                if (produto.Id == 0)
+                {
+                    produto = Produto.ObterPorId(int.Parse(txtCodBar.Text));
+                    
+
+                }
+                txtDescricao.Text = produto.Descricao;
+                txtValorUnit.Text = produto.ValorUnit.ToString("R$##.00");
+                label4.Text = $"R$ {produto.ValorUnit * produto.ClasseDesconto}";
+            }
         }
     }
 }
