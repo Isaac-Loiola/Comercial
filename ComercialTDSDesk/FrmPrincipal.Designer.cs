@@ -32,6 +32,33 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             pnlPrincipal = new Panel();
             pnlCentral = new Panel();
+            flpMenulateralVendas = new FlowLayoutPanel();
+            panel26 = new Panel();
+            btnVendas = new Button();
+            panel27 = new Panel();
+            btnConsultarVendas = new Button();
+            panel28 = new Panel();
+            btnEmitirnota = new Button();
+            flpMenuLateralCaixa = new FlowLayoutPanel();
+            panel21 = new Panel();
+            btnCaixa = new Button();
+            panel22 = new Panel();
+            btnAbrirCaixa = new Button();
+            panel23 = new Panel();
+            btnTerminalCaixa = new Button();
+            panel24 = new Panel();
+            btnConsultarCaixa = new Button();
+            panel25 = new Panel();
+            button1 = new Button();
+            flpMenuLateralPedidos = new FlowLayoutPanel();
+            panel17 = new Panel();
+            btnPedidos = new Button();
+            panel18 = new Panel();
+            btnNovoPedidos = new Button();
+            panel19 = new Panel();
+            btnConsultarPedidos = new Button();
+            panel20 = new Panel();
+            btnListarPedidos = new Button();
             flpMenu = new FlowLayoutPanel();
             panel11 = new Panel();
             btnCliente = new Button();
@@ -66,33 +93,6 @@
             btnListarUsuario = new Button();
             panel33 = new Panel();
             btnNiveisUsuario = new Button();
-            flpMenuLateralPedidos = new FlowLayoutPanel();
-            panel17 = new Panel();
-            btnPedidos = new Button();
-            panel18 = new Panel();
-            btnNovoPedidos = new Button();
-            panel19 = new Panel();
-            btnConsultarPedidos = new Button();
-            panel20 = new Panel();
-            btnListarPedidos = new Button();
-            flpMenuLateralCaixa = new FlowLayoutPanel();
-            panel21 = new Panel();
-            btnCaixa = new Button();
-            panel22 = new Panel();
-            btnAbrirCaixa = new Button();
-            panel23 = new Panel();
-            btnTerminalCaixa = new Button();
-            panel24 = new Panel();
-            btnConsultarCaixa = new Button();
-            panel25 = new Panel();
-            button1 = new Button();
-            flpMenulateralVendas = new FlowLayoutPanel();
-            panel26 = new Panel();
-            btnVendas = new Button();
-            panel27 = new Panel();
-            btnConsultarVendas = new Button();
-            panel28 = new Panel();
-            btnEmitirnota = new Button();
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
@@ -117,6 +117,21 @@
             transicaoMenuVendas = new System.Windows.Forms.Timer(components);
             transicaoMenuUsuarios = new System.Windows.Forms.Timer(components);
             pnlPrincipal.SuspendLayout();
+            flpMenulateralVendas.SuspendLayout();
+            panel26.SuspendLayout();
+            panel27.SuspendLayout();
+            panel28.SuspendLayout();
+            flpMenuLateralCaixa.SuspendLayout();
+            panel21.SuspendLayout();
+            panel22.SuspendLayout();
+            panel23.SuspendLayout();
+            panel24.SuspendLayout();
+            panel25.SuspendLayout();
+            flpMenuLateralPedidos.SuspendLayout();
+            panel17.SuspendLayout();
+            panel18.SuspendLayout();
+            panel19.SuspendLayout();
+            panel20.SuspendLayout();
             flpMenu.SuspendLayout();
             panel11.SuspendLayout();
             flpMenuLateralProdutos.SuspendLayout();
@@ -136,21 +151,6 @@
             panel32.SuspendLayout();
             panel34.SuspendLayout();
             panel33.SuspendLayout();
-            flpMenuLateralPedidos.SuspendLayout();
-            panel17.SuspendLayout();
-            panel18.SuspendLayout();
-            panel19.SuspendLayout();
-            panel20.SuspendLayout();
-            flpMenuLateralCaixa.SuspendLayout();
-            panel21.SuspendLayout();
-            panel22.SuspendLayout();
-            panel23.SuspendLayout();
-            panel24.SuspendLayout();
-            panel25.SuspendLayout();
-            flpMenulateralVendas.SuspendLayout();
-            panel26.SuspendLayout();
-            panel27.SuspendLayout();
-            panel28.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             flpMenuLateralusuarios.SuspendLayout();
@@ -186,6 +186,350 @@
             pnlCentral.Size = new Size(1731, 946);
             pnlCentral.TabIndex = 4;
             pnlCentral.Paint += pnlCentral_Paint;
+            // 
+            // flpMenulateralVendas
+            // 
+            flpMenulateralVendas.Controls.Add(panel26);
+            flpMenulateralVendas.Controls.Add(panel27);
+            flpMenulateralVendas.Controls.Add(panel28);
+            flpMenulateralVendas.Location = new Point(3, 422);
+            flpMenulateralVendas.Margin = new Padding(3, 3, 3, 420);
+            flpMenulateralVendas.Name = "flpMenulateralVendas";
+            flpMenulateralVendas.Size = new Size(185, 53);
+            flpMenulateralVendas.TabIndex = 8;
+            // 
+            // panel26
+            // 
+            panel26.Controls.Add(btnVendas);
+            panel26.Location = new Point(0, 0);
+            panel26.Margin = new Padding(0);
+            panel26.Name = "panel26";
+            panel26.Size = new Size(180, 53);
+            panel26.TabIndex = 2;
+            // 
+            // btnVendas
+            // 
+            btnVendas.BackColor = Color.Transparent;
+            btnVendas.BackgroundImage = (Image)resources.GetObject("btnVendas.BackgroundImage");
+            btnVendas.FlatAppearance.BorderSize = 0;
+            btnVendas.FlatStyle = FlatStyle.Flat;
+            btnVendas.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            btnVendas.Image = (Image)resources.GetObject("btnVendas.Image");
+            btnVendas.ImageAlign = ContentAlignment.MiddleLeft;
+            btnVendas.Location = new Point(0, 0);
+            btnVendas.Name = "btnVendas";
+            btnVendas.Size = new Size(180, 53);
+            btnVendas.TabIndex = 2;
+            btnVendas.Text = "   Vendas";
+            btnVendas.UseVisualStyleBackColor = false;
+            btnVendas.Click += btnVendas_Click;
+            // 
+            // panel27
+            // 
+            panel27.Controls.Add(btnConsultarVendas);
+            panel27.Location = new Point(0, 53);
+            panel27.Margin = new Padding(0);
+            panel27.Name = "panel27";
+            panel27.Size = new Size(180, 53);
+            panel27.TabIndex = 2;
+            // 
+            // btnConsultarVendas
+            // 
+            btnConsultarVendas.BackColor = Color.Transparent;
+            btnConsultarVendas.BackgroundImage = (Image)resources.GetObject("btnConsultarVendas.BackgroundImage");
+            btnConsultarVendas.FlatAppearance.BorderSize = 0;
+            btnConsultarVendas.FlatStyle = FlatStyle.Flat;
+            btnConsultarVendas.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            btnConsultarVendas.Image = (Image)resources.GetObject("btnConsultarVendas.Image");
+            btnConsultarVendas.ImageAlign = ContentAlignment.MiddleLeft;
+            btnConsultarVendas.Location = new Point(0, 0);
+            btnConsultarVendas.Name = "btnConsultarVendas";
+            btnConsultarVendas.Size = new Size(180, 53);
+            btnConsultarVendas.TabIndex = 2;
+            btnConsultarVendas.Text = "   Consultar";
+            btnConsultarVendas.UseVisualStyleBackColor = false;
+            // 
+            // panel28
+            // 
+            panel28.Controls.Add(btnEmitirnota);
+            panel28.Location = new Point(0, 106);
+            panel28.Margin = new Padding(0);
+            panel28.Name = "panel28";
+            panel28.Size = new Size(180, 53);
+            panel28.TabIndex = 2;
+            // 
+            // btnEmitirnota
+            // 
+            btnEmitirnota.BackColor = Color.Transparent;
+            btnEmitirnota.BackgroundImage = (Image)resources.GetObject("btnEmitirnota.BackgroundImage");
+            btnEmitirnota.FlatAppearance.BorderSize = 0;
+            btnEmitirnota.FlatStyle = FlatStyle.Flat;
+            btnEmitirnota.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            btnEmitirnota.Image = (Image)resources.GetObject("btnEmitirnota.Image");
+            btnEmitirnota.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEmitirnota.Location = new Point(0, 0);
+            btnEmitirnota.Name = "btnEmitirnota";
+            btnEmitirnota.Size = new Size(180, 53);
+            btnEmitirnota.TabIndex = 2;
+            btnEmitirnota.Text = "   Vendas";
+            btnEmitirnota.UseVisualStyleBackColor = false;
+            // 
+            // flpMenuLateralCaixa
+            // 
+            flpMenuLateralCaixa.Controls.Add(panel21);
+            flpMenuLateralCaixa.Controls.Add(panel22);
+            flpMenuLateralCaixa.Controls.Add(panel23);
+            flpMenuLateralCaixa.Controls.Add(panel24);
+            flpMenuLateralCaixa.Controls.Add(panel25);
+            flpMenuLateralCaixa.Location = new Point(3, 357);
+            flpMenuLateralCaixa.Name = "flpMenuLateralCaixa";
+            flpMenuLateralCaixa.Size = new Size(187, 59);
+            flpMenuLateralCaixa.TabIndex = 7;
+            // 
+            // panel21
+            // 
+            panel21.Controls.Add(btnCaixa);
+            panel21.Location = new Point(3, 3);
+            panel21.Name = "panel21";
+            panel21.Size = new Size(180, 53);
+            panel21.TabIndex = 2;
+            // 
+            // btnCaixa
+            // 
+            btnCaixa.BackColor = Color.Transparent;
+            btnCaixa.BackgroundImage = (Image)resources.GetObject("btnCaixa.BackgroundImage");
+            btnCaixa.FlatAppearance.BorderSize = 0;
+            btnCaixa.FlatStyle = FlatStyle.Flat;
+            btnCaixa.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            btnCaixa.Image = (Image)resources.GetObject("btnCaixa.Image");
+            btnCaixa.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCaixa.Location = new Point(0, 0);
+            btnCaixa.Margin = new Padding(0);
+            btnCaixa.Name = "btnCaixa";
+            btnCaixa.Size = new Size(180, 53);
+            btnCaixa.TabIndex = 2;
+            btnCaixa.Text = "   Caixa";
+            btnCaixa.UseVisualStyleBackColor = false;
+            btnCaixa.Click += btnCaixa_Click;
+            // 
+            // panel22
+            // 
+            panel22.Controls.Add(btnAbrirCaixa);
+            panel22.Location = new Point(3, 62);
+            panel22.Name = "panel22";
+            panel22.Size = new Size(180, 53);
+            panel22.TabIndex = 2;
+            // 
+            // btnAbrirCaixa
+            // 
+            btnAbrirCaixa.BackColor = Color.Transparent;
+            btnAbrirCaixa.BackgroundImage = (Image)resources.GetObject("btnAbrirCaixa.BackgroundImage");
+            btnAbrirCaixa.FlatAppearance.BorderSize = 0;
+            btnAbrirCaixa.FlatStyle = FlatStyle.Flat;
+            btnAbrirCaixa.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            btnAbrirCaixa.Image = (Image)resources.GetObject("btnAbrirCaixa.Image");
+            btnAbrirCaixa.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAbrirCaixa.Location = new Point(0, 0);
+            btnAbrirCaixa.Margin = new Padding(0);
+            btnAbrirCaixa.Name = "btnAbrirCaixa";
+            btnAbrirCaixa.Size = new Size(180, 53);
+            btnAbrirCaixa.TabIndex = 2;
+            btnAbrirCaixa.Text = "   Abrir";
+            btnAbrirCaixa.UseVisualStyleBackColor = false;
+            // 
+            // panel23
+            // 
+            panel23.Controls.Add(btnTerminalCaixa);
+            panel23.Location = new Point(3, 121);
+            panel23.Name = "panel23";
+            panel23.Size = new Size(180, 53);
+            panel23.TabIndex = 2;
+            // 
+            // btnTerminalCaixa
+            // 
+            btnTerminalCaixa.BackColor = Color.Transparent;
+            btnTerminalCaixa.BackgroundImage = (Image)resources.GetObject("btnTerminalCaixa.BackgroundImage");
+            btnTerminalCaixa.FlatAppearance.BorderSize = 0;
+            btnTerminalCaixa.FlatStyle = FlatStyle.Flat;
+            btnTerminalCaixa.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            btnTerminalCaixa.Image = (Image)resources.GetObject("btnTerminalCaixa.Image");
+            btnTerminalCaixa.ImageAlign = ContentAlignment.MiddleLeft;
+            btnTerminalCaixa.Location = new Point(0, 0);
+            btnTerminalCaixa.Margin = new Padding(0);
+            btnTerminalCaixa.Name = "btnTerminalCaixa";
+            btnTerminalCaixa.Size = new Size(180, 53);
+            btnTerminalCaixa.TabIndex = 2;
+            btnTerminalCaixa.Text = "   Terminal";
+            btnTerminalCaixa.UseVisualStyleBackColor = false;
+            // 
+            // panel24
+            // 
+            panel24.Controls.Add(btnConsultarCaixa);
+            panel24.Location = new Point(0, 177);
+            panel24.Margin = new Padding(0);
+            panel24.Name = "panel24";
+            panel24.Size = new Size(180, 53);
+            panel24.TabIndex = 2;
+            // 
+            // btnConsultarCaixa
+            // 
+            btnConsultarCaixa.BackColor = Color.Transparent;
+            btnConsultarCaixa.BackgroundImage = (Image)resources.GetObject("btnConsultarCaixa.BackgroundImage");
+            btnConsultarCaixa.FlatAppearance.BorderSize = 0;
+            btnConsultarCaixa.FlatStyle = FlatStyle.Flat;
+            btnConsultarCaixa.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            btnConsultarCaixa.Image = (Image)resources.GetObject("btnConsultarCaixa.Image");
+            btnConsultarCaixa.ImageAlign = ContentAlignment.MiddleLeft;
+            btnConsultarCaixa.Location = new Point(0, 0);
+            btnConsultarCaixa.Margin = new Padding(0);
+            btnConsultarCaixa.Name = "btnConsultarCaixa";
+            btnConsultarCaixa.Size = new Size(180, 53);
+            btnConsultarCaixa.TabIndex = 2;
+            btnConsultarCaixa.Text = "   Consultar";
+            btnConsultarCaixa.UseVisualStyleBackColor = false;
+            // 
+            // panel25
+            // 
+            panel25.Controls.Add(button1);
+            panel25.Location = new Point(0, 230);
+            panel25.Margin = new Padding(0);
+            panel25.Name = "panel25";
+            panel25.Size = new Size(180, 53);
+            panel25.TabIndex = 2;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Transparent;
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(0, 0);
+            button1.Margin = new Padding(0);
+            button1.Name = "button1";
+            button1.Size = new Size(180, 53);
+            button1.TabIndex = 2;
+            button1.Text = "   Relátorio";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // flpMenuLateralPedidos
+            // 
+            flpMenuLateralPedidos.Controls.Add(panel17);
+            flpMenuLateralPedidos.Controls.Add(panel18);
+            flpMenuLateralPedidos.Controls.Add(panel19);
+            flpMenuLateralPedidos.Controls.Add(panel20);
+            flpMenuLateralPedidos.Location = new Point(3, 298);
+            flpMenuLateralPedidos.Name = "flpMenuLateralPedidos";
+            flpMenuLateralPedidos.Size = new Size(180, 53);
+            flpMenuLateralPedidos.TabIndex = 6;
+            // 
+            // panel17
+            // 
+            panel17.Controls.Add(btnPedidos);
+            panel17.Location = new Point(0, 0);
+            panel17.Margin = new Padding(0);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(180, 53);
+            panel17.TabIndex = 2;
+            // 
+            // btnPedidos
+            // 
+            btnPedidos.BackColor = Color.Transparent;
+            btnPedidos.BackgroundImage = (Image)resources.GetObject("btnPedidos.BackgroundImage");
+            btnPedidos.FlatAppearance.BorderSize = 0;
+            btnPedidos.FlatStyle = FlatStyle.Flat;
+            btnPedidos.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            btnPedidos.Image = (Image)resources.GetObject("btnPedidos.Image");
+            btnPedidos.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPedidos.Location = new Point(0, 0);
+            btnPedidos.Margin = new Padding(0);
+            btnPedidos.Name = "btnPedidos";
+            btnPedidos.Size = new Size(180, 53);
+            btnPedidos.TabIndex = 2;
+            btnPedidos.Text = "   Pedidos";
+            btnPedidos.UseVisualStyleBackColor = false;
+            btnPedidos.Click += btnPedidos_Click;
+            // 
+            // panel18
+            // 
+            panel18.Controls.Add(btnNovoPedidos);
+            panel18.Location = new Point(0, 53);
+            panel18.Margin = new Padding(0);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(180, 53);
+            panel18.TabIndex = 2;
+            // 
+            // btnNovoPedidos
+            // 
+            btnNovoPedidos.BackColor = Color.Transparent;
+            btnNovoPedidos.BackgroundImage = (Image)resources.GetObject("btnNovoPedidos.BackgroundImage");
+            btnNovoPedidos.FlatAppearance.BorderSize = 0;
+            btnNovoPedidos.FlatStyle = FlatStyle.Flat;
+            btnNovoPedidos.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            btnNovoPedidos.Image = (Image)resources.GetObject("btnNovoPedidos.Image");
+            btnNovoPedidos.ImageAlign = ContentAlignment.MiddleLeft;
+            btnNovoPedidos.Location = new Point(0, 0);
+            btnNovoPedidos.Margin = new Padding(0);
+            btnNovoPedidos.Name = "btnNovoPedidos";
+            btnNovoPedidos.Size = new Size(180, 53);
+            btnNovoPedidos.TabIndex = 2;
+            btnNovoPedidos.Text = "   Novo";
+            btnNovoPedidos.UseVisualStyleBackColor = false;
+            btnNovoPedidos.Click += btnNovoPedidos_Click;
+            // 
+            // panel19
+            // 
+            panel19.Controls.Add(btnConsultarPedidos);
+            panel19.Location = new Point(0, 106);
+            panel19.Margin = new Padding(0);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(180, 53);
+            panel19.TabIndex = 2;
+            // 
+            // btnConsultarPedidos
+            // 
+            btnConsultarPedidos.BackColor = Color.Transparent;
+            btnConsultarPedidos.BackgroundImage = (Image)resources.GetObject("btnConsultarPedidos.BackgroundImage");
+            btnConsultarPedidos.FlatAppearance.BorderSize = 0;
+            btnConsultarPedidos.FlatStyle = FlatStyle.Flat;
+            btnConsultarPedidos.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            btnConsultarPedidos.Image = (Image)resources.GetObject("btnConsultarPedidos.Image");
+            btnConsultarPedidos.ImageAlign = ContentAlignment.MiddleLeft;
+            btnConsultarPedidos.Location = new Point(0, 0);
+            btnConsultarPedidos.Margin = new Padding(0);
+            btnConsultarPedidos.Name = "btnConsultarPedidos";
+            btnConsultarPedidos.Size = new Size(180, 53);
+            btnConsultarPedidos.TabIndex = 2;
+            btnConsultarPedidos.Text = "   Consultar";
+            btnConsultarPedidos.UseVisualStyleBackColor = false;
+            // 
+            // panel20
+            // 
+            panel20.Controls.Add(btnListarPedidos);
+            panel20.Location = new Point(0, 159);
+            panel20.Margin = new Padding(0);
+            panel20.Name = "panel20";
+            panel20.Size = new Size(180, 53);
+            panel20.TabIndex = 2;
+            // 
+            // btnListarPedidos
+            // 
+            btnListarPedidos.BackColor = Color.Transparent;
+            btnListarPedidos.BackgroundImage = (Image)resources.GetObject("btnListarPedidos.BackgroundImage");
+            btnListarPedidos.FlatAppearance.BorderSize = 0;
+            btnListarPedidos.FlatStyle = FlatStyle.Flat;
+            btnListarPedidos.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            btnListarPedidos.Image = (Image)resources.GetObject("btnListarPedidos.Image");
+            btnListarPedidos.ImageAlign = ContentAlignment.MiddleLeft;
+            btnListarPedidos.Location = new Point(0, 0);
+            btnListarPedidos.Margin = new Padding(0);
+            btnListarPedidos.Name = "btnListarPedidos";
+            btnListarPedidos.Size = new Size(180, 53);
+            btnListarPedidos.TabIndex = 2;
+            btnListarPedidos.Text = "   Listar";
+            btnListarPedidos.UseVisualStyleBackColor = false;
             // 
             // flpMenu
             // 
@@ -622,349 +966,6 @@
             btnNiveisUsuario.UseVisualStyleBackColor = false;
             btnNiveisUsuario.Click += button2_Click;
             // 
-            // flpMenuLateralPedidos
-            // 
-            flpMenuLateralPedidos.Controls.Add(panel17);
-            flpMenuLateralPedidos.Controls.Add(panel18);
-            flpMenuLateralPedidos.Controls.Add(panel19);
-            flpMenuLateralPedidos.Controls.Add(panel20);
-            flpMenuLateralPedidos.Location = new Point(3, 298);
-            flpMenuLateralPedidos.Name = "flpMenuLateralPedidos";
-            flpMenuLateralPedidos.Size = new Size(180, 53);
-            flpMenuLateralPedidos.TabIndex = 6;
-            // 
-            // panel17
-            // 
-            panel17.Controls.Add(btnPedidos);
-            panel17.Location = new Point(0, 0);
-            panel17.Margin = new Padding(0);
-            panel17.Name = "panel17";
-            panel17.Size = new Size(180, 53);
-            panel17.TabIndex = 2;
-            // 
-            // btnPedidos
-            // 
-            btnPedidos.BackColor = Color.Transparent;
-            btnPedidos.BackgroundImage = (Image)resources.GetObject("btnPedidos.BackgroundImage");
-            btnPedidos.FlatAppearance.BorderSize = 0;
-            btnPedidos.FlatStyle = FlatStyle.Flat;
-            btnPedidos.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
-            btnPedidos.Image = (Image)resources.GetObject("btnPedidos.Image");
-            btnPedidos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPedidos.Location = new Point(0, 0);
-            btnPedidos.Margin = new Padding(0);
-            btnPedidos.Name = "btnPedidos";
-            btnPedidos.Size = new Size(180, 53);
-            btnPedidos.TabIndex = 2;
-            btnPedidos.Text = "   Pedidos";
-            btnPedidos.UseVisualStyleBackColor = false;
-            btnPedidos.Click += btnPedidos_Click;
-            // 
-            // panel18
-            // 
-            panel18.Controls.Add(btnNovoPedidos);
-            panel18.Location = new Point(0, 53);
-            panel18.Margin = new Padding(0);
-            panel18.Name = "panel18";
-            panel18.Size = new Size(180, 53);
-            panel18.TabIndex = 2;
-            // 
-            // btnNovoPedidos
-            // 
-            btnNovoPedidos.BackColor = Color.Transparent;
-            btnNovoPedidos.BackgroundImage = (Image)resources.GetObject("btnNovoPedidos.BackgroundImage");
-            btnNovoPedidos.FlatAppearance.BorderSize = 0;
-            btnNovoPedidos.FlatStyle = FlatStyle.Flat;
-            btnNovoPedidos.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
-            btnNovoPedidos.Image = (Image)resources.GetObject("btnNovoPedidos.Image");
-            btnNovoPedidos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNovoPedidos.Location = new Point(0, 0);
-            btnNovoPedidos.Margin = new Padding(0);
-            btnNovoPedidos.Name = "btnNovoPedidos";
-            btnNovoPedidos.Size = new Size(180, 53);
-            btnNovoPedidos.TabIndex = 2;
-            btnNovoPedidos.Text = "   Novo";
-            btnNovoPedidos.UseVisualStyleBackColor = false;
-            // 
-            // panel19
-            // 
-            panel19.Controls.Add(btnConsultarPedidos);
-            panel19.Location = new Point(0, 106);
-            panel19.Margin = new Padding(0);
-            panel19.Name = "panel19";
-            panel19.Size = new Size(180, 53);
-            panel19.TabIndex = 2;
-            // 
-            // btnConsultarPedidos
-            // 
-            btnConsultarPedidos.BackColor = Color.Transparent;
-            btnConsultarPedidos.BackgroundImage = (Image)resources.GetObject("btnConsultarPedidos.BackgroundImage");
-            btnConsultarPedidos.FlatAppearance.BorderSize = 0;
-            btnConsultarPedidos.FlatStyle = FlatStyle.Flat;
-            btnConsultarPedidos.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
-            btnConsultarPedidos.Image = (Image)resources.GetObject("btnConsultarPedidos.Image");
-            btnConsultarPedidos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnConsultarPedidos.Location = new Point(0, 0);
-            btnConsultarPedidos.Margin = new Padding(0);
-            btnConsultarPedidos.Name = "btnConsultarPedidos";
-            btnConsultarPedidos.Size = new Size(180, 53);
-            btnConsultarPedidos.TabIndex = 2;
-            btnConsultarPedidos.Text = "   Consultar";
-            btnConsultarPedidos.UseVisualStyleBackColor = false;
-            // 
-            // panel20
-            // 
-            panel20.Controls.Add(btnListarPedidos);
-            panel20.Location = new Point(0, 159);
-            panel20.Margin = new Padding(0);
-            panel20.Name = "panel20";
-            panel20.Size = new Size(180, 53);
-            panel20.TabIndex = 2;
-            // 
-            // btnListarPedidos
-            // 
-            btnListarPedidos.BackColor = Color.Transparent;
-            btnListarPedidos.BackgroundImage = (Image)resources.GetObject("btnListarPedidos.BackgroundImage");
-            btnListarPedidos.FlatAppearance.BorderSize = 0;
-            btnListarPedidos.FlatStyle = FlatStyle.Flat;
-            btnListarPedidos.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
-            btnListarPedidos.Image = (Image)resources.GetObject("btnListarPedidos.Image");
-            btnListarPedidos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnListarPedidos.Location = new Point(0, 0);
-            btnListarPedidos.Margin = new Padding(0);
-            btnListarPedidos.Name = "btnListarPedidos";
-            btnListarPedidos.Size = new Size(180, 53);
-            btnListarPedidos.TabIndex = 2;
-            btnListarPedidos.Text = "   Listar";
-            btnListarPedidos.UseVisualStyleBackColor = false;
-            // 
-            // flpMenuLateralCaixa
-            // 
-            flpMenuLateralCaixa.Controls.Add(panel21);
-            flpMenuLateralCaixa.Controls.Add(panel22);
-            flpMenuLateralCaixa.Controls.Add(panel23);
-            flpMenuLateralCaixa.Controls.Add(panel24);
-            flpMenuLateralCaixa.Controls.Add(panel25);
-            flpMenuLateralCaixa.Location = new Point(3, 357);
-            flpMenuLateralCaixa.Name = "flpMenuLateralCaixa";
-            flpMenuLateralCaixa.Size = new Size(187, 59);
-            flpMenuLateralCaixa.TabIndex = 7;
-            // 
-            // panel21
-            // 
-            panel21.Controls.Add(btnCaixa);
-            panel21.Location = new Point(3, 3);
-            panel21.Name = "panel21";
-            panel21.Size = new Size(180, 53);
-            panel21.TabIndex = 2;
-            // 
-            // btnCaixa
-            // 
-            btnCaixa.BackColor = Color.Transparent;
-            btnCaixa.BackgroundImage = (Image)resources.GetObject("btnCaixa.BackgroundImage");
-            btnCaixa.FlatAppearance.BorderSize = 0;
-            btnCaixa.FlatStyle = FlatStyle.Flat;
-            btnCaixa.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
-            btnCaixa.Image = (Image)resources.GetObject("btnCaixa.Image");
-            btnCaixa.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCaixa.Location = new Point(0, 0);
-            btnCaixa.Margin = new Padding(0);
-            btnCaixa.Name = "btnCaixa";
-            btnCaixa.Size = new Size(180, 53);
-            btnCaixa.TabIndex = 2;
-            btnCaixa.Text = "   Caixa";
-            btnCaixa.UseVisualStyleBackColor = false;
-            btnCaixa.Click += btnCaixa_Click;
-            // 
-            // panel22
-            // 
-            panel22.Controls.Add(btnAbrirCaixa);
-            panel22.Location = new Point(3, 62);
-            panel22.Name = "panel22";
-            panel22.Size = new Size(180, 53);
-            panel22.TabIndex = 2;
-            // 
-            // btnAbrirCaixa
-            // 
-            btnAbrirCaixa.BackColor = Color.Transparent;
-            btnAbrirCaixa.BackgroundImage = (Image)resources.GetObject("btnAbrirCaixa.BackgroundImage");
-            btnAbrirCaixa.FlatAppearance.BorderSize = 0;
-            btnAbrirCaixa.FlatStyle = FlatStyle.Flat;
-            btnAbrirCaixa.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
-            btnAbrirCaixa.Image = (Image)resources.GetObject("btnAbrirCaixa.Image");
-            btnAbrirCaixa.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAbrirCaixa.Location = new Point(0, 0);
-            btnAbrirCaixa.Margin = new Padding(0);
-            btnAbrirCaixa.Name = "btnAbrirCaixa";
-            btnAbrirCaixa.Size = new Size(180, 53);
-            btnAbrirCaixa.TabIndex = 2;
-            btnAbrirCaixa.Text = "   Abrir";
-            btnAbrirCaixa.UseVisualStyleBackColor = false;
-            // 
-            // panel23
-            // 
-            panel23.Controls.Add(btnTerminalCaixa);
-            panel23.Location = new Point(3, 121);
-            panel23.Name = "panel23";
-            panel23.Size = new Size(180, 53);
-            panel23.TabIndex = 2;
-            // 
-            // btnTerminalCaixa
-            // 
-            btnTerminalCaixa.BackColor = Color.Transparent;
-            btnTerminalCaixa.BackgroundImage = (Image)resources.GetObject("btnTerminalCaixa.BackgroundImage");
-            btnTerminalCaixa.FlatAppearance.BorderSize = 0;
-            btnTerminalCaixa.FlatStyle = FlatStyle.Flat;
-            btnTerminalCaixa.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
-            btnTerminalCaixa.Image = (Image)resources.GetObject("btnTerminalCaixa.Image");
-            btnTerminalCaixa.ImageAlign = ContentAlignment.MiddleLeft;
-            btnTerminalCaixa.Location = new Point(0, 0);
-            btnTerminalCaixa.Margin = new Padding(0);
-            btnTerminalCaixa.Name = "btnTerminalCaixa";
-            btnTerminalCaixa.Size = new Size(180, 53);
-            btnTerminalCaixa.TabIndex = 2;
-            btnTerminalCaixa.Text = "   Terminal";
-            btnTerminalCaixa.UseVisualStyleBackColor = false;
-            // 
-            // panel24
-            // 
-            panel24.Controls.Add(btnConsultarCaixa);
-            panel24.Location = new Point(0, 177);
-            panel24.Margin = new Padding(0);
-            panel24.Name = "panel24";
-            panel24.Size = new Size(180, 53);
-            panel24.TabIndex = 2;
-            // 
-            // btnConsultarCaixa
-            // 
-            btnConsultarCaixa.BackColor = Color.Transparent;
-            btnConsultarCaixa.BackgroundImage = (Image)resources.GetObject("btnConsultarCaixa.BackgroundImage");
-            btnConsultarCaixa.FlatAppearance.BorderSize = 0;
-            btnConsultarCaixa.FlatStyle = FlatStyle.Flat;
-            btnConsultarCaixa.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
-            btnConsultarCaixa.Image = (Image)resources.GetObject("btnConsultarCaixa.Image");
-            btnConsultarCaixa.ImageAlign = ContentAlignment.MiddleLeft;
-            btnConsultarCaixa.Location = new Point(0, 0);
-            btnConsultarCaixa.Margin = new Padding(0);
-            btnConsultarCaixa.Name = "btnConsultarCaixa";
-            btnConsultarCaixa.Size = new Size(180, 53);
-            btnConsultarCaixa.TabIndex = 2;
-            btnConsultarCaixa.Text = "   Consultar";
-            btnConsultarCaixa.UseVisualStyleBackColor = false;
-            // 
-            // panel25
-            // 
-            panel25.Controls.Add(button1);
-            panel25.Location = new Point(0, 230);
-            panel25.Margin = new Padding(0);
-            panel25.Name = "panel25";
-            panel25.Size = new Size(180, 53);
-            panel25.TabIndex = 2;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Transparent;
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(0, 0);
-            button1.Margin = new Padding(0);
-            button1.Name = "button1";
-            button1.Size = new Size(180, 53);
-            button1.TabIndex = 2;
-            button1.Text = "   Relátorio";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // flpMenulateralVendas
-            // 
-            flpMenulateralVendas.Controls.Add(panel26);
-            flpMenulateralVendas.Controls.Add(panel27);
-            flpMenulateralVendas.Controls.Add(panel28);
-            flpMenulateralVendas.Location = new Point(3, 422);
-            flpMenulateralVendas.Margin = new Padding(3, 3, 3, 420);
-            flpMenulateralVendas.Name = "flpMenulateralVendas";
-            flpMenulateralVendas.Size = new Size(185, 53);
-            flpMenulateralVendas.TabIndex = 8;
-            // 
-            // panel26
-            // 
-            panel26.Controls.Add(btnVendas);
-            panel26.Location = new Point(0, 0);
-            panel26.Margin = new Padding(0);
-            panel26.Name = "panel26";
-            panel26.Size = new Size(180, 53);
-            panel26.TabIndex = 2;
-            // 
-            // btnVendas
-            // 
-            btnVendas.BackColor = Color.Transparent;
-            btnVendas.BackgroundImage = (Image)resources.GetObject("btnVendas.BackgroundImage");
-            btnVendas.FlatAppearance.BorderSize = 0;
-            btnVendas.FlatStyle = FlatStyle.Flat;
-            btnVendas.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
-            btnVendas.Image = (Image)resources.GetObject("btnVendas.Image");
-            btnVendas.ImageAlign = ContentAlignment.MiddleLeft;
-            btnVendas.Location = new Point(0, 0);
-            btnVendas.Name = "btnVendas";
-            btnVendas.Size = new Size(180, 53);
-            btnVendas.TabIndex = 2;
-            btnVendas.Text = "   Vendas";
-            btnVendas.UseVisualStyleBackColor = false;
-            btnVendas.Click += btnVendas_Click;
-            // 
-            // panel27
-            // 
-            panel27.Controls.Add(btnConsultarVendas);
-            panel27.Location = new Point(0, 53);
-            panel27.Margin = new Padding(0);
-            panel27.Name = "panel27";
-            panel27.Size = new Size(180, 53);
-            panel27.TabIndex = 2;
-            // 
-            // btnConsultarVendas
-            // 
-            btnConsultarVendas.BackColor = Color.Transparent;
-            btnConsultarVendas.BackgroundImage = (Image)resources.GetObject("btnConsultarVendas.BackgroundImage");
-            btnConsultarVendas.FlatAppearance.BorderSize = 0;
-            btnConsultarVendas.FlatStyle = FlatStyle.Flat;
-            btnConsultarVendas.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
-            btnConsultarVendas.Image = (Image)resources.GetObject("btnConsultarVendas.Image");
-            btnConsultarVendas.ImageAlign = ContentAlignment.MiddleLeft;
-            btnConsultarVendas.Location = new Point(0, 0);
-            btnConsultarVendas.Name = "btnConsultarVendas";
-            btnConsultarVendas.Size = new Size(180, 53);
-            btnConsultarVendas.TabIndex = 2;
-            btnConsultarVendas.Text = "   Consultar";
-            btnConsultarVendas.UseVisualStyleBackColor = false;
-            // 
-            // panel28
-            // 
-            panel28.Controls.Add(btnEmitirnota);
-            panel28.Location = new Point(0, 106);
-            panel28.Margin = new Padding(0);
-            panel28.Name = "panel28";
-            panel28.Size = new Size(180, 53);
-            panel28.TabIndex = 2;
-            // 
-            // btnEmitirnota
-            // 
-            btnEmitirnota.BackColor = Color.Transparent;
-            btnEmitirnota.BackgroundImage = (Image)resources.GetObject("btnEmitirnota.BackgroundImage");
-            btnEmitirnota.FlatAppearance.BorderSize = 0;
-            btnEmitirnota.FlatStyle = FlatStyle.Flat;
-            btnEmitirnota.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
-            btnEmitirnota.Image = (Image)resources.GetObject("btnEmitirnota.Image");
-            btnEmitirnota.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEmitirnota.Location = new Point(0, 0);
-            btnEmitirnota.Name = "btnEmitirnota";
-            btnEmitirnota.Size = new Size(180, 53);
-            btnEmitirnota.TabIndex = 2;
-            btnEmitirnota.Text = "   Vendas";
-            btnEmitirnota.UseVisualStyleBackColor = false;
-            // 
             // panel1
             // 
             panel1.BackColor = Color.White;
@@ -1224,6 +1225,21 @@
             Text = "Sistema Comercial TDS T01";
             Load += FrmPrincipal_Load;
             pnlPrincipal.ResumeLayout(false);
+            flpMenulateralVendas.ResumeLayout(false);
+            panel26.ResumeLayout(false);
+            panel27.ResumeLayout(false);
+            panel28.ResumeLayout(false);
+            flpMenuLateralCaixa.ResumeLayout(false);
+            panel21.ResumeLayout(false);
+            panel22.ResumeLayout(false);
+            panel23.ResumeLayout(false);
+            panel24.ResumeLayout(false);
+            panel25.ResumeLayout(false);
+            flpMenuLateralPedidos.ResumeLayout(false);
+            panel17.ResumeLayout(false);
+            panel18.ResumeLayout(false);
+            panel19.ResumeLayout(false);
+            panel20.ResumeLayout(false);
             flpMenu.ResumeLayout(false);
             panel11.ResumeLayout(false);
             flpMenuLateralProdutos.ResumeLayout(false);
@@ -1243,21 +1259,6 @@
             panel32.ResumeLayout(false);
             panel34.ResumeLayout(false);
             panel33.ResumeLayout(false);
-            flpMenuLateralPedidos.ResumeLayout(false);
-            panel17.ResumeLayout(false);
-            panel18.ResumeLayout(false);
-            panel19.ResumeLayout(false);
-            panel20.ResumeLayout(false);
-            flpMenuLateralCaixa.ResumeLayout(false);
-            panel21.ResumeLayout(false);
-            panel22.ResumeLayout(false);
-            panel23.ResumeLayout(false);
-            panel24.ResumeLayout(false);
-            panel25.ResumeLayout(false);
-            flpMenulateralVendas.ResumeLayout(false);
-            panel26.ResumeLayout(false);
-            panel27.ResumeLayout(false);
-            panel28.ResumeLayout(false);
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             flpMenuLateralusuarios.ResumeLayout(false);

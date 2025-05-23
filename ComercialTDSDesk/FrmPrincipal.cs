@@ -329,5 +329,10 @@ namespace ComercialTDSDesk
         {
 
         }
+
+        private void btnNovoPedidos_Click(object sender, EventArgs e)
+        {
+            AssociaPanel(new FrmPedido());
+        }
     }
 }
