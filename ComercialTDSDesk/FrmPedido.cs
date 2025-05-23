@@ -41,11 +41,11 @@ namespace ComercialTDSDesk
 
         private void btnInserePedido_Click(object sender, EventArgs e)
         {
-            if(txtNomeCliente.Text.Length > 5)
+            if (txtNomeCliente.Text.Length > 5)
             {
                 Pedido pedido = new(Program.UsuarioLogado, Cliente.ObterPorId(int.Parse(txtIdCliente.Text)));
                 pedido.Inserir();
-                if(pedido.Id > 0)
+                if (pedido.Id > 0)
                 {
                     //MessageBox.Show($"Pedido ")
                     txtIdPedido.Text = pedido.Id.ToString();
@@ -56,8 +56,13 @@ namespace ComercialTDSDesk
             {
                 MessageBox.Show("ID do cliente inválido!");
             }
-            
-            
+
+
+        }
+
+        private void txtCodBar_TextChanged(object sender, EventArgs e)
+        {
+            var produto = Produto.ObterPorBar(txtIdPedido. Text);
         }
     }
 }
