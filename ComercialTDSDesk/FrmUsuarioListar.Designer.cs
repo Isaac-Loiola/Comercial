@@ -106,7 +106,7 @@
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.Controls.Add(dgvListarUsuario);
-            panel1.Location = new Point(290, 91);
+            panel1.Location = new Point(458, 195);
             panel1.Name = "panel1";
             panel1.Size = new Size(787, 451);
             panel1.TabIndex = 3;
@@ -114,7 +114,7 @@
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.Location = new Point(856, 35);
+            pictureBox1.Location = new Point(1024, 139);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(221, 50);
             pictureBox1.TabIndex = 4;
@@ -123,7 +123,7 @@
             // txtBuscarUsuario
             // 
             txtBuscarUsuario.BorderStyle = BorderStyle.None;
-            txtBuscarUsuario.Location = new Point(865, 52);
+            txtBuscarUsuario.Location = new Point(1033, 156);
             txtBuscarUsuario.Name = "txtBuscarUsuario";
             txtBuscarUsuario.PlaceholderText = "Buscar";
             txtBuscarUsuario.Size = new Size(203, 16);
@@ -134,7 +134,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1248, 573);
+            ClientSize = new Size(1715, 907);
             Controls.Add(txtBuscarUsuario);
             Controls.Add(pictureBox1);
             Controls.Add(panel1);
