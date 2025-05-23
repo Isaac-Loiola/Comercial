@@ -19,37 +19,37 @@ namespace ComercialTDSDesk
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            FrmLogin frmLogin = new();
-            this.Hide();
-            frmLogin.ShowDialog();
-            if (Program.UsuarioLogado.Id > 0)
-            {
-                tsslUsuarioLogado.Text = Program.UsuarioLogado.Nome + " - " + Program.UsuarioLogado.Nivel.Nome;
-            }
-            this.Show();
+            //FrmLogin frmLogin = new();
+            //this.Hide();
+            //frmLogin.ShowDialog();
+            //if (Program.UsuarioLogado.Id > 0)
+            //{
+            //    tsslUsuarioLogado.Text = Program.UsuarioLogado.Nome + " - " + Program.UsuarioLogado.Nivel.Nome;
+            //}
+            //this.Show();
         }
 
         private void AssociaPanel(Form form)
         {
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
-            form.Size = pnlPrincipal.Size;
-            form.Size = pnlPrincipal.Size;
-            pnlPrincipal.Controls.Clear();
+            form.Size = pnlCentral.Size;
+            form.Size = pnlCentral.Size;
+            pnlCentral.Controls.Clear();
             form.MaximizeBox = true;
             form.AutoSize = true;
-            pnlPrincipal.Controls.Clear();
-            pnlPrincipal.Controls.Add(form);
+            pnlCentral.Controls.Clear();
+            pnlCentral.Controls.Add(form);
             form.Show();
-            pnlPrincipal.Visible = true;
+            pnlCentral.Visible = true;
         }
 
         private void trocarDeUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmLogin frmLogin = new();
-            frmLogin.btnCancelar.Text = "&Voltar";
-            frmLogin.ShowDialog();
-            tsslUsuarioLogado.Text = Program.UsuarioLogado.Nome + " - " + Program.UsuarioLogado.Nivel.Nome;
+            //FrmLogin frmLogin = new();
+            //frmLogin.btnCancelar.Text = "&Voltar";
+            //frmLogin.ShowDialog();
+            //tsslUsuarioLogado.Text = Program.UsuarioLogado.Nome + " - " + Program.UsuarioLogado.Nivel.Nome;
 
         }
 
@@ -70,7 +70,7 @@ namespace ComercialTDSDesk
 
         private void níveisToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AssociaPanel(new FrmNivel());
+            //AssociaPanel(new FrmNivel());
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -80,7 +80,7 @@ namespace ComercialTDSDesk
 
         private void listarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            AssociaPanel(new FrmUsuarioListar());
+            //AssociaPanel(new FrmUsuarioListar());
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -90,16 +90,232 @@ namespace ComercialTDSDesk
 
         private void incluirToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            AssociaPanel(new FrmUsuarioInserir());
+            //AssociaPanel(new FrmUsuarioInserir());
 
         }
 
         private void incluirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AssociaPanel(new FrmProduto());
+            //AssociaPanel(new FrmProduto());
         }
 
         private void listarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //AssociaPanel(new FrmProdutoListar());
+        }
+
+        private void pedidosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        bool menuEspandidoProdutos = false;
+
+        private void transicaoMenu_Tick(object sender, EventArgs e)
+        {
+            if (menuEspandidoProdutos == false)
+            {
+                flpMenuLateralProdutos.Height += 15;
+                if (flpMenuLateralProdutos.Height >= 348)
+                {
+                    transicaoMenuProdutos.Stop();
+                    menuEspandidoProdutos = true;
+                }
+
+            }
+            else
+            {
+                flpMenuLateralProdutos.Height -= 15;
+                if (flpMenuLateralProdutos.Height <= 53)
+                {
+                    transicaoMenuProdutos.Stop();
+                    menuEspandidoProdutos = false;
+                }
+            }
+        }
+
+        private void btnProdutos_Click(object sender, EventArgs e)
+        {
+            transicaoMenuProdutos.Start();
+        }
+
+        private void btnCaixa_Click(object sender, EventArgs e)
+        {
+            transicaoMenuCaixa.Start();
+        }
+
+
+        public bool menuEspandidoFornecedores = false;
+        private void transicaoMenuFornecedores_Tick(object sender, EventArgs e)
+        {
+            if (menuEspandidoFornecedores == false)
+            {
+                flpMenuLateralFornecedores.Height += 15;
+                if (flpMenuLateralFornecedores.Height >= 166)
+                {
+                    transicaoMenuFornecedores.Stop();
+                    menuEspandidoFornecedores = true;
+                }
+            }
+            else
+            {
+                flpMenuLateralFornecedores.Height -= 15;
+                if (flpMenuLateralFornecedores.Height <= 53)
+                {
+                    transicaoMenuFornecedores.Stop();
+                    menuEspandidoFornecedores = false;
+                }
+            }
+        }
+
+        private void btnFornecedores_Click(object sender, EventArgs e)
+        {
+            transicaoMenuFornecedores.Start();
+        }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            transicaoMenuPedidos.Start();
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        bool menuEspandidoPedidos = false;
+        private void transicaoMenuPedidos_Tick(object sender, EventArgs e)
+        {
+            if (menuEspandidoPedidos == false)
+            {
+                flpMenuLateralPedidos.Height += 15;
+                if (flpMenuLateralPedidos.Height >= 202)
+                {
+                    transicaoMenuPedidos.Stop();
+                    menuEspandidoPedidos = true;
+                }
+            }
+            else
+            {
+                flpMenuLateralPedidos.Height -= 15;
+                if (flpMenuLateralPedidos.Height <= 53)
+                {
+                    transicaoMenuPedidos.Stop();
+                    menuEspandidoPedidos = false;
+                }
+            }
+        }
+
+        bool menuEspandidoCaixa = false;
+        private void transicaoMenuCaixa_Tick(object sender, EventArgs e)
+        {
+            if (menuEspandidoCaixa == false)
+            {
+                flpMenuLateralCaixa.Height += 15;
+                if (flpMenuLateralCaixa.Height >= 290)
+                {
+                    transicaoMenuCaixa.Stop();
+                    menuEspandidoCaixa = true;
+                }
+            }
+            else
+            {
+                flpMenuLateralCaixa.Height -= 15;
+                if (flpMenuLateralCaixa.Height <= 53)
+                {
+                    transicaoMenuCaixa.Stop();
+                    menuEspandidoCaixa = false;
+                }
+            }
+        }
+
+        bool menuEspandidoVendas = false;
+        private void transicaoMenuVendas_Tick(object sender, EventArgs e)
+        {
+            if (menuEspandidoVendas == false)
+            {
+                flpMenulateralVendas.Height += 5;
+                if (flpMenulateralVendas.Height >= 160)
+                {
+                    transicaoMenuVendas.Stop();
+                    menuEspandidoVendas = true;
+                }
+            }
+            else
+            {
+                flpMenulateralVendas.Height -= 5;
+                if (flpMenulateralVendas.Height <= 53)
+                {
+                    transicaoMenuVendas.Stop();
+                    menuEspandidoVendas = false;
+                }
+            }
+        }
+
+        private void btnVendas_Click(object sender, EventArgs e)
+        {
+            transicaoMenuVendas.Start();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            transicaoMenuUsuarios.Start();
+        }
+
+        bool menuEspandidoUsuarios = false;
+        private void transicaoMenuUsuarios_Tick(object sender, EventArgs e)
+        {
+            if (menuEspandidoUsuarios == false)
+            {
+                flpMenuLateralUsuario.Height += 15;
+                if (flpMenuLateralUsuario.Height >= 214)
+                {
+                    transicaoMenuUsuarios.Stop();
+                    menuEspandidoUsuarios = true;
+                }
+            }
+            else
+            {
+                flpMenuLateralUsuario.Height -= 15;
+                if (flpMenuLateralUsuario.Height <= 53)
+                {
+                    transicaoMenuUsuarios.Stop();
+                    menuEspandidoUsuarios = false;
+                }
+            }
+        }
+
+        private void pnlPrincipal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            transicaoMenuUsuarios.Start();
+        }
+
+        private void btnIncluirUsuario_Click(object sender, EventArgs e)
+        {
+            AssociaPanel(new FrmUsuarioInserir());
+        }
+
+        private void btnListarUsuario_Click(object sender, EventArgs e)
+        {
+            AssociaPanel(new FrmUsuarioListar());
+        }
+
+        private void btnIncluirProdutos_Click(object sender, EventArgs e)
+        {
+            AssociaPanel(new FrmProduto());
+        }
+
+        private void btnListarProdutos_Click(object sender, EventArgs e)
         {
             AssociaPanel(new FrmProdutoListar());
         }
