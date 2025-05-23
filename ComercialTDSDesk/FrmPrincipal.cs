@@ -239,7 +239,7 @@ namespace ComercialTDSDesk
         {
             if (menuEspandidoVendas == false)
             {
-                flpMenulateralVendas.Height += 5;
+                flpMenulateralVendas.Height += 15;
                 if (flpMenulateralVendas.Height >= 160)
                 {
                     transicaoMenuVendas.Stop();
@@ -248,7 +248,7 @@ namespace ComercialTDSDesk
             }
             else
             {
-                flpMenulateralVendas.Height -= 5;
+                flpMenulateralVendas.Height -= 15;
                 if (flpMenulateralVendas.Height <= 53)
                 {
                     transicaoMenuVendas.Stop();
@@ -318,6 +318,11 @@ namespace ComercialTDSDesk
         private void btnListarProdutos_Click(object sender, EventArgs e)
         {
             AssociaPanel(new FrmProdutoListar());
+        }
+
+        private void pnlCentral_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             pnlPrincipal = new Panel();
+            pnlCentral = new Panel();
             flpMenu = new FlowLayoutPanel();
             panel11 = new Panel();
             btnCliente = new Button();
@@ -115,7 +116,6 @@
             transicaoMenuCaixa = new System.Windows.Forms.Timer(components);
             transicaoMenuVendas = new System.Windows.Forms.Timer(components);
             transicaoMenuUsuarios = new System.Windows.Forms.Timer(components);
-            pnlCentral = new Panel();
             pnlPrincipal.SuspendLayout();
             flpMenu.SuspendLayout();
             panel11.SuspendLayout();
@@ -178,6 +178,14 @@
             pnlPrincipal.Click += pnlPrincipal_Click;
             pnlPrincipal.Paint += panel1_Paint;
             // 
+            // pnlCentral
+            // 
+            pnlCentral.Location = new Point(189, 86);
+            pnlCentral.Name = "pnlCentral";
+            pnlCentral.Size = new Size(1731, 946);
+            pnlCentral.TabIndex = 4;
+            pnlCentral.Paint += pnlCentral_Paint;
+            // 
             // flpMenu
             // 
             flpMenu.BackColor = Color.White;
@@ -208,7 +216,7 @@
             btnCliente.BackgroundImage = (Image)resources.GetObject("btnCliente.BackgroundImage");
             btnCliente.FlatAppearance.BorderSize = 0;
             btnCliente.FlatStyle = FlatStyle.Flat;
-            btnCliente.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnCliente.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnCliente.Image = (Image)resources.GetObject("btnCliente.Image");
             btnCliente.ImageAlign = ContentAlignment.MiddleLeft;
             btnCliente.Location = new Point(0, 0);
@@ -245,7 +253,7 @@
             btnProdutos.BackgroundImage = (Image)resources.GetObject("btnProdutos.BackgroundImage");
             btnProdutos.FlatAppearance.BorderSize = 0;
             btnProdutos.FlatStyle = FlatStyle.Flat;
-            btnProdutos.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnProdutos.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnProdutos.Image = (Image)resources.GetObject("btnProdutos.Image");
             btnProdutos.ImageAlign = ContentAlignment.MiddleLeft;
             btnProdutos.Location = new Point(0, 0);
@@ -271,7 +279,7 @@
             btnIncluirProdutos.BackgroundImage = (Image)resources.GetObject("btnIncluirProdutos.BackgroundImage");
             btnIncluirProdutos.FlatAppearance.BorderSize = 0;
             btnIncluirProdutos.FlatStyle = FlatStyle.Flat;
-            btnIncluirProdutos.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnIncluirProdutos.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnIncluirProdutos.Image = (Image)resources.GetObject("btnIncluirProdutos.Image");
             btnIncluirProdutos.ImageAlign = ContentAlignment.MiddleLeft;
             btnIncluirProdutos.Location = new Point(0, 0);
@@ -297,7 +305,7 @@
             btnListarProdutos.BackgroundImage = (Image)resources.GetObject("btnListarProdutos.BackgroundImage");
             btnListarProdutos.FlatAppearance.BorderSize = 0;
             btnListarProdutos.FlatStyle = FlatStyle.Flat;
-            btnListarProdutos.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnListarProdutos.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnListarProdutos.Image = (Image)resources.GetObject("btnListarProdutos.Image");
             btnListarProdutos.ImageAlign = ContentAlignment.MiddleLeft;
             btnListarProdutos.Location = new Point(0, 0);
@@ -323,7 +331,7 @@
             btnFornecedorProdutos.BackgroundImage = (Image)resources.GetObject("btnFornecedorProdutos.BackgroundImage");
             btnFornecedorProdutos.FlatAppearance.BorderSize = 0;
             btnFornecedorProdutos.FlatStyle = FlatStyle.Flat;
-            btnFornecedorProdutos.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnFornecedorProdutos.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnFornecedorProdutos.Image = (Image)resources.GetObject("btnFornecedorProdutos.Image");
             btnFornecedorProdutos.ImageAlign = ContentAlignment.MiddleLeft;
             btnFornecedorProdutos.Location = new Point(0, 0);
@@ -348,7 +356,7 @@
             btnCategoriaProdutos.BackgroundImage = (Image)resources.GetObject("btnCategoriaProdutos.BackgroundImage");
             btnCategoriaProdutos.FlatAppearance.BorderSize = 0;
             btnCategoriaProdutos.FlatStyle = FlatStyle.Flat;
-            btnCategoriaProdutos.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnCategoriaProdutos.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnCategoriaProdutos.Image = (Image)resources.GetObject("btnCategoriaProdutos.Image");
             btnCategoriaProdutos.ImageAlign = ContentAlignment.MiddleLeft;
             btnCategoriaProdutos.Location = new Point(0, 0);
@@ -373,7 +381,7 @@
             btnEstoqueProdutos.BackgroundImage = (Image)resources.GetObject("btnEstoqueProdutos.BackgroundImage");
             btnEstoqueProdutos.FlatAppearance.BorderSize = 0;
             btnEstoqueProdutos.FlatStyle = FlatStyle.Flat;
-            btnEstoqueProdutos.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnEstoqueProdutos.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnEstoqueProdutos.Image = (Image)resources.GetObject("btnEstoqueProdutos.Image");
             btnEstoqueProdutos.ImageAlign = ContentAlignment.MiddleLeft;
             btnEstoqueProdutos.Location = new Point(0, 0);
@@ -409,7 +417,7 @@
             btnFornecedores.BackgroundImage = (Image)resources.GetObject("btnFornecedores.BackgroundImage");
             btnFornecedores.FlatAppearance.BorderSize = 0;
             btnFornecedores.FlatStyle = FlatStyle.Flat;
-            btnFornecedores.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnFornecedores.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnFornecedores.Image = (Image)resources.GetObject("btnFornecedores.Image");
             btnFornecedores.ImageAlign = ContentAlignment.MiddleLeft;
             btnFornecedores.Location = new Point(0, 0);
@@ -436,7 +444,7 @@
             btnIncluirFornecedores.BackgroundImage = (Image)resources.GetObject("btnIncluirFornecedores.BackgroundImage");
             btnIncluirFornecedores.FlatAppearance.BorderSize = 0;
             btnIncluirFornecedores.FlatStyle = FlatStyle.Flat;
-            btnIncluirFornecedores.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnIncluirFornecedores.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnIncluirFornecedores.Image = (Image)resources.GetObject("btnIncluirFornecedores.Image");
             btnIncluirFornecedores.ImageAlign = ContentAlignment.MiddleLeft;
             btnIncluirFornecedores.Location = new Point(0, 0);
@@ -462,7 +470,7 @@
             btnListarFornecedores.BackgroundImage = (Image)resources.GetObject("btnListarFornecedores.BackgroundImage");
             btnListarFornecedores.FlatAppearance.BorderSize = 0;
             btnListarFornecedores.FlatStyle = FlatStyle.Flat;
-            btnListarFornecedores.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnListarFornecedores.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnListarFornecedores.Image = (Image)resources.GetObject("btnListarFornecedores.Image");
             btnListarFornecedores.ImageAlign = ContentAlignment.MiddleLeft;
             btnListarFornecedores.Location = new Point(0, 0);
@@ -487,7 +495,7 @@
             btnCategorias.BackgroundImage = (Image)resources.GetObject("btnCategorias.BackgroundImage");
             btnCategorias.FlatAppearance.BorderSize = 0;
             btnCategorias.FlatStyle = FlatStyle.Flat;
-            btnCategorias.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnCategorias.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnCategorias.Image = (Image)resources.GetObject("btnCategorias.Image");
             btnCategorias.ImageAlign = ContentAlignment.MiddleLeft;
             btnCategorias.Location = new Point(0, 0);
@@ -524,7 +532,7 @@
             btnUsuario.BackgroundImage = (Image)resources.GetObject("btnUsuario.BackgroundImage");
             btnUsuario.FlatAppearance.BorderSize = 0;
             btnUsuario.FlatStyle = FlatStyle.Flat;
-            btnUsuario.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnUsuario.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnUsuario.Image = (Image)resources.GetObject("btnUsuario.Image");
             btnUsuario.ImageAlign = ContentAlignment.MiddleLeft;
             btnUsuario.Location = new Point(0, 0);
@@ -550,7 +558,7 @@
             btnIncluirUsuario.BackgroundImage = (Image)resources.GetObject("btnIncluirUsuario.BackgroundImage");
             btnIncluirUsuario.FlatAppearance.BorderSize = 0;
             btnIncluirUsuario.FlatStyle = FlatStyle.Flat;
-            btnIncluirUsuario.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnIncluirUsuario.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnIncluirUsuario.Image = (Image)resources.GetObject("btnIncluirUsuario.Image");
             btnIncluirUsuario.ImageAlign = ContentAlignment.MiddleLeft;
             btnIncluirUsuario.Location = new Point(0, 0);
@@ -576,7 +584,7 @@
             btnListarUsuario.BackgroundImage = (Image)resources.GetObject("btnListarUsuario.BackgroundImage");
             btnListarUsuario.FlatAppearance.BorderSize = 0;
             btnListarUsuario.FlatStyle = FlatStyle.Flat;
-            btnListarUsuario.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnListarUsuario.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnListarUsuario.Image = (Image)resources.GetObject("btnListarUsuario.Image");
             btnListarUsuario.ImageAlign = ContentAlignment.MiddleLeft;
             btnListarUsuario.Location = new Point(0, 0);
@@ -602,7 +610,7 @@
             btnNiveisUsuario.BackgroundImage = (Image)resources.GetObject("btnNiveisUsuario.BackgroundImage");
             btnNiveisUsuario.FlatAppearance.BorderSize = 0;
             btnNiveisUsuario.FlatStyle = FlatStyle.Flat;
-            btnNiveisUsuario.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnNiveisUsuario.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnNiveisUsuario.Image = (Image)resources.GetObject("btnNiveisUsuario.Image");
             btnNiveisUsuario.ImageAlign = ContentAlignment.MiddleLeft;
             btnNiveisUsuario.Location = new Point(0, 0);
@@ -639,7 +647,7 @@
             btnPedidos.BackgroundImage = (Image)resources.GetObject("btnPedidos.BackgroundImage");
             btnPedidos.FlatAppearance.BorderSize = 0;
             btnPedidos.FlatStyle = FlatStyle.Flat;
-            btnPedidos.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnPedidos.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnPedidos.Image = (Image)resources.GetObject("btnPedidos.Image");
             btnPedidos.ImageAlign = ContentAlignment.MiddleLeft;
             btnPedidos.Location = new Point(0, 0);
@@ -666,7 +674,7 @@
             btnNovoPedidos.BackgroundImage = (Image)resources.GetObject("btnNovoPedidos.BackgroundImage");
             btnNovoPedidos.FlatAppearance.BorderSize = 0;
             btnNovoPedidos.FlatStyle = FlatStyle.Flat;
-            btnNovoPedidos.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnNovoPedidos.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnNovoPedidos.Image = (Image)resources.GetObject("btnNovoPedidos.Image");
             btnNovoPedidos.ImageAlign = ContentAlignment.MiddleLeft;
             btnNovoPedidos.Location = new Point(0, 0);
@@ -692,7 +700,7 @@
             btnConsultarPedidos.BackgroundImage = (Image)resources.GetObject("btnConsultarPedidos.BackgroundImage");
             btnConsultarPedidos.FlatAppearance.BorderSize = 0;
             btnConsultarPedidos.FlatStyle = FlatStyle.Flat;
-            btnConsultarPedidos.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnConsultarPedidos.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnConsultarPedidos.Image = (Image)resources.GetObject("btnConsultarPedidos.Image");
             btnConsultarPedidos.ImageAlign = ContentAlignment.MiddleLeft;
             btnConsultarPedidos.Location = new Point(0, 0);
@@ -718,7 +726,7 @@
             btnListarPedidos.BackgroundImage = (Image)resources.GetObject("btnListarPedidos.BackgroundImage");
             btnListarPedidos.FlatAppearance.BorderSize = 0;
             btnListarPedidos.FlatStyle = FlatStyle.Flat;
-            btnListarPedidos.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnListarPedidos.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnListarPedidos.Image = (Image)resources.GetObject("btnListarPedidos.Image");
             btnListarPedidos.ImageAlign = ContentAlignment.MiddleLeft;
             btnListarPedidos.Location = new Point(0, 0);
@@ -755,7 +763,7 @@
             btnCaixa.BackgroundImage = (Image)resources.GetObject("btnCaixa.BackgroundImage");
             btnCaixa.FlatAppearance.BorderSize = 0;
             btnCaixa.FlatStyle = FlatStyle.Flat;
-            btnCaixa.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnCaixa.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnCaixa.Image = (Image)resources.GetObject("btnCaixa.Image");
             btnCaixa.ImageAlign = ContentAlignment.MiddleLeft;
             btnCaixa.Location = new Point(0, 0);
@@ -781,7 +789,7 @@
             btnAbrirCaixa.BackgroundImage = (Image)resources.GetObject("btnAbrirCaixa.BackgroundImage");
             btnAbrirCaixa.FlatAppearance.BorderSize = 0;
             btnAbrirCaixa.FlatStyle = FlatStyle.Flat;
-            btnAbrirCaixa.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnAbrirCaixa.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnAbrirCaixa.Image = (Image)resources.GetObject("btnAbrirCaixa.Image");
             btnAbrirCaixa.ImageAlign = ContentAlignment.MiddleLeft;
             btnAbrirCaixa.Location = new Point(0, 0);
@@ -806,7 +814,7 @@
             btnTerminalCaixa.BackgroundImage = (Image)resources.GetObject("btnTerminalCaixa.BackgroundImage");
             btnTerminalCaixa.FlatAppearance.BorderSize = 0;
             btnTerminalCaixa.FlatStyle = FlatStyle.Flat;
-            btnTerminalCaixa.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnTerminalCaixa.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnTerminalCaixa.Image = (Image)resources.GetObject("btnTerminalCaixa.Image");
             btnTerminalCaixa.ImageAlign = ContentAlignment.MiddleLeft;
             btnTerminalCaixa.Location = new Point(0, 0);
@@ -832,7 +840,7 @@
             btnConsultarCaixa.BackgroundImage = (Image)resources.GetObject("btnConsultarCaixa.BackgroundImage");
             btnConsultarCaixa.FlatAppearance.BorderSize = 0;
             btnConsultarCaixa.FlatStyle = FlatStyle.Flat;
-            btnConsultarCaixa.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnConsultarCaixa.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnConsultarCaixa.Image = (Image)resources.GetObject("btnConsultarCaixa.Image");
             btnConsultarCaixa.ImageAlign = ContentAlignment.MiddleLeft;
             btnConsultarCaixa.Location = new Point(0, 0);
@@ -858,7 +866,7 @@
             button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            button1.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
             button1.Location = new Point(0, 0);
@@ -895,7 +903,7 @@
             btnVendas.BackgroundImage = (Image)resources.GetObject("btnVendas.BackgroundImage");
             btnVendas.FlatAppearance.BorderSize = 0;
             btnVendas.FlatStyle = FlatStyle.Flat;
-            btnVendas.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnVendas.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnVendas.Image = (Image)resources.GetObject("btnVendas.Image");
             btnVendas.ImageAlign = ContentAlignment.MiddleLeft;
             btnVendas.Location = new Point(0, 0);
@@ -921,7 +929,7 @@
             btnConsultarVendas.BackgroundImage = (Image)resources.GetObject("btnConsultarVendas.BackgroundImage");
             btnConsultarVendas.FlatAppearance.BorderSize = 0;
             btnConsultarVendas.FlatStyle = FlatStyle.Flat;
-            btnConsultarVendas.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnConsultarVendas.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnConsultarVendas.Image = (Image)resources.GetObject("btnConsultarVendas.Image");
             btnConsultarVendas.ImageAlign = ContentAlignment.MiddleLeft;
             btnConsultarVendas.Location = new Point(0, 0);
@@ -946,7 +954,7 @@
             btnEmitirnota.BackgroundImage = (Image)resources.GetObject("btnEmitirnota.BackgroundImage");
             btnEmitirnota.FlatAppearance.BorderSize = 0;
             btnEmitirnota.FlatStyle = FlatStyle.Flat;
-            btnEmitirnota.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnEmitirnota.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnEmitirnota.Image = (Image)resources.GetObject("btnEmitirnota.Image");
             btnEmitirnota.ImageAlign = ContentAlignment.MiddleLeft;
             btnEmitirnota.Location = new Point(0, 0);
@@ -1026,7 +1034,7 @@
             btnUsuarios.BackgroundImage = (Image)resources.GetObject("btnUsuarios.BackgroundImage");
             btnUsuarios.FlatAppearance.BorderSize = 0;
             btnUsuarios.FlatStyle = FlatStyle.Flat;
-            btnUsuarios.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnUsuarios.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnUsuarios.Image = (Image)resources.GetObject("btnUsuarios.Image");
             btnUsuarios.ImageAlign = ContentAlignment.MiddleLeft;
             btnUsuarios.Location = new Point(0, 0);
@@ -1051,7 +1059,7 @@
             btnIncluirUsuarios.BackgroundImage = (Image)resources.GetObject("btnIncluirUsuarios.BackgroundImage");
             btnIncluirUsuarios.FlatAppearance.BorderSize = 0;
             btnIncluirUsuarios.FlatStyle = FlatStyle.Flat;
-            btnIncluirUsuarios.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnIncluirUsuarios.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnIncluirUsuarios.Image = (Image)resources.GetObject("btnIncluirUsuarios.Image");
             btnIncluirUsuarios.ImageAlign = ContentAlignment.MiddleLeft;
             btnIncluirUsuarios.Location = new Point(0, 0);
@@ -1075,7 +1083,7 @@
             btnListarUsuarios.BackgroundImage = (Image)resources.GetObject("btnListarUsuarios.BackgroundImage");
             btnListarUsuarios.FlatAppearance.BorderSize = 0;
             btnListarUsuarios.FlatStyle = FlatStyle.Flat;
-            btnListarUsuarios.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnListarUsuarios.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnListarUsuarios.Image = (Image)resources.GetObject("btnListarUsuarios.Image");
             btnListarUsuarios.ImageAlign = ContentAlignment.MiddleLeft;
             btnListarUsuarios.Location = new Point(0, 0);
@@ -1100,7 +1108,7 @@
             btnNiveisUsuarios.BackgroundImage = (Image)resources.GetObject("btnNiveisUsuarios.BackgroundImage");
             btnNiveisUsuarios.FlatAppearance.BorderSize = 0;
             btnNiveisUsuarios.FlatStyle = FlatStyle.Flat;
-            btnNiveisUsuarios.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnNiveisUsuarios.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnNiveisUsuarios.Image = (Image)resources.GetObject("btnNiveisUsuarios.Image");
             btnNiveisUsuarios.ImageAlign = ContentAlignment.MiddleLeft;
             btnNiveisUsuarios.Location = new Point(0, 0);
@@ -1136,7 +1144,7 @@
             btnConfiguracao.BackgroundImage = (Image)resources.GetObject("btnConfiguracao.BackgroundImage");
             btnConfiguracao.FlatAppearance.BorderSize = 0;
             btnConfiguracao.FlatStyle = FlatStyle.Flat;
-            btnConfiguracao.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnConfiguracao.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnConfiguracao.Image = (Image)resources.GetObject("btnConfiguracao.Image");
             btnConfiguracao.ImageAlign = ContentAlignment.MiddleLeft;
             btnConfiguracao.Location = new Point(0, 0);
@@ -1161,7 +1169,7 @@
             btnSair.BackgroundImage = (Image)resources.GetObject("btnSair.BackgroundImage");
             btnSair.FlatAppearance.BorderSize = 0;
             btnSair.FlatStyle = FlatStyle.Flat;
-            btnSair.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnSair.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             btnSair.Image = (Image)resources.GetObject("btnSair.Image");
             btnSair.ImageAlign = ContentAlignment.MiddleLeft;
             btnSair.Location = new Point(0, 0);
@@ -1173,12 +1181,12 @@
             // 
             // transicaoMenuProdutos
             // 
-            transicaoMenuProdutos.Interval = 5;
+            transicaoMenuProdutos.Interval = 10;
             transicaoMenuProdutos.Tick += transicaoMenu_Tick;
             // 
             // transicaoMenuFornecedores
             // 
-            transicaoMenuFornecedores.Interval = 3;
+            transicaoMenuFornecedores.Interval = 10;
             transicaoMenuFornecedores.Tick += transicaoMenuFornecedores_Tick;
             // 
             // transicaoMenuPedidos
@@ -1200,13 +1208,6 @@
             // 
             transicaoMenuUsuarios.Interval = 3;
             transicaoMenuUsuarios.Tick += transicaoMenuUsuarios_Tick;
-            // 
-            // pnlCentral
-            // 
-            pnlCentral.Location = new Point(189, 86);
-            pnlCentral.Name = "pnlCentral";
-            pnlCentral.Size = new Size(1731, 946);
-            pnlCentral.TabIndex = 4;
             // 
             // FrmPrincipal
             // 
