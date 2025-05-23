@@ -33,15 +33,15 @@ namespace ComercialTDSDesk
         {
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
-            form.Size = pnlPrincipal.Size;
-            form.Size = pnlPrincipal.Size;
-            pnlPrincipal.Controls.Clear();
+            form.Size = pnlCentral.Size;
+            form.Size = pnlCentral.Size;
+            pnlCentral.Controls.Clear();
             form.MaximizeBox = true;
             form.AutoSize = true;
-            pnlPrincipal.Controls.Clear();
-            pnlPrincipal.Controls.Add(form);
+            pnlCentral.Controls.Clear();
+            pnlCentral.Controls.Add(form);
             form.Show();
-            pnlPrincipal.Visible = true;
+            pnlCentral.Visible = true;
         }
 
         private void trocarDeUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace ComercialTDSDesk
 
         private void níveisToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AssociaPanel(new FrmNivel());
+            //AssociaPanel(new FrmNivel());
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -80,7 +80,7 @@ namespace ComercialTDSDesk
 
         private void listarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            AssociaPanel(new FrmUsuarioListar());
+            //AssociaPanel(new FrmUsuarioListar());
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -90,18 +90,18 @@ namespace ComercialTDSDesk
 
         private void incluirToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            AssociaPanel(new FrmUsuarioInserir());
+            //AssociaPanel(new FrmUsuarioInserir());
 
         }
 
         private void incluirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AssociaPanel(new FrmProduto());
+            //AssociaPanel(new FrmProduto());
         }
 
         private void listarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AssociaPanel(new FrmProdutoListar());
+            //AssociaPanel(new FrmProdutoListar());
         }
 
         private void pedidosToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -288,6 +288,36 @@ namespace ComercialTDSDesk
                     menuEspandidoUsuarios = false;
                 }
             }
+        }
+
+        private void pnlPrincipal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            transicaoMenuUsuarios.Start();
+        }
+
+        private void btnIncluirUsuario_Click(object sender, EventArgs e)
+        {
+            AssociaPanel(new FrmUsuarioInserir());
+        }
+
+        private void btnListarUsuario_Click(object sender, EventArgs e)
+        {
+            AssociaPanel(new FrmUsuarioListar());
+        }
+
+        private void btnIncluirProdutos_Click(object sender, EventArgs e)
+        {
+            AssociaPanel(new FrmProduto());
+        }
+
+        private void btnListarProdutos_Click(object sender, EventArgs e)
+        {
+            AssociaPanel(new FrmProdutoListar());
         }
     }
 }
