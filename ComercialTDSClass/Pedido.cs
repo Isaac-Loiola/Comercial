@@ -85,7 +85,7 @@ namespace ComercialTDSClass
         {
             Pedido pedido = new();
             var cmd = Banco.Abrir();
-            cmd.CommandText = "select * from pedidos";
+            cmd.CommandText = $"select * from pedidos where id = {id}";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -108,6 +108,8 @@ namespace ComercialTDSClass
         public static List<Pedido> ObterLista()
         {
             List<Pedido> pedidos = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandText = "selcet "
 
             return pedidos;
         }
