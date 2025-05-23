@@ -32,7 +32,7 @@
             button1 = new Button();
             btnInserePedido = new Button();
             txtIdCliente = new TextBox();
-            textBox3 = new TextBox();
+            txtNomeCliente = new TextBox();
             txtUsuario = new TextBox();
             label3 = new Label();
             grbItens = new GroupBox();
@@ -82,7 +82,7 @@
             grbIndentificacao.Controls.Add(button1);
             grbIndentificacao.Controls.Add(btnInserePedido);
             grbIndentificacao.Controls.Add(txtIdCliente);
-            grbIndentificacao.Controls.Add(textBox3);
+            grbIndentificacao.Controls.Add(txtNomeCliente);
             grbIndentificacao.Controls.Add(txtUsuario);
             grbIndentificacao.Controls.Add(label3);
             grbIndentificacao.Location = new Point(509, 195);
@@ -112,6 +112,7 @@
             btnInserePedido.TabIndex = 1;
             btnInserePedido.Text = "Abrir";
             btnInserePedido.UseVisualStyleBackColor = true;
+            btnInserePedido.Click += btnInserePedido_Click;
             // 
             // txtIdCliente
             // 
@@ -120,14 +121,16 @@
             txtIdCliente.Name = "txtIdCliente";
             txtIdCliente.Size = new Size(78, 27);
             txtIdCliente.TabIndex = 0;
+            txtIdCliente.TextChanged += txtIdCliente_TextChanged;
             // 
-            // textBox3
+            // txtNomeCliente
             // 
-            textBox3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(209, 93);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(255, 27);
-            textBox3.TabIndex = 1;
+            txtNomeCliente.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNomeCliente.Location = new Point(209, 93);
+            txtNomeCliente.Name = "txtNomeCliente";
+            txtNomeCliente.ReadOnly = true;
+            txtNomeCliente.Size = new Size(255, 27);
+            txtNomeCliente.TabIndex = 1;
             // 
             // txtUsuario
             // 
@@ -526,6 +529,7 @@
             Controls.Add(btnFechar);
             Name = "FrmPedido";
             Text = "FrmPedidoNovo";
+            Load += FrmPedido_Load;
             grbIndentificacao.ResumeLayout(false);
             grbIndentificacao.PerformLayout();
             grbItens.ResumeLayout(false);
@@ -544,7 +548,7 @@
         private Label label2;
         private TextBox txtIdPedido;
         private TextBox txtUsuario;
-        private TextBox textBox3;
+        private TextBox txtNomeCliente;
         private Button btnInserePedido;
         private TextBox txtIdCliente;
         private Button btnAddItem;

@@ -19,14 +19,10 @@ namespace ComercialTDSDesk
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            //FrmLogin frmLogin = new();
-            //this.Hide();
-            //frmLogin.ShowDialog();
-            //if (Program.UsuarioLogado.Id > 0)
-            //{
-            //    tsslUsuarioLogado.Text = Program.UsuarioLogado.Nome + " - " + Program.UsuarioLogado.Nivel.Nome;
-            //}
-            //this.Show();
+            FrmLogin frmLogin = new();
+            this.Hide();
+            frmLogin.ShowDialog();
+            this.Show();
         }
 
         private void AssociaPanel(Form form)
@@ -46,10 +42,7 @@ namespace ComercialTDSDesk
 
         private void trocarDeUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //FrmLogin frmLogin = new();
-            //frmLogin.btnCancelar.Text = "&Voltar";
-            //frmLogin.ShowDialog();
-            //tsslUsuarioLogado.Text = Program.UsuarioLogado.Nome + " - " + Program.UsuarioLogado.Nivel.Nome;
+            
 
         }
 
@@ -327,7 +320,7 @@ namespace ComercialTDSDesk
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void btnNovoPedidos_Click(object sender, EventArgs e)

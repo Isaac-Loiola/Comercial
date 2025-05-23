@@ -16,10 +16,13 @@ namespace ComercialTDSClass
         public double Desconto { get; set; }
         public List<ItemPedido> Items { get; set; }
          
+
         public Pedido()
         {
 
         }
+
+      
         public Pedido(int id, Usuario usuario, Cliente cliente, DateTime data, string? status, double desconto, List<ItemPedido> items)
         {
             Id = id;
