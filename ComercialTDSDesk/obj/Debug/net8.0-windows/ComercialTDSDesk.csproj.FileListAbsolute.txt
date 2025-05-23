@@ -139,3 +139,4 @@ C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\obj\
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.FrmProdutoListar.resources
 C:\Users\ratoj\source\repos\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.FrmProdutoListar.resources
 C:\Users\ratoj\source\repos\Comercial\ComercialTDSDesk\bin\Debug\net8.0-windows\ReaLTaiizor.dll
+C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\bin\Debug\net8.0-windows\ReaLTaiizor.dll
