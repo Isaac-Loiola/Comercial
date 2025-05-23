@@ -68,7 +68,17 @@ namespace ComercialTDSClass
 
         public bool Atualizar()
         {
-            return true;
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.CommandText = "sp_pedido_update";
+            cmd.Parameters.AddWithValue("spid", Id);
+            cmd.Parameters.AddWithValue("spstatus", Status);
+            cmd.Parameters.AddWithValue("spdesconto", Desconto);
+
+            bool atualizado = cmd.ExecuteNonQuery() > 0 ? true : false;
+            cmd.Connection.Close();
+            return atualizado;
+            
         }
 
         public static Pedido ObterPorId(int id)
