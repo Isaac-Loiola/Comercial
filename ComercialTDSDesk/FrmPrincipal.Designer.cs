@@ -31,6 +31,13 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             pnlPrincipal = new Panel();
+            panel33 = new Panel();
+            btnNiveisUsuario = new Button();
+            flpMenuLateralUsuario = new FlowLayoutPanel();
+            panel31 = new Panel();
+            btnUsuario = new Button();
+            panel32 = new Panel();
+            btnIncluirUsuario = new Button();
             flpMenu = new FlowLayoutPanel();
             panel11 = new Panel();
             btnCliente = new Button();
@@ -105,7 +112,14 @@
             transicaoMenuPedidos = new System.Windows.Forms.Timer(components);
             transicaoMenuCaixa = new System.Windows.Forms.Timer(components);
             transicaoMenuVendas = new System.Windows.Forms.Timer(components);
+            panel34 = new Panel();
+            btnListarUsuario = new Button();
+            transicaoMenuUsuarios = new System.Windows.Forms.Timer(components);
             pnlPrincipal.SuspendLayout();
+            panel33.SuspendLayout();
+            flpMenuLateralUsuario.SuspendLayout();
+            panel31.SuspendLayout();
+            panel32.SuspendLayout();
             flpMenu.SuspendLayout();
             panel11.SuspendLayout();
             flpMenuLateralProdutos.SuspendLayout();
@@ -145,6 +159,7 @@
             pnlInferior.SuspendLayout();
             panel29.SuspendLayout();
             panel30.SuspendLayout();
+            panel34.SuspendLayout();
             SuspendLayout();
             // 
             // pnlPrincipal
@@ -161,6 +176,95 @@
             pnlPrincipal.TabIndex = 6;
             pnlPrincipal.Paint += panel1_Paint;
             // 
+            // panel33
+            // 
+            panel33.Controls.Add(btnNiveisUsuario);
+            panel33.Location = new Point(0, 159);
+            panel33.Margin = new Padding(0);
+            panel33.Name = "panel33";
+            panel33.Size = new Size(180, 53);
+            panel33.TabIndex = 4;
+            // 
+            // btnNiveisUsuario
+            // 
+            btnNiveisUsuario.BackColor = Color.Transparent;
+            btnNiveisUsuario.BackgroundImage = (Image)resources.GetObject("btnNiveisUsuario.BackgroundImage");
+            btnNiveisUsuario.FlatAppearance.BorderSize = 0;
+            btnNiveisUsuario.FlatStyle = FlatStyle.Flat;
+            btnNiveisUsuario.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnNiveisUsuario.Image = (Image)resources.GetObject("btnNiveisUsuario.Image");
+            btnNiveisUsuario.ImageAlign = ContentAlignment.MiddleLeft;
+            btnNiveisUsuario.Location = new Point(0, 0);
+            btnNiveisUsuario.Name = "btnNiveisUsuario";
+            btnNiveisUsuario.Size = new Size(180, 53);
+            btnNiveisUsuario.TabIndex = 2;
+            btnNiveisUsuario.Text = "   Niveis";
+            btnNiveisUsuario.UseVisualStyleBackColor = false;
+            btnNiveisUsuario.Click += button2_Click;
+            // 
+            // flpMenuLateralUsuario
+            // 
+            flpMenuLateralUsuario.Controls.Add(panel31);
+            flpMenuLateralUsuario.Controls.Add(panel32);
+            flpMenuLateralUsuario.Controls.Add(panel34);
+            flpMenuLateralUsuario.Controls.Add(panel33);
+            flpMenuLateralUsuario.Location = new Point(3, 239);
+            flpMenuLateralUsuario.Name = "flpMenuLateralUsuario";
+            flpMenuLateralUsuario.Size = new Size(185, 53);
+            flpMenuLateralUsuario.TabIndex = 5;
+            // 
+            // panel31
+            // 
+            panel31.Controls.Add(btnUsuario);
+            panel31.Location = new Point(0, 0);
+            panel31.Margin = new Padding(0);
+            panel31.Name = "panel31";
+            panel31.Size = new Size(180, 53);
+            panel31.TabIndex = 4;
+            // 
+            // btnUsuario
+            // 
+            btnUsuario.BackColor = Color.Transparent;
+            btnUsuario.BackgroundImage = (Image)resources.GetObject("btnUsuario.BackgroundImage");
+            btnUsuario.FlatAppearance.BorderSize = 0;
+            btnUsuario.FlatStyle = FlatStyle.Flat;
+            btnUsuario.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnUsuario.Image = (Image)resources.GetObject("btnUsuario.Image");
+            btnUsuario.ImageAlign = ContentAlignment.MiddleLeft;
+            btnUsuario.Location = new Point(0, 0);
+            btnUsuario.Name = "btnUsuario";
+            btnUsuario.Size = new Size(180, 53);
+            btnUsuario.TabIndex = 2;
+            btnUsuario.Text = "   Usuarios";
+            btnUsuario.UseVisualStyleBackColor = false;
+            btnUsuario.Click += button2_Click;
+            // 
+            // panel32
+            // 
+            panel32.Controls.Add(btnIncluirUsuario);
+            panel32.Location = new Point(0, 53);
+            panel32.Margin = new Padding(0);
+            panel32.Name = "panel32";
+            panel32.Size = new Size(180, 53);
+            panel32.TabIndex = 4;
+            // 
+            // btnIncluirUsuario
+            // 
+            btnIncluirUsuario.BackColor = Color.Transparent;
+            btnIncluirUsuario.BackgroundImage = (Image)resources.GetObject("btnIncluirUsuario.BackgroundImage");
+            btnIncluirUsuario.FlatAppearance.BorderSize = 0;
+            btnIncluirUsuario.FlatStyle = FlatStyle.Flat;
+            btnIncluirUsuario.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnIncluirUsuario.Image = (Image)resources.GetObject("btnIncluirUsuario.Image");
+            btnIncluirUsuario.ImageAlign = ContentAlignment.MiddleLeft;
+            btnIncluirUsuario.Location = new Point(0, 0);
+            btnIncluirUsuario.Name = "btnIncluirUsuario";
+            btnIncluirUsuario.Size = new Size(180, 53);
+            btnIncluirUsuario.TabIndex = 2;
+            btnIncluirUsuario.Text = "   Incluir";
+            btnIncluirUsuario.UseVisualStyleBackColor = false;
+            btnIncluirUsuario.Click += button2_Click;
+            // 
             // flpMenu
             // 
             flpMenu.BackColor = Color.White;
@@ -168,6 +272,7 @@
             flpMenu.Controls.Add(flpMenuLateralProdutos);
             flpMenu.Controls.Add(flpMenuLateralFornecedores);
             flpMenu.Controls.Add(panel12);
+            flpMenu.Controls.Add(flpMenuLateralUsuario);
             flpMenu.Controls.Add(flpMenuLateralPedidos);
             flpMenu.Controls.Add(flpMenuLateralCaixa);
             flpMenu.Controls.Add(flpMenulateralVendas);
@@ -484,7 +589,7 @@
             flpMenuLateralPedidos.Controls.Add(panel18);
             flpMenuLateralPedidos.Controls.Add(panel19);
             flpMenuLateralPedidos.Controls.Add(panel20);
-            flpMenuLateralPedidos.Location = new Point(3, 239);
+            flpMenuLateralPedidos.Location = new Point(3, 298);
             flpMenuLateralPedidos.Name = "flpMenuLateralPedidos";
             flpMenuLateralPedidos.Size = new Size(180, 53);
             flpMenuLateralPedidos.TabIndex = 6;
@@ -601,7 +706,7 @@
             flpMenuLateralCaixa.Controls.Add(panel23);
             flpMenuLateralCaixa.Controls.Add(panel24);
             flpMenuLateralCaixa.Controls.Add(panel25);
-            flpMenuLateralCaixa.Location = new Point(3, 298);
+            flpMenuLateralCaixa.Location = new Point(3, 357);
             flpMenuLateralCaixa.Name = "flpMenuLateralCaixa";
             flpMenuLateralCaixa.Size = new Size(187, 59);
             flpMenuLateralCaixa.TabIndex = 7;
@@ -739,7 +844,7 @@
             flpMenulateralVendas.Controls.Add(panel26);
             flpMenulateralVendas.Controls.Add(panel27);
             flpMenulateralVendas.Controls.Add(panel28);
-            flpMenulateralVendas.Location = new Point(3, 363);
+            flpMenulateralVendas.Location = new Point(3, 422);
             flpMenulateralVendas.Margin = new Padding(3, 3, 3, 420);
             flpMenulateralVendas.Name = "flpMenulateralVendas";
             flpMenulateralVendas.Size = new Size(185, 53);
@@ -1038,7 +1143,7 @@
             // 
             // transicaoMenuProdutos
             // 
-            transicaoMenuProdutos.Interval = 3;
+            transicaoMenuProdutos.Interval = 5;
             transicaoMenuProdutos.Tick += transicaoMenu_Tick;
             // 
             // transicaoMenuFornecedores
@@ -1061,6 +1166,37 @@
             transicaoMenuVendas.Interval = 3;
             transicaoMenuVendas.Tick += transicaoMenuVendas_Tick;
             // 
+            // panel34
+            // 
+            panel34.Controls.Add(btnListarUsuario);
+            panel34.Location = new Point(0, 106);
+            panel34.Margin = new Padding(0);
+            panel34.Name = "panel34";
+            panel34.Size = new Size(180, 53);
+            panel34.TabIndex = 4;
+            // 
+            // btnListarUsuario
+            // 
+            btnListarUsuario.BackColor = Color.Transparent;
+            btnListarUsuario.BackgroundImage = (Image)resources.GetObject("btnListarUsuario.BackgroundImage");
+            btnListarUsuario.FlatAppearance.BorderSize = 0;
+            btnListarUsuario.FlatStyle = FlatStyle.Flat;
+            btnListarUsuario.Font = new Font("Nexa Heavy", 10F, FontStyle.Bold);
+            btnListarUsuario.Image = (Image)resources.GetObject("btnListarUsuario.Image");
+            btnListarUsuario.ImageAlign = ContentAlignment.MiddleLeft;
+            btnListarUsuario.Location = new Point(0, 0);
+            btnListarUsuario.Name = "btnListarUsuario";
+            btnListarUsuario.Size = new Size(180, 53);
+            btnListarUsuario.TabIndex = 2;
+            btnListarUsuario.Text = "   Listar";
+            btnListarUsuario.UseVisualStyleBackColor = false;
+            btnListarUsuario.Click += button2_Click;
+            // 
+            // transicaoMenuUsuarios
+            // 
+            transicaoMenuUsuarios.Interval = 3;
+            transicaoMenuUsuarios.Tick += transicaoMenuUsuarios_Tick;
+            // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1074,6 +1210,10 @@
             Text = "Sistema Comercial TDS T01";
             Load += FrmPrincipal_Load;
             pnlPrincipal.ResumeLayout(false);
+            panel33.ResumeLayout(false);
+            flpMenuLateralUsuario.ResumeLayout(false);
+            panel31.ResumeLayout(false);
+            panel32.ResumeLayout(false);
             flpMenu.ResumeLayout(false);
             panel11.ResumeLayout(false);
             flpMenuLateralProdutos.ResumeLayout(false);
@@ -1113,6 +1253,7 @@
             pnlInferior.ResumeLayout(false);
             panel29.ResumeLayout(false);
             panel30.ResumeLayout(false);
+            panel34.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -1192,5 +1333,15 @@
         private System.Windows.Forms.Timer transicaoMenuPedidos;
         private System.Windows.Forms.Timer transicaoMenuCaixa;
         private System.Windows.Forms.Timer transicaoMenuVendas;
+        private Panel panel31;
+        private Button btnUsuario;
+        private FlowLayoutPanel flpMenuLateralUsuario;
+        private Panel panel33;
+        private Button btnNiveisUsuario;
+        private Panel panel32;
+        private Button btnIncluirUsuario;
+        private Panel panel34;
+        private Button btnListarUsuario;
+        private System.Windows.Forms.Timer transicaoMenuUsuarios;
     }
 }

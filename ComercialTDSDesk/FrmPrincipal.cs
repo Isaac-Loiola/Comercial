@@ -261,5 +261,33 @@ namespace ComercialTDSDesk
         {
             transicaoMenuVendas.Start();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            transicaoMenuUsuarios.Start();
+        }
+
+        bool menuEspandidoUsuarios = false;
+        private void transicaoMenuUsuarios_Tick(object sender, EventArgs e)
+        {
+            if (menuEspandidoUsuarios == false)
+            {
+                flpMenuLateralUsuario.Height += 15;
+                if (flpMenuLateralUsuario.Height >= 214)
+                {
+                    transicaoMenuUsuarios.Stop();
+                    menuEspandidoUsuarios = true;
+                }
+            }
+            else
+            {
+                flpMenuLateralUsuario.Height -= 15;
+                if (flpMenuLateralUsuario.Height <= 53)
+                {
+                    transicaoMenuUsuarios.Stop();
+                    menuEspandidoUsuarios = false;
+                }
+            }
+        }
     }
 }
