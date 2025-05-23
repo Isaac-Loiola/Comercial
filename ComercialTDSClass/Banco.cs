@@ -19,8 +19,8 @@ namespace ComercialTDSClass
             StrConn = strconn;
             if (StrConn == string.Empty)
             {
-                //StrConn = $@"server=10.91.47.220;database=comercialtdsdb01;user=root;password=123"; // Work
-                StrConn = $@"server=127.0.0.1;database=comercialtdsdb01;user=root;password="; // home
+                StrConn = $@"server=10.91.47.220;database=comercialtdsdb01;user=root;password=123"; // Work
+                //StrConn = $@"server=127.0.0.1;database=comercialtdsdb01;user=root;password="; // home
                 MySqlConnection cn = new(StrConn);
 
                 try
