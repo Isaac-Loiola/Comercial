@@ -42,7 +42,7 @@ namespace ComercialTDSDesk
 
         private void trocarDeUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -320,12 +320,17 @@ namespace ComercialTDSDesk
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void btnNovoPedidos_Click(object sender, EventArgs e)
         {
             AssociaPanel(new FrmPedido());
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
