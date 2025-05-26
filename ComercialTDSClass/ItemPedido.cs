@@ -70,7 +70,7 @@ namespace ComercialTDSClass
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.CommandText = "sp_itempedido_insert";
             cmd.Parameters.AddWithValue("sppedido_id", PedidoId);
-            cmd.Parameters.AddWithValue("spproduto_id", Produto);
+            cmd.Parameters.AddWithValue("spproduto_id", Produto.Id);
             cmd.Parameters.AddWithValue("spquantidade", Quantidade);
             cmd.Parameters.AddWithValue("spdesconto", Desconto);
 
@@ -121,7 +121,7 @@ namespace ComercialTDSClass
             List<ItemPedido> items = new();
             ItemPedido itemPedido = new();
             var cmd = Banco.Abrir();
-            cmd.CommandText = $"select * from itempedido where id = {pedidoId}";
+            cmd.CommandText = $"select * from itempedido where pedido_id = {pedidoId}";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {

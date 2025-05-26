@@ -1195,6 +1195,7 @@
             ClientSize = new Size(1920, 1032);
             Controls.Add(pnlPrincipal);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             Name = "FrmPrincipal";
             StartPosition = FormStartPosition.CenterScreen;

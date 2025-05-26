@@ -36,10 +36,11 @@
             txtUsuario = new TextBox();
             label3 = new Label();
             grbItens = new GroupBox();
+            txtIdProd = new TextBox();
             label4 = new Label();
             radioButton2 = new RadioButton();
             radioButton1 = new RadioButton();
-            textBox1 = new TextBox();
+            txtSubTotalItens = new TextBox();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
@@ -72,6 +73,7 @@
             label12 = new Label();
             label13 = new Label();
             label14 = new Label();
+            btnFecharPedido = new Button();
             grbIndentificacao.SuspendLayout();
             grbItens.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvItensPedido).BeginInit();
@@ -152,10 +154,11 @@
             // 
             // grbItens
             // 
+            grbItens.Controls.Add(txtIdProd);
             grbItens.Controls.Add(label4);
             grbItens.Controls.Add(radioButton2);
             grbItens.Controls.Add(radioButton1);
-            grbItens.Controls.Add(textBox1);
+            grbItens.Controls.Add(txtSubTotalItens);
             grbItens.Controls.Add(label10);
             grbItens.Controls.Add(label9);
             grbItens.Controls.Add(label8);
@@ -176,6 +179,13 @@
             grbItens.TabIndex = 1;
             grbItens.TabStop = false;
             grbItens.Text = "Itens do Pedido";
+            // 
+            // txtIdProd
+            // 
+            txtIdProd.Location = new Point(22, 18);
+            txtIdProd.Name = "txtIdProd";
+            txtIdProd.Size = new Size(30, 23);
+            txtIdProd.TabIndex = 10;
             // 
             // label4
             // 
@@ -209,16 +219,16 @@
             radioButton1.Text = "Percentual";
             radioButton1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtSubTotalItens
             // 
-            textBox1.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.Navy;
-            textBox1.Location = new Point(506, 285);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(122, 33);
-            textBox1.TabIndex = 13;
-            textBox1.TextAlign = HorizontalAlignment.Right;
+            txtSubTotalItens.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtSubTotalItens.ForeColor = Color.Navy;
+            txtSubTotalItens.Location = new Point(506, 285);
+            txtSubTotalItens.Name = "txtSubTotalItens";
+            txtSubTotalItens.ReadOnly = true;
+            txtSubTotalItens.Size = new Size(122, 33);
+            txtSubTotalItens.TabIndex = 13;
+            txtSubTotalItens.TextAlign = HorizontalAlignment.Right;
             // 
             // label10
             // 
@@ -226,9 +236,9 @@
             label10.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.Location = new Point(430, 289);
             label10.Name = "label10";
-            label10.Size = new Size(81, 25);
+            label10.Size = new Size(159, 25);
             label10.TabIndex = 12;
-            label10.Text = "Total R$";
+            label10.Text = "Subtotal Itens R$";
             // 
             // label9
             // 
@@ -323,6 +333,7 @@
             btnAddItem.TabIndex = 5;
             btnAddItem.Text = "A&dicionar";
             btnAddItem.UseVisualStyleBackColor = true;
+            btnAddItem.Click += btnAddItem_Click;
             // 
             // dgvItensPedido
             // 
@@ -419,10 +430,11 @@
             // 
             txtIdPedido.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtIdPedido.ForeColor = Color.Red;
-            txtIdPedido.Location = new Point(1066, 134);
+            txtIdPedido.Location = new Point(1066, 141);
             txtIdPedido.Name = "txtIdPedido";
             txtIdPedido.Size = new Size(181, 43);
             txtIdPedido.TabIndex = 4;
+            txtIdPedido.KeyDown += txtIdPedido_KeyDown;
             // 
             // txtTotal
             // 
@@ -472,6 +484,7 @@
             txtDescontoPedido.TabIndex = 8;
             txtDescontoPedido.Text = "0,00";
             txtDescontoPedido.TextAlign = HorizontalAlignment.Right;
+            txtDescontoPedido.KeyDown += txtDescontoPedido_KeyDown;
             // 
             // label11
             // 
@@ -509,11 +522,22 @@
             label14.TabIndex = 9;
             label14.Text = "Total ";
             // 
+            // btnFecharPedido
+            // 
+            btnFecharPedido.Location = new Point(1196, 628);
+            btnFecharPedido.Name = "btnFecharPedido";
+            btnFecharPedido.Size = new Size(68, 58);
+            btnFecharPedido.TabIndex = 10;
+            btnFecharPedido.Text = "Fechar";
+            btnFecharPedido.UseVisualStyleBackColor = true;
+            btnFecharPedido.Click += btnFecharPedido_Click;
+            // 
             // FrmPedido
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1715, 907);
+            Controls.Add(btnFecharPedido);
             Controls.Add(label14);
             Controls.Add(label13);
             Controls.Add(label12);
@@ -564,7 +588,7 @@
         private Label label5;
         private TextBox txtDescontoItem;
         private TextBox txtQuantidade;
-        private TextBox textBox1;
+        private TextBox txtSubTotalItens;
         private Label label10;
         private TextBox txtTotal;
         private TextBox txtSubTotal;
@@ -586,5 +610,7 @@
         private RadioButton radioButton1;
         private Button button1;
         private Label label4;
+        private TextBox txtIdProd;
+        private Button btnFecharPedido;
     }
 }
