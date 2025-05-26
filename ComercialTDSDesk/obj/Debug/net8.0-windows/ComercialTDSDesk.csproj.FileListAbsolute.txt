@@ -90,6 +90,8 @@ C:\Users\ratoj\source\repos\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\
 C:\Users\ratoj\source\repos\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.pdb
 C:\Users\ratoj\source\repos\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.genruntimeconfig.cache
 C:\Users\ratoj\source\repos\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ref\ComercialTDSDesk.dll
+C:\Users\ratoj\source\repos\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.FrmProdutoListar.resources
+C:\Users\ratoj\source\repos\Comercial\ComercialTDSDesk\bin\Debug\net8.0-windows\ReaLTaiizor.dll
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\bin\Debug\net8.0-windows\ComercialTDSDesk.exe
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\bin\Debug\net8.0-windows\ComercialTDSDesk.deps.json
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\bin\Debug\net8.0-windows\ComercialTDSDesk.runtimeconfig.json
@@ -101,6 +103,7 @@ C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\bin\
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\bin\Debug\net8.0-windows\ReaLTaiizor.dll
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\bin\Debug\net8.0-windows\System.Text.Json.dll
@@ -121,6 +124,7 @@ C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\obj\
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.FrmPedido.resources
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.FrmPrincipal.resources
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.FrmProduto.resources
+C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.FrmProdutoListar.resources
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.FrmUsuarioInserir.resources
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.FrmUsuarioListar.resources
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.Properties.Resources.resources
@@ -136,7 +140,3 @@ C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\obj\
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.pdb
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.genruntimeconfig.cache
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ref\ComercialTDSDesk.dll
-C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.FrmProdutoListar.resources
-C:\Users\ratoj\source\repos\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.FrmProdutoListar.resources
-C:\Users\ratoj\source\repos\Comercial\ComercialTDSDesk\bin\Debug\net8.0-windows\ReaLTaiizor.dll
-C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\bin\Debug\net8.0-windows\ReaLTaiizor.dll
