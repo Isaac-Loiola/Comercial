@@ -70,8 +70,8 @@
             dataGridViewCellStyle1.BackColor = Color.Black;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle1.SelectionBackColor = Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvListarPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvListarPedidos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -80,14 +80,14 @@
             dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 255, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             dataGridViewCellStyle2.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle2.SelectionBackColor = Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgvListarPedidos.DefaultCellStyle = dataGridViewCellStyle2;
             dgvListarPedidos.EnableHeadersVisualStyles = false;
             dgvListarPedidos.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             dgvListarPedidos.GridColor = Color.FromArgb(255, 255, 255);
-            dgvListarPedidos.Location = new Point(3, 13);
+            dgvListarPedidos.Location = new Point(-9, 13);
             dgvListarPedidos.Name = "dgvListarPedidos";
             dgvListarPedidos.ReadOnly = true;
             dgvListarPedidos.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -101,8 +101,9 @@
             dgvListarPedidos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvListarPedidos.RowHeadersVisible = false;
             dgvListarPedidos.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dgvListarPedidos.ScrollBars = ScrollBars.None;
             dgvListarPedidos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvListarPedidos.Size = new Size(1021, 562);
+            dgvListarPedidos.Size = new Size(1046, 562);
             dgvListarPedidos.TabIndex = 0;
             // 
             // panel2
@@ -166,7 +167,7 @@
             Column5.HeaderText = "Desconto";
             Column5.Name = "Column5";
             Column5.ReadOnly = true;
-            Column5.Width = 200;
+            Column5.Width = 220;
             // 
             // FrmPedidoListar
             // 
