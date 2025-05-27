@@ -112,7 +112,7 @@ namespace ComercialTDSClass
         {
             List<Pedido> pedidos = new();
             var cmd = Banco.Abrir();
-            cmd.CommandText = "selcet * from pedidos";
+            cmd.CommandText = "select * from pedidos";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {

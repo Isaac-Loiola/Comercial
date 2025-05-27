@@ -332,5 +332,10 @@ namespace ComercialTDSDesk
         {
             Application.Exit();
         }
+
+        private void btnListarPedidos_Click(object sender, EventArgs e)
+        {
+            AssociaPanel(new FrmPedidoListar());
+        }
     }
 }
