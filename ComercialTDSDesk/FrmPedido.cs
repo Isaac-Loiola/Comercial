@@ -168,7 +168,10 @@ namespace ComercialTDSDesk
             txtIdPedido.Clear();
             txtIdProd.Clear();
             txtTotal.Clear();
-            
+            txtValorUnit.Clear();
+            txtSubTotalItens.Clear();
+            dgvItensPedido.Rows.Clear();
+
         }
         private void btnFecharPedido_Click(object sender, EventArgs e)
         {
