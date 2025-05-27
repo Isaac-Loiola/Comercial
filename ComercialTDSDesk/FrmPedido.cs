@@ -130,22 +130,31 @@ namespace ComercialTDSDesk
         {
             if (e.KeyCode == Keys.Enter)
             {
-                var pedido = Pedido.ObterPorId(int.Parse(txtIdPedido.Text));
-                if (pedido.Id > 0)
+                if(txtIdPedido.Text.Length > 5)
                 {
-                    if (pedido.Status == "A")
+                    var pedido = Pedido.ObterPorId(int.Parse(txtIdPedido.Text));
+                    if (pedido.Id > 0)
                     {
-                        grbIndentificacao.Enabled = false;
-                        txtNomeCliente.Text = $"{pedido.Cliente.Id} - {pedido.Cliente.Nome}";
-                        txtUsuario.Text = $"{pedido.Usuario.Id} - {pedido.Usuario.Nome}";
-                        grbItens.Enabled = true;
-                        CarregarItems(pedido.Id);
+                        if (pedido.Status == "A")
+                        {
+                            grbIndentificacao.Enabled = false;
+                            txtNomeCliente.Text = pedido.Cliente.Nome;
+                            txtIdCliente.Text = pedido.Cliente.Id.ToString();
+
+                            txtUsuario.Text = $"{pedido.Usuario.Id} - {pedido.Usuario.Nome}";
+                            grbItens.Enabled = true;
+                            CarregarItems(pedido.Id);
+                        }
+                        else if (pedido.Status == "F")
+                        {
+                            var resposta = MessageBox.Show("O pedido está fechado. \nDeseja Reabrir?",
+                            "Pedido", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                        }
                     }
-                    else if (pedido.Status == "F")
-                    {
-                        var resposta = MessageBox.Show("O pedido está fechado. \nDeseja Reabrir?",
-                        "Pedido", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-                    }
+                }
+                else
+                {
+                    MessageBox.Show("Numeros de carâcteres do indentificador incorreto!");
                 }
             }
         }
