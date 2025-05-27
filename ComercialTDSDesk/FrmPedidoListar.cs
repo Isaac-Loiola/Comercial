@@ -26,10 +26,11 @@ namespace ComercialTDSDesk
             {
                 dgvListarPedidos.Rows.Add();
                 dgvListarPedidos.Rows[linha].Cells[0].Value = pedido.Id;
-                dgvListarPedidos.Rows[linha].Cells[1].Value = pedido.Usuario.Id;
-                dgvListarPedidos.Rows[linha].Cells[0].Value = pedido.Data;
-                dgvListarPedidos.Rows[linha].Cells[0].Value = pedido.Status;
-                dgvListarPedidos.Rows[linha].Cells[0].Value = pedido.Desconto;
+                dgvListarPedidos.Rows[linha].Cells[1].Value = pedido.Usuario.Nome;
+                dgvListarPedidos.Rows[linha].Cells[2].Value = pedido.Cliente.Nome;
+                dgvListarPedidos.Rows[linha].Cells[3].Value = pedido.Data;
+                dgvListarPedidos.Rows[linha].Cells[4].Value = pedido.Status == "A" ? "Aberto" : "Fechado";
+                dgvListarPedidos.Rows[linha].Cells[5].Value = pedido.Desconto;
 
                 linha++;
             }
