@@ -151,6 +151,10 @@ namespace ComercialTDSDesk
                             "Pedido", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                         }
                     }
+                    else
+                    {
+                        MessageBox.Show($"Pedido {txtIdPedido.Text} inexistente!");
+                    }
                 }
                 else
                 {
