@@ -158,6 +158,9 @@ namespace ComercialTDSDesk
             }
         }
 
+        /// <summary>
+        /// Método para tratar exeções gerais
+        /// </summary>
         private void LimparControles()
         {
             txtCodBar.Clear();
@@ -172,17 +175,31 @@ namespace ComercialTDSDesk
             txtSubTotalItens.Clear();
             dgvItensPedido.Rows.Clear();
 
+            grbIndentificacao.Enabled = true;
+            grbItens.Enabled = false;
+            txtIdCliente.Clear();
+            txtNomeCliente.Clear();
         }
         private void btnFecharPedido_Click(object sender, EventArgs e)
         {
             Pedido pedido = Pedido.ObterPorId(int.Parse(txtIdPedido.Text));
-            pedido.Desconto = double.Parse(txtDescontoPedido.Text);
+            pedido.Desconto = Convert.ToDouble(txtDescontoPedido.Text);
             pedido.Status = "F";
             if (pedido.Atualizar())
             {
                 MessageBox.Show($"Pedido {pedido.Id} foi fechado com sucesso! \n");
                 LimparControles();
             }
+        }
+
+        private void txtIdPedido_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNomeCliente_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

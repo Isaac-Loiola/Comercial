@@ -133,6 +133,7 @@
             txtNomeCliente.ReadOnly = true;
             txtNomeCliente.Size = new Size(255, 27);
             txtNomeCliente.TabIndex = 1;
+            txtNomeCliente.TextChanged += txtNomeCliente_TextChanged;
             // 
             // txtUsuario
             // 
@@ -434,6 +435,7 @@
             txtIdPedido.Name = "txtIdPedido";
             txtIdPedido.Size = new Size(181, 43);
             txtIdPedido.TabIndex = 4;
+            txtIdPedido.TextChanged += txtIdPedido_TextChanged;
             txtIdPedido.KeyDown += txtIdPedido_KeyDown;
             // 
             // txtTotal
