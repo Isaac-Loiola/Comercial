@@ -337,5 +337,10 @@ namespace ComercialTDSDesk
         {
             AssociaPanel(new FrmPedidoListar());
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
