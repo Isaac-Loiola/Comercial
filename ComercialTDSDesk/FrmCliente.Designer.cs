@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            pnlClienteInserir = new Panel();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             panel5 = new Panel();
             txtDataNascimento = new MaskedTextBox();
             panel4 = new Panel();
@@ -52,8 +51,26 @@
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
-            mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
-            pnlClienteInserir.SuspendLayout();
+            txtId = new TextBox();
+            tcCadastroCLiente = new TabControl();
+            tpInserir = new TabPage();
+            tpEndereco = new TabPage();
+            panel7 = new Panel();
+            txtCep = new TextBox();
+            panel9 = new Panel();
+            txtNumero = new TextBox();
+            panel13 = new Panel();
+            txtBairro = new TextBox();
+            panel8 = new Panel();
+            txtLogradouro = new TextBox();
+            panel11 = new Panel();
+            txtComplemento = new TextBox();
+            panel12 = new Panel();
+            txtCidade = new TextBox();
+            cmbUf = new ComboBox();
+            panel14 = new Panel();
+            panel16 = new Panel();
+            cmbTipoEndereco = new ComboBox();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             panel3.SuspendLayout();
@@ -61,24 +78,23 @@
             panel1.SuspendLayout();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClienteListar).BeginInit();
+            tcCadastroCLiente.SuspendLayout();
+            tpInserir.SuspendLayout();
+            tpEndereco.SuspendLayout();
+            panel7.SuspendLayout();
+            panel9.SuspendLayout();
+            panel13.SuspendLayout();
+            panel8.SuspendLayout();
+            panel11.SuspendLayout();
+            panel12.SuspendLayout();
+            panel14.SuspendLayout();
+            panel16.SuspendLayout();
             SuspendLayout();
-            // 
-            // pnlClienteInserir
-            // 
-            pnlClienteInserir.Controls.Add(panel5);
-            pnlClienteInserir.Controls.Add(panel4);
-            pnlClienteInserir.Controls.Add(panel3);
-            pnlClienteInserir.Controls.Add(panel2);
-            pnlClienteInserir.Controls.Add(panel1);
-            pnlClienteInserir.Location = new Point(86, 205);
-            pnlClienteInserir.Name = "pnlClienteInserir";
-            pnlClienteInserir.Size = new Size(344, 416);
-            pnlClienteInserir.TabIndex = 0;
             // 
             // panel5
             // 
             panel5.Controls.Add(txtDataNascimento);
-            panel5.Location = new Point(59, 361);
+            panel5.Location = new Point(157, 536);
             panel5.Name = "panel5";
             panel5.Size = new Size(233, 30);
             panel5.TabIndex = 2;
@@ -98,7 +114,7 @@
             // panel4
             // 
             panel4.Controls.Add(txtEmail);
-            panel4.Location = new Point(59, 100);
+            panel4.Location = new Point(157, 188);
             panel4.Name = "panel4";
             panel4.Size = new Size(233, 30);
             panel4.TabIndex = 0;
@@ -116,7 +132,7 @@
             // panel3
             // 
             panel3.Controls.Add(txtTelefone);
-            panel3.Location = new Point(59, 274);
+            panel3.Location = new Point(157, 421);
             panel3.Name = "panel3";
             panel3.Size = new Size(233, 30);
             panel3.TabIndex = 0;
@@ -134,7 +150,7 @@
             // panel2
             // 
             panel2.Controls.Add(txtCpf);
-            panel2.Location = new Point(59, 186);
+            panel2.Location = new Point(157, 309);
             panel2.Name = "panel2";
             panel2.Size = new Size(233, 30);
             panel2.TabIndex = 0;
@@ -152,7 +168,7 @@
             // panel1
             // 
             panel1.Controls.Add(txtNome);
-            panel1.Location = new Point(59, 26);
+            panel1.Location = new Point(157, 64);
             panel1.Name = "panel1";
             panel1.Size = new Size(233, 30);
             panel1.TabIndex = 0;
@@ -170,7 +186,7 @@
             // btnInserir
             // 
             btnInserir.ForeColor = SystemColors.ControlText;
-            btnInserir.Location = new Point(174, 627);
+            btnInserir.Location = new Point(228, 804);
             btnInserir.Name = "btnInserir";
             btnInserir.Size = new Size(149, 30);
             btnInserir.TabIndex = 1;
@@ -196,24 +212,24 @@
             dgvClienteListar.BorderStyle = BorderStyle.None;
             dgvClienteListar.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvClienteListar.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvClienteListar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvClienteListar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvClienteListar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvClienteListar.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvClienteListar.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dgvClienteListar.DefaultCellStyle = dataGridViewCellStyle5;
             dgvClienteListar.EnableHeadersVisualStyles = false;
             dgvClienteListar.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             dgvClienteListar.GridColor = Color.FromArgb(255, 255, 255);
@@ -221,14 +237,14 @@
             dgvClienteListar.Name = "dgvClienteListar";
             dgvClienteListar.ReadOnly = true;
             dgvClienteListar.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvClienteListar.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgvClienteListar.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dgvClienteListar.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dgvClienteListar.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvClienteListar.Size = new Size(1037, 732);
@@ -290,25 +306,210 @@
             Column7.ReadOnly = true;
             Column7.Width = 170;
             // 
-            // mySqlCommand1
+            // txtId
             // 
-            mySqlCommand1.CacheAge = 0;
-            mySqlCommand1.Connection = null;
-            mySqlCommand1.EnableCaching = false;
-            mySqlCommand1.Transaction = null;
+            txtId.Location = new Point(245, 6);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(37, 23);
+            txtId.TabIndex = 3;
+            txtId.Visible = false;
+            // 
+            // tcCadastroCLiente
+            // 
+            tcCadastroCLiente.Controls.Add(tpInserir);
+            tcCadastroCLiente.Controls.Add(tpEndereco);
+            tcCadastroCLiente.Location = new Point(22, 124);
+            tcCadastroCLiente.Name = "tcCadastroCLiente";
+            tcCadastroCLiente.SelectedIndex = 0;
+            tcCadastroCLiente.Size = new Size(555, 621);
+            tcCadastroCLiente.TabIndex = 4;
+            // 
+            // tpInserir
+            // 
+            tpInserir.Controls.Add(panel1);
+            tpInserir.Controls.Add(txtId);
+            tpInserir.Controls.Add(panel5);
+            tpInserir.Controls.Add(panel4);
+            tpInserir.Controls.Add(panel3);
+            tpInserir.Controls.Add(panel2);
+            tpInserir.Location = new Point(4, 24);
+            tpInserir.Name = "tpInserir";
+            tpInserir.Padding = new Padding(3);
+            tpInserir.Size = new Size(547, 593);
+            tpInserir.TabIndex = 0;
+            tpInserir.Text = "Cliente";
+            tpInserir.UseVisualStyleBackColor = true;
+            // 
+            // tpEndereco
+            // 
+            tpEndereco.Controls.Add(panel12);
+            tpEndereco.Controls.Add(panel11);
+            tpEndereco.Controls.Add(panel13);
+            tpEndereco.Controls.Add(panel16);
+            tpEndereco.Controls.Add(panel14);
+            tpEndereco.Controls.Add(panel8);
+            tpEndereco.Controls.Add(panel9);
+            tpEndereco.Controls.Add(panel7);
+            tpEndereco.Location = new Point(4, 24);
+            tpEndereco.Name = "tpEndereco";
+            tpEndereco.Padding = new Padding(3);
+            tpEndereco.Size = new Size(547, 593);
+            tpEndereco.TabIndex = 1;
+            tpEndereco.Text = "Endereco";
+            tpEndereco.UseVisualStyleBackColor = true;
+            tpEndereco.Click += tpEndereco_Click;
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(txtCep);
+            panel7.Location = new Point(144, 38);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(233, 30);
+            panel7.TabIndex = 1;
+            // 
+            // txtCep
+            // 
+            txtCep.BorderStyle = BorderStyle.None;
+            txtCep.Font = new Font("Segoe UI", 11F);
+            txtCep.Location = new Point(3, 5);
+            txtCep.Name = "txtCep";
+            txtCep.Size = new Size(225, 20);
+            txtCep.TabIndex = 0;
+            txtCep.TextAlign = HorizontalAlignment.Center;
+            // 
+            // panel9
+            // 
+            panel9.Controls.Add(txtNumero);
+            panel9.Location = new Point(290, 126);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(233, 30);
+            panel9.TabIndex = 1;
+            // 
+            // txtNumero
+            // 
+            txtNumero.BorderStyle = BorderStyle.None;
+            txtNumero.Font = new Font("Segoe UI", 11F);
+            txtNumero.Location = new Point(3, 5);
+            txtNumero.Name = "txtNumero";
+            txtNumero.Size = new Size(225, 20);
+            txtNumero.TabIndex = 0;
+            txtNumero.TextAlign = HorizontalAlignment.Center;
+            // 
+            // panel13
+            // 
+            panel13.Controls.Add(txtBairro);
+            panel13.Location = new Point(290, 224);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(233, 30);
+            panel13.TabIndex = 1;
+            // 
+            // txtBairro
+            // 
+            txtBairro.BorderStyle = BorderStyle.None;
+            txtBairro.Font = new Font("Segoe UI", 11F);
+            txtBairro.Location = new Point(3, 5);
+            txtBairro.Name = "txtBairro";
+            txtBairro.Size = new Size(225, 20);
+            txtBairro.TabIndex = 0;
+            txtBairro.TextAlign = HorizontalAlignment.Center;
+            // 
+            // panel8
+            // 
+            panel8.Controls.Add(txtLogradouro);
+            panel8.Location = new Point(17, 126);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(233, 30);
+            panel8.TabIndex = 1;
+            // 
+            // txtLogradouro
+            // 
+            txtLogradouro.BorderStyle = BorderStyle.None;
+            txtLogradouro.Font = new Font("Segoe UI", 11F);
+            txtLogradouro.Location = new Point(3, 5);
+            txtLogradouro.Name = "txtLogradouro";
+            txtLogradouro.Size = new Size(225, 20);
+            txtLogradouro.TabIndex = 0;
+            txtLogradouro.TextAlign = HorizontalAlignment.Center;
+            // 
+            // panel11
+            // 
+            panel11.Controls.Add(txtComplemento);
+            panel11.Location = new Point(17, 224);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(233, 30);
+            panel11.TabIndex = 1;
+            // 
+            // txtComplemento
+            // 
+            txtComplemento.BorderStyle = BorderStyle.None;
+            txtComplemento.Font = new Font("Segoe UI", 11F);
+            txtComplemento.Location = new Point(3, 5);
+            txtComplemento.Name = "txtComplemento";
+            txtComplemento.Size = new Size(225, 20);
+            txtComplemento.TabIndex = 0;
+            txtComplemento.TextAlign = HorizontalAlignment.Center;
+            // 
+            // panel12
+            // 
+            panel12.Controls.Add(txtCidade);
+            panel12.Location = new Point(144, 314);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(233, 30);
+            panel12.TabIndex = 1;
+            // 
+            // txtCidade
+            // 
+            txtCidade.BorderStyle = BorderStyle.None;
+            txtCidade.Font = new Font("Segoe UI", 11F);
+            txtCidade.Location = new Point(3, 5);
+            txtCidade.Name = "txtCidade";
+            txtCidade.Size = new Size(225, 20);
+            txtCidade.TabIndex = 0;
+            txtCidade.TextAlign = HorizontalAlignment.Center;
+            // 
+            // cmbUf
+            // 
+            cmbUf.FormattingEnabled = true;
+            cmbUf.Location = new Point(5, 4);
+            cmbUf.Name = "cmbUf";
+            cmbUf.Size = new Size(126, 23);
+            cmbUf.TabIndex = 2;
+            // 
+            // panel14
+            // 
+            panel14.Controls.Add(cmbUf);
+            panel14.Location = new Point(202, 387);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(136, 30);
+            panel14.TabIndex = 1;
+            // 
+            // panel16
+            // 
+            panel16.Controls.Add(cmbTipoEndereco);
+            panel16.Location = new Point(202, 457);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(136, 30);
+            panel16.TabIndex = 1;
+            // 
+            // cmbTipoEndereco
+            // 
+            cmbTipoEndereco.FormattingEnabled = true;
+            cmbTipoEndereco.Location = new Point(5, 4);
+            cmbTipoEndereco.Name = "cmbTipoEndereco";
+            cmbTipoEndereco.Size = new Size(126, 23);
+            cmbTipoEndereco.TabIndex = 2;
             // 
             // FrmCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1715, 907);
+            Controls.Add(tcCadastroCLiente);
             Controls.Add(panel6);
             Controls.Add(btnInserir);
-            Controls.Add(pnlClienteInserir);
             Name = "FrmCliente";
             Text = "FrmCliente";
             Load += FrmCliente_Load;
-            pnlClienteInserir.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             panel4.ResumeLayout(false);
@@ -321,12 +522,28 @@
             panel1.PerformLayout();
             panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvClienteListar).EndInit();
+            tcCadastroCLiente.ResumeLayout(false);
+            tpInserir.ResumeLayout(false);
+            tpInserir.PerformLayout();
+            tpEndereco.ResumeLayout(false);
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel9.PerformLayout();
+            panel13.ResumeLayout(false);
+            panel13.PerformLayout();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            panel11.ResumeLayout(false);
+            panel11.PerformLayout();
+            panel12.ResumeLayout(false);
+            panel12.PerformLayout();
+            panel14.ResumeLayout(false);
+            panel16.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Panel pnlClienteInserir;
         private Panel panel1;
         private TextBox txtNome;
         private Panel panel4;
@@ -341,7 +558,6 @@
         private Button btnInserir;
         private Panel panel6;
         private ReaLTaiizor.Controls.PoisonDataGridView dgvClienteListar;
-        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
@@ -349,5 +565,25 @@
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
+        private TextBox txtId;
+        private TabControl tcCadastroCLiente;
+        private TabPage tpInserir;
+        private TabPage tpEndereco;
+        private Panel panel13;
+        private TextBox txtBairro;
+        private Panel panel9;
+        private TextBox txtNumero;
+        private Panel panel7;
+        private TextBox txtCep;
+        private Panel panel12;
+        private TextBox txtCidade;
+        private Panel panel11;
+        private TextBox txtComplemento;
+        private Panel panel8;
+        private TextBox txtLogradouro;
+        private Panel panel16;
+        private ComboBox cmbTipoEndereco;
+        private Panel panel14;
+        private ComboBox cmbUf;
     }
 }

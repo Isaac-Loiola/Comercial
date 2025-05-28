@@ -20,7 +20,7 @@ namespace ComercialTDSDesk
 
         private void FrmCliente_Load(object sender, EventArgs e)
         {
-            var clientes = Cliente.ObterLista();
+            var clientes = ComercialTDSClass.Cliente.ObterLista();
             int linha = 0;
             foreach (var cliente in clientes)
             {
@@ -46,7 +46,7 @@ namespace ComercialTDSDesk
             {
                 Cliente cliente = new(txtNome.Text, txtCpf.Text, txtTelefone.Text, txtEmail.Text, Convert.ToDateTime(txtDataNascimento.Text));
                 cliente.Inserir();
-                if(cliente.Id > 0)
+                if (cliente.Id > 0)
                 {
                     MessageBox.Show($"{cliente.Nome} inserido com sucesso!");
                 }
@@ -59,8 +59,13 @@ namespace ComercialTDSDesk
             {
                 MessageBox.Show("Todos campos são obrigatórios para inserir!");
             }
-            
-            
+
+
+        }
+
+        private void tpEndereco_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
