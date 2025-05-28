@@ -347,5 +347,10 @@ namespace ComercialTDSDesk
         {
             AssociaPanel(new FrmCliente());
         }
+
+        private void btnIncluirFornecedores_Click(object sender, EventArgs e)
+        {
+            AssociaPanel(new FrmFornecedorInserir());
+        }
     }
 }
