@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComercialTDSClass;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,21 @@ using System.Windows.Forms;
 
 namespace ComercialTDSDesk
 {
-    public partial class FrmCliente: Form
+    public partial class FrmCliente : Form
     {
         public FrmCliente()
         {
             InitializeComponent();
+        }
+
+        private void FrmCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
