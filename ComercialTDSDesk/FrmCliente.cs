@@ -1,4 +1,5 @@
 ﻿using ComercialTDSClass;
+using NcMaster;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,16 +44,24 @@ namespace ComercialTDSDesk
             txtTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
 
             if (txtNome.Text != string.Empty && txtCpf.Text != string.Empty && txtTelefone.Text != string.Empty && txtEmail.Text != string.Empty && txtDataNascimento.Text != string.Empty)
-            {
-                Cliente cliente = new(txtNome.Text, txtCpf.Text, txtTelefone.Text, txtEmail.Text, Convert.ToDateTime(txtDataNascimento.Text));
-                cliente.Inserir();
-                if (cliente.Id > 0)
+            {   
+                
+                if(txtCep.Text != string.Empty && txtBairro.Text != string.Empty && txtCidade.Text != string.Empty && txtLogradouro.Text != string.Empty &&
+                    txtUf.Text != string.Empty && cmbTipoEndereco.Text != string.Empty && txtComplemento.Text != string.Empty && txtNumero.Text != string.Empty)
                 {
-                    MessageBox.Show($"{cliente.Nome} inserido com sucesso!");
+                    Cliente cliente = new(txtNome.Text, txtCpf.Text, txtTelefone.Text, txtEmail.Text, Convert.ToDateTime(txtDataNascimento.Text));
+                    cliente.Inserir();
+                    if(cliente.Id > 0)
+                    {
+                        Endereco endereco = new(cliente.Id, txtCep.Text, txtLogradouro.Text, txtNumero.Text, txtComplemento.Text, txtBairro.Text, txtCidade.Text, txtUf.Text, cmbTipoEndereco.Text);
+                        endereco.Inserir();
+
+                        MessageBox.Show($"{cliente.Nome} cadastrado com sucesso!");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show($"Falha ao inserir {cliente.Nome}");
+                    MessageBox.Show("Adicionar endereço!");
                 }
             }
             else
@@ -66,6 +75,18 @@ namespace ComercialTDSDesk
         private void tpEndereco_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtCep_TextChanged(object sender, EventArgs e)
+        {
+            if(txtCep.Text.Length > 6)
+            {
+                WebCEP webCEP = new(txtCep.Text);
+                txtLogradouro.Text = webCEP.Lagradouro;
+                txtBairro.Text = webCEP.Bairro;
+                txtCidade.Text = webCEP.Cidade;
+                txtUf.Text = webCEP.UF;
+            }
         }
     }
 }
