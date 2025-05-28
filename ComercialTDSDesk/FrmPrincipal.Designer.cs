@@ -225,6 +225,7 @@
             btnCliente.TabIndex = 2;
             btnCliente.Text = "   Clientes";
             btnCliente.UseVisualStyleBackColor = false;
+            btnCliente.Click += btnCliente_Click;
             // 
             // flpMenuLateralProdutos
             // 

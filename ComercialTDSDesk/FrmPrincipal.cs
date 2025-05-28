@@ -342,5 +342,10 @@ namespace ComercialTDSDesk
         {
 
         }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            AssociaPanel(new FrmCliente());
+        }
     }
 }
