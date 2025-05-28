@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             pnlClienteInserir = new Panel();
             panel5 = new Panel();
             txtDataNascimento = new MaskedTextBox();
@@ -40,12 +43,24 @@
             panel1 = new Panel();
             txtNome = new TextBox();
             btnInserir = new Button();
+            panel6 = new Panel();
+            dgvClienteListar = new ReaLTaiizor.Controls.PoisonDataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             pnlClienteInserir.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
+            panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvClienteListar).BeginInit();
             SuspendLayout();
             // 
             // pnlClienteInserir
@@ -55,7 +70,7 @@
             pnlClienteInserir.Controls.Add(panel3);
             pnlClienteInserir.Controls.Add(panel2);
             pnlClienteInserir.Controls.Add(panel1);
-            pnlClienteInserir.Location = new Point(130, 115);
+            pnlClienteInserir.Location = new Point(86, 205);
             pnlClienteInserir.Name = "pnlClienteInserir";
             pnlClienteInserir.Size = new Size(344, 416);
             pnlClienteInserir.TabIndex = 0;
@@ -155,7 +170,7 @@
             // btnInserir
             // 
             btnInserir.ForeColor = SystemColors.ControlText;
-            btnInserir.Location = new Point(130, 537);
+            btnInserir.Location = new Point(174, 627);
             btnInserir.Name = "btnInserir";
             btnInserir.Size = new Size(149, 30);
             btnInserir.TabIndex = 1;
@@ -163,11 +178,131 @@
             btnInserir.UseVisualStyleBackColor = true;
             btnInserir.Click += btnInserir_Click;
             // 
+            // panel6
+            // 
+            panel6.BackColor = Color.Transparent;
+            panel6.Controls.Add(dgvClienteListar);
+            panel6.Location = new Point(603, 97);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(1066, 764);
+            panel6.TabIndex = 2;
+            // 
+            // dgvClienteListar
+            // 
+            dgvClienteListar.AllowUserToAddRows = false;
+            dgvClienteListar.AllowUserToDeleteRows = false;
+            dgvClienteListar.AllowUserToResizeRows = false;
+            dgvClienteListar.BackgroundColor = Color.FromArgb(255, 255, 255);
+            dgvClienteListar.BorderStyle = BorderStyle.None;
+            dgvClienteListar.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgvClienteListar.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvClienteListar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvClienteListar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvClienteListar.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvClienteListar.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvClienteListar.EnableHeadersVisualStyles = false;
+            dgvClienteListar.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dgvClienteListar.GridColor = Color.FromArgb(255, 255, 255);
+            dgvClienteListar.Location = new Point(15, 15);
+            dgvClienteListar.Name = "dgvClienteListar";
+            dgvClienteListar.ReadOnly = true;
+            dgvClienteListar.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvClienteListar.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvClienteListar.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dgvClienteListar.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvClienteListar.Size = new Size(1037, 732);
+            dgvClienteListar.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            Column1.Frozen = true;
+            Column1.HeaderText = "ID";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            Column2.Frozen = true;
+            Column2.HeaderText = "Nome";
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            Column2.Width = 180;
+            // 
+            // Column3
+            // 
+            Column3.Frozen = true;
+            Column3.HeaderText = "CPF";
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            Column3.Width = 150;
+            // 
+            // Column4
+            // 
+            Column4.Frozen = true;
+            Column4.HeaderText = "Telefone";
+            Column4.Name = "Column4";
+            Column4.ReadOnly = true;
+            Column4.Width = 150;
+            // 
+            // Column5
+            // 
+            Column5.Frozen = true;
+            Column5.HeaderText = "Email";
+            Column5.Name = "Column5";
+            Column5.ReadOnly = true;
+            Column5.Width = 200;
+            // 
+            // Column6
+            // 
+            Column6.Frozen = true;
+            Column6.HeaderText = "Data de Nascimento";
+            Column6.Name = "Column6";
+            Column6.ReadOnly = true;
+            Column6.Width = 150;
+            // 
+            // Column7
+            // 
+            Column7.Frozen = true;
+            Column7.HeaderText = "Data de  Cadastro";
+            Column7.Name = "Column7";
+            Column7.ReadOnly = true;
+            Column7.Width = 170;
+            // 
+            // mySqlCommand1
+            // 
+            mySqlCommand1.CacheAge = 0;
+            mySqlCommand1.Connection = null;
+            mySqlCommand1.EnableCaching = false;
+            mySqlCommand1.Transaction = null;
+            // 
             // FrmCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1715, 907);
+            Controls.Add(panel6);
             Controls.Add(btnInserir);
             Controls.Add(pnlClienteInserir);
             Name = "FrmCliente";
@@ -184,6 +319,8 @@
             panel2.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvClienteListar).EndInit();
             ResumeLayout(false);
         }
 
@@ -202,5 +339,15 @@
         private MaskedTextBox txtTelefone;
         private MaskedTextBox txtCpf;
         private Button btnInserir;
+        private Panel panel6;
+        private ReaLTaiizor.Controls.PoisonDataGridView dgvClienteListar;
+        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column7;
     }
 }
