@@ -56,6 +56,7 @@
             tpInserir = new TabPage();
             tpEndereco = new TabPage();
             panel14 = new Panel();
+            cmbTipoEndereco = new ComboBox();
             panel11 = new Panel();
             txtComplemento = new TextBox();
             panel10 = new Panel();
@@ -70,7 +71,6 @@
             txtNumero = new TextBox();
             panel7 = new Panel();
             txtCep = new TextBox();
-            cmbTipoEndereco = new ComboBox();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             panel3.SuspendLayout();
@@ -186,9 +186,9 @@
             // btnInserir
             // 
             btnInserir.ForeColor = SystemColors.ControlText;
-            btnInserir.Location = new Point(228, 804);
+            btnInserir.Location = new Point(212, 751);
             btnInserir.Name = "btnInserir";
-            btnInserir.Size = new Size(149, 30);
+            btnInserir.Size = new Size(149, 40);
             btnInserir.TabIndex = 1;
             btnInserir.Text = "Inserir";
             btnInserir.UseVisualStyleBackColor = true;
@@ -367,6 +367,15 @@
             panel14.Size = new Size(118, 30);
             panel14.TabIndex = 1;
             // 
+            // cmbTipoEndereco
+            // 
+            cmbTipoEndereco.FormattingEnabled = true;
+            cmbTipoEndereco.Items.AddRange(new object[] { "RES", "COM", "ENT" });
+            cmbTipoEndereco.Location = new Point(8, 4);
+            cmbTipoEndereco.Name = "cmbTipoEndereco";
+            cmbTipoEndereco.Size = new Size(103, 23);
+            cmbTipoEndereco.TabIndex = 0;
+            // 
             // panel11
             // 
             panel11.Controls.Add(txtComplemento);
@@ -493,15 +502,6 @@
             txtCep.TabIndex = 0;
             txtCep.TextAlign = HorizontalAlignment.Center;
             txtCep.TextChanged += txtCep_TextChanged;
-            // 
-            // cmbTipoEndereco
-            // 
-            cmbTipoEndereco.FormattingEnabled = true;
-            cmbTipoEndereco.Items.AddRange(new object[] { "RES", "COM", "ENT" });
-            cmbTipoEndereco.Location = new Point(8, 4);
-            cmbTipoEndereco.Name = "cmbTipoEndereco";
-            cmbTipoEndereco.Size = new Size(103, 23);
-            cmbTipoEndereco.TabIndex = 0;
             // 
             // FrmCliente
             // 

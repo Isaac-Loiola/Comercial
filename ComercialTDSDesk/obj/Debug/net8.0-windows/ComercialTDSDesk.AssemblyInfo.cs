@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ComercialTDSDesk")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc6fecf314f530a7b26b4f0526da4e5fe0329acd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33231dff1befd9e464a24503b49c3cb5957a8dc9")]
 [assembly: System.Reflection.AssemblyProductAttribute("ComercialTDSDesk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ComercialTDSDesk")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

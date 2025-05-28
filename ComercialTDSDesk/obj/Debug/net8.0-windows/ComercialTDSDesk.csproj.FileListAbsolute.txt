@@ -142,3 +142,4 @@ C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\obj\
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ref\ComercialTDSDesk.dll
 C:\Users\isaac.oloiola\source\repos\Isaac-Loiola\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.FrmPedidoListar.resources
 C:\Users\ratoj\source\repos\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.FrmPedidoListar.resources
+C:\Users\ratoj\source\repos\Comercial\ComercialTDSDesk\obj\Debug\net8.0-windows\ComercialTDSDesk.FrmFornecedorInserir.resources
