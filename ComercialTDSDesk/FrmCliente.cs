@@ -82,7 +82,7 @@ namespace ComercialTDSDesk
             if(txtCep.Text.Length > 6)
             {
                 WebCEP webCEP = new(txtCep.Text);
-                txtLogradouro.Text = webCEP.Lagradouro;
+                txtLogradouro.Text = webCEP.TipoLagradouro + " " + webCEP.Lagradouro;
                 txtBairro.Text = webCEP.Bairro;
                 txtCidade.Text = webCEP.Cidade;
                 txtUf.Text = webCEP.UF;
