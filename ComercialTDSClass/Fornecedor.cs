@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace ComercialTDSClass
 {
@@ -87,6 +88,38 @@ namespace ComercialTDSClass
 
             cmd.Connection.Close();
             return retorno;
+        }
+
+        /// <summary>
+        /// Método para listar todos fornecedores do banco de dados!
+        /// </summary>
+        /// <returns>Lista de fornecedores</returns>
+        public static List<Fornecedor> ObterLista()
+        {
+            List<Fornecedor> fornecedores = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandText = "select * from fornecedores";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                fornecedores.Add
+                    (
+                        new
+                            (
+                                dr.GetInt32(0),
+                                dr.GetString(1),
+                                dr.GetString(2),
+                                dr.GetString(3),
+                                dr.GetString(4),
+                                dr.GetString(5),
+                                dr.GetString(6)
+                            )
+
+                    );
+            }
+            dr.Close();
+            cmd.Connection.Close();
+            return fornecedores;
         }
     }
 }
