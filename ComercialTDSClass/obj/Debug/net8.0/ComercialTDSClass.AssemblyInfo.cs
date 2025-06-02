@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ComercialTDSClass")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbe0017a1d075cc7e9369d182a31d6021c3aaad8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85fa8bfa1776a3a6c2d0a4ec2c9b6722a9fff66f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ComercialTDSClass")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ComercialTDSClass")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
