@@ -66,5 +66,27 @@ namespace ComercialTDSClass
             Id = Convert.ToInt32(cmd.ExecuteScalar());
             cmd.Connection.Close();
         }
+        
+        /// <summary>
+        /// Método para atualizar registro de um fornecedor!
+        /// Propriedades necessárias: Id, Fantasia, Contato, Telefone, Email.
+        /// </summary>
+        /// <returns>Booleano</returns>
+        public bool Atualizar()
+        {
+            var cmd = Banco.Abrir();
+            
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.CommandText = "sp_fornecedor_update";
+            cmd.Parameters.AddWithValue("spid", Id);
+            cmd.Parameters.AddWithValue("spfantasia", Fantasia);
+            cmd.Parameters.AddWithValue("spcontato", Contato);
+            cmd.Parameters.AddWithValue("sptelefone", Telefone);
+            cmd.Parameters.AddWithValue("spemail", Email);
+            bool retorno = cmd.ExecuteNonQuery() > 0 ? true : false;
+
+            cmd.Connection.Close();
+            return retorno;
+        }
     }
 }
