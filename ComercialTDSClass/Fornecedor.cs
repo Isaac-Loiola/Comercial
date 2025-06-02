@@ -18,6 +18,11 @@ namespace ComercialTDSClass
         public string Telefone { get; set; }
         public string Email { get; set; }
 
+
+        public Fornecedor()
+        {
+
+        }
         public Fornecedor(int id, string razaoSocial, string fantasia, string cnpj, string contato, string telefone, string email)
         {
             Id = id;
@@ -120,6 +125,35 @@ namespace ComercialTDSClass
             dr.Close();
             cmd.Connection.Close();
             return fornecedores;
+        }
+
+        /// <summary>
+        /// Método para obter um objeto fornecedor por ID
+        /// </summary>
+        /// <returns>Objeto Fornecedor</returns>
+        public static Fornecedor ObterPorId(int idFornecedor)
+        {
+            var cmd = Banco.Abrir();
+            Fornecedor fornecedor = new();
+
+            cmd.CommandText = $"select * from fornecedores where id = {idFornecedor}";
+            var dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                fornecedor = new
+                    (
+                        dr.GetInt32(0),
+                        dr.GetString(1),
+                        dr.GetString(2),
+                        dr.GetString(3),
+                        dr.GetString(4),
+                        dr.GetString(5),
+                        dr.GetString(6)
+                    );
+            }
+            cmd.Connection.Close();
+            return fornecedor;
+             
         }
     }
 }
