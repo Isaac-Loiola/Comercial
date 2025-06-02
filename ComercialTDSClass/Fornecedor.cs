@@ -46,7 +46,11 @@ namespace ComercialTDSClass
             Telefone = telefone;
             Email = email;
         }
-
+           
+        /// <summary>
+        /// Método para Inserir um fornecedor ao banco de dados!
+        /// Propriedades necessárias: RazaoSocial, Fantasia, Cpnj, Contato, Telefone, Email.
+        /// </summary>
         public void Inserir()
         {
             var cmd = Banco.Abrir();
